@@ -1,15 +1,15 @@
-import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
-import Cv from '../Components/Cv'
-import Projects from '../Components/Projects'
-import HomeChapterNav from '../Components/HomeChapterNav'
 import { useRef, useEffect } from 'react'
-import placeholder_logo from "../Assets/icons/react.png"
 import { useScrollContext } from '../GlobalContext/ScrollPositionsContext'
-import About from '../Components/About'
 import { useThemeContext } from '../GlobalContext/ThemeContext'
 
 import { projects} from "../Projects/projects"
 import ProjectThumbnail from '../Components/ProjectThumbnail'
+import Cv from '../Components/Cv'
+import HomeChapterNav from '../Components/HomeChapterNav'
+import About from '../Components/About'
+
+import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
+import placeholder_logo from "../Assets/icons/react.png"
 
 
 export default function Homepage () {
@@ -81,7 +81,6 @@ export default function Homepage () {
       <section ref={sectionRightRef} className="home__right">
         <div ref={scrollRef} className='home__right__scrollable'>
           <About/>
-          {/* <Projects/> */}
           <div id="projects_start" className="projects__main__div">
             <h1>Projects</h1>
             {projects.map((project, i) => (

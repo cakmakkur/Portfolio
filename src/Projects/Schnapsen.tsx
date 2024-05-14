@@ -3,15 +3,14 @@ import laptop_bottom from "../Assets/laptop_bottom.png"
 import githubIcon from "../Assets/github.svg"
 import youtubeIcon from "../Assets/youtube.svg"
 
-import ts_logo from "../Assets/icons/ts.png";
-import sass_logo from "../Assets/icons/sass.png";
-import vitest_logo from "../Assets/icons/vitest.png";
-import node_logo from "../Assets/icons/node.png";
 import js_logo from "../Assets/icons/js.png";
-import css_logo from "../Assets/icons/css.png";
-import express_logo from "../Assets/icons/express.png";
+import sass_logo from "../Assets/icons/sass.png";
 import react_logo from "../Assets/icons/react.png";
 
+import img1 from "../Assets/carousel__images/buybuy_main/demo_buybuy_1.png";
+import img2 from "../Assets/carousel__images/buybuy_main/demo_buybuy_2.png";
+import img3 from "../Assets/carousel__images/buybuy_main/demo_buybuy_3.png";
+import img4 from "../Assets/carousel__images/buybuy_main/demo_buybuy_4.png";
 
 
 import TypewriterTitle from "../Animations/TypewriterTitle"
@@ -19,12 +18,16 @@ import CarouselAnm from "../Animations/CarouselAnm";
 
 import { useEffect, useRef, useState } from "react";
 
-export default function BuyBuySchnapsen () {
-  const [isHovering, setIsHovering] = useState('')
-  const githubBtnRef = useRef(null)
-  const youtubeBtnRef = useRef(null)
+type ImageArrayType = string[]
 
-  function toggleFxBtn (arg) {
+export default function Schnapsen () {
+  const [isHovering, setIsHovering] = useState('')
+  const githubBtnRef = useRef<HTMLDivElement>(null)
+  const youtubeBtnRef = useRef<HTMLDivElement>(null)
+
+  const schnapsenImages: ImageArrayType = [img1, img2, img3, img4];
+
+  function toggleFxBtn (arg: string) {
     setIsHovering(arg)
   }
 
@@ -45,14 +48,14 @@ export default function BuyBuySchnapsen () {
       <div className="single__project__main__top">
         <span>Project Name:</span>
         <div className="single__project__title__div">
-          <TypewriterTitle text="Buy-Buy" />
+          <TypewriterTitle text="Schnapsen" />
         </div>
       </div>
       <div className="single__project__main__bottom">
         <div className="single__product__left">
           <div className="laptop__top">
             <img className="laptop__scr" src={laptop_top} alt="" />
-            <CarouselAnm/>
+            <CarouselAnm images={schnapsenImages}/>
           </div>
           <div className="laptop__bottom">
             <img className="laptop__img3" src={laptop_bottom} alt="" />
@@ -72,27 +75,13 @@ export default function BuyBuySchnapsen () {
         </div>
       <div className="single__product__right">
           <article className="product__description">
-            <span className="product__description--accent--pr">Buy-Buy</span> is an e-commerce website that sells imaginary musical instruments. It is created in <span className="product__description--accent">React</span> framework as an <span className="product__description--accent">SPA</span>  that renders on the client-side. It demonstrates the full functionality of a modern e-commerce website. <br /> <br /><span className="product__description--underline">Users can: </span> 
-            <ul>
-              <li>create and edit their account, search for products based on queries and filters,</li>
-              <li>add products to and remove them from their cart</li>
-              <li>view previously placed orders,</li>
-              <li>view and submit reviews on products,</li>
-              <li>and many more...</li>
-            </ul>
-              <br /> Buy-Buy Homepage is a part of a comprehensive project that also includes a <a href="">back-end</a> and an <a href="">administrative portal</a>. <br />  <br />Never provide any authentic data like personal info.
-              <br /> <br /> Cookies are only used for essential functionality like persistent log-in and shopping cart.
-              <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers.
+            <span className="product__description--accent--pr">Schnapsen</span> is a popular card game mainly in Bavaria, also known as <span className="product__description--accent"> Game of 66</span>. This project demonstrates a short 2-player version of this game, played agains a computer with a fixed difficulty. <br /> <br /> Player can choose between different textures for the table and different types of cards. The tutorial can be viewed anytime for a quick reference. The scoreboard displays the points of each player. The winner of 2 of 3 rounds wins! <br /> <br /> The project is build in <span className="product__description--accent">React</span> framework and intended only for wide-screen devices. <br /> <br />
+            → This project is an ongoing project. It will feature in the future an online-mode, which will be playable against another player. It will also include differen difficulty settings for the CPU.
           </article>
           <div className="used__tech__div">
           <img className="tech__icon__img" height={45} src={react_logo} alt="" />
             <img className="tech__icon__img" height={45} src={js_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={ts_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={css_logo} alt="" />
             <img className="tech__icon__img" height={45} src={sass_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={vitest_logo} alt="" />
-
-
           </div>
           <div className="view__product__btn__div">
             <button>VIEW PROJECT</button>

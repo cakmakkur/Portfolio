@@ -1,14 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 
-import img1 from "../Assets/carousel__images/buybuy_main/demo_buybuy_1.png";
-import img2 from "../Assets/carousel__images/buybuy_main/demo_buybuy_2.png";
-import img3 from "../Assets/carousel__images/buybuy_main/demo_buybuy_3.png";
-import img4 from "../Assets/carousel__images/buybuy_main/demo_buybuy_4.png";
+type CarouselProps = {
+  images: string[]
+}
 
-export default function CarouselAnm() {
+export default function MobileCarouselAnm({images}: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef(null);
-  const intervalRef = useRef(undefined);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<undefined | number>(undefined);
+
+  const extendedImages = [...images, images[0]]
+
 
   useEffect(() => {
     startSlide();
@@ -49,13 +51,9 @@ export default function CarouselAnm() {
   }, [currentIndex]);
 
   return (
-    <div className="carousel__wrapper">
-      <div ref={carouselRef} className="carousel__div">
-        <img loading="lazy" src={img1} alt="" />
-        <img loading="lazy" src={img2} alt="" />
-        <img loading="lazy" src={img3} alt="" />
-        <img loading="lazy" src={img4} alt="" />
-        <img loading="lazy" src={img1} alt="" />
+    <div className="mobile__carousel__wrapper">
+      <div ref={carouselRef} className="mobile__carousel__div">
+        {extendedImages.map((image, i) => (<img key={i} loading="lazy" src={image} alt="" />))}
       </div>
     </div>
   );

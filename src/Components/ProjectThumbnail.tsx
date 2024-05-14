@@ -3,7 +3,6 @@ import { useThemeContext } from "../GlobalContext/ThemeContext";
 import { Link } from "react-router-dom";
 
 import arrow from "../Assets/svg_repo/arrow_icon";
-import pr_buybuy from "../Assets/project_thumbnails/buybuy.png";
 import { icons } from "../Projects/projects";
 
 
