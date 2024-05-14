@@ -1,0 +1,53 @@
+// @use "variables" as *;
+
+.menu__nav__div {
+  display: flex;
+  justify-content: end;
+  column-gap: 2vw;
+  position: relative;
+  margin-bottom: 10px;
+  height: 40px;
+  align-items: center;
+}
+
+.logo_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu__home__btn {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 8px 16px;
+  transition: 0.2s;
+  color: var(--text);
+  cursor: pointer;
+  &:hover {
+    border-color: var(--text);
+    color: var(--menu-btn-tx-hl);
+  }
+}
+
+.menu__contact__btn {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 8px 16px;
+  transition: 0.2s;
+  color: var(--text);
+  cursor: pointer;
+  &:hover {
+    border-color: var(--text);
+    color: var(--menu-btn-tx-hl);
+  }
+}
+
+.lg_select {
+  background-color: inherit;
+  border: none;
+  color: var(--text);
+  height: 40px;
+  border-radius: 10px;
+  padding: 0px 16px;
+  cursor: pointer;
+}

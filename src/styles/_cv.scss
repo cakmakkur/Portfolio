@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.cv__div {
+  padding: 0px 30px;
+  width: 100%;
+  & section {
+    border: none;
+  }
+  & h1 {
+    color: var(--highlight);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--primary);
+  }
+}
+
+.cv__chapter__div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.cv__sub__top {
+  margin: 6vh 0px 4vh 0px;
+  color: var(--text);
+}
+
+.cv__sub__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  column-gap: 20px;
+  &__right {
+    font-size: 0.9rem;
+    color: var(--highlight);
+  }
+  &__left {
+    text-align: end;
+    font-size: 0.7rem;
+    color: var(--text);
+  }
+}

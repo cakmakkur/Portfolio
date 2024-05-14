@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+.carousel__wrapper {
+  // width: 438px;
+  // height: 250px;
+  // display: flex;
+  // overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel__div {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  transition: transform 1s ease-out;
+}
+
+.carousel_img {
+  padding-top: 5px;
+  padding-left: 4px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}

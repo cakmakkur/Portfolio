@@ -1,0 +1,35 @@
+$color-schemes: (
+  dark: (
+    highlight: rgb(209, 241, 252),
+    primary: rgb(151, 119, 37),
+    secondary: rgb(180, 225, 223),
+    background: rgb(58, 88, 99),
+    background-highlight: rgb(65, 99, 112),
+    text: rgb(150, 187, 200),
+    menu-btn-bg-hl: rgb(79, 111, 123),
+    menu-btn-tx-hl: rgb(209, 241, 252),
+    highlight-fx: rgb(158, 226, 168),
+  ),
+  light: (
+    // secondary: rgb(148, 117, 71),
+    secondary: rgb(0, 0, 0),
+    highlight: rgb(45, 158, 145),
+    primary: rgb(208, 159, 74),
+    background: rgb(243, 244, 240),
+    background-highlight: rgb(225, 228, 215),
+    text: rgb(123, 124, 98),
+    menu-btn-bg-hl: rgb(225, 228, 215),
+    menu-btn-tx-hl: rgb(208, 159, 74),
+    highlight-fx: rgb(200, 94, 80),
+  ),
+);
+
+@each $theme-name, $theme-properties in $color-schemes {
+  [data-theme="#{$theme-name}"] {
+    @each $property, $value in $theme-properties {
+      --#{$property}: #{$value};
+    }
+  }
+}
+
+$small: 1070px;

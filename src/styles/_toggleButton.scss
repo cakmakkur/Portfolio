@@ -1,0 +1,81 @@
+.menu__switch__div {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__switch__btn {
+  padding: 8px;
+  transition: 0.4s;
+  border-radius: 50%;
+  z-index: 50;
+  opacity: 1;
+  cursor: pointer;
+  &--closing {
+    & > :first-child {
+      opacity: 0;
+    }
+  }
+  & > :first-child {
+    color: var(--text);
+  }
+}
+
+.switch__options {
+  z-index: 20;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+  left: 0px;
+  width: 40px;
+  height: 0px;
+  border-radius: (0% 0% 48% 48%);
+  pointer-events: none;
+  & > :first-child {
+    color: var(--text);
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  &--open {
+    pointer-events: auto;
+    height: 52px;
+    z-index: 0;
+    & > :first-child {
+      opacity: 1;
+      transform: translateY(0px);
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &--closing {
+    z-index: 280;
+    border-radius: (50% 50% 48% 48%);
+    transform: translateY(-15px);
+    height: 24px;
+    & > :first-child {
+      opacity: 1;
+      transform: translateY(-16px);
+    }
+  }
+
+  &--transition {
+    transition: 0.3s;
+    & > :first-child {
+      transition: 0.3s;
+    }
+  }
+}
+
+.language__icon__svg {
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  width: 20px;
+}
