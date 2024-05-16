@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useScrollContext } from '../GlobalContext/ScrollPositionsContext'
 import { useThemeContext } from '../GlobalContext/ThemeContext'
 
@@ -8,16 +8,43 @@ import Cv from '../Components/Cv'
 import HomeChapterNav from '../Components/HomeChapterNav'
 import About from '../Components/About'
 
-import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
+// import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
 import placeholder_logo from "../Assets/icons/react.png"
+import github__logo from "../Assets/github-hp.png"
+import linked__in__logo from "../Assets/linkedin.svg"
 
 
 export default function Homepage () {
-  const {setProjectsPosition, setResumePosition, setCurrentScrollPosition, newScrollPosition} = useScrollContext()
+  const {setProjectsPosition, setResumePosition, setCurrentScrollPosition, setWindowWidth, windowWidth, newScrollPosition} = useScrollContext()
   const {theme} = useThemeContext()
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const sectionRightRef = useRef<HTMLDivElement>(null)
+
+  //starting animation
+  const mainPageRef = useRef<HTMLDivElement>(null)
+  const [initialLoad, setInitialLoad] =useState<boolean>(false)
+  useEffect(() => {
+    const mountedBefore = sessionStorage.getItem('pageMountedBefore')
+    console.log('checking load')
+    console.log(mountedBefore)
+    if (mountedBefore === 'true') {
+      if (!mainPageRef.current) return
+      mainPageRef.current.style.opacity = '1'
+    } else {
+      const timeoutId = setTimeout(() => {
+        sessionStorage.setItem('pageMountedBefore', 'true')
+          if (!mainPageRef.current) return
+          mainPageRef.current.style.opacity = '1'
+        }, 3200);
+        return () => {
+          clearTimeout(timeoutId)
+        }
+    }
+    setInitialLoad(true)
+  }, [initialLoad])
+  
+  
 
   const getScrollPositions = () => {
     const projectsCurrentPosition = document.getElementById('projects_start')?.offsetTop
@@ -27,6 +54,7 @@ export default function Homepage () {
 
     setProjectsPosition(projectsCurrentPosition - 10)
     setResumePosition(resumeCurrentPosition - 10)
+    setWindowWidth(window.innerWidth)
   }
 
   const updateCurrentScrollPosition = () => {
@@ -42,6 +70,7 @@ export default function Homepage () {
     return () => {
       window.removeEventListener('resize', getScrollPositions)
       scrollRef.current?.removeEventListener('scroll', updateCurrentScrollPosition);
+      setCurrentScrollPosition(0)
     };
   }, []);
 
@@ -68,16 +97,20 @@ export default function Homepage () {
   }, [theme])
 
   return (
-    <div className="home__main">
+    <div ref={mainPageRef} className="home__main">
       <section className="home__left">
         <div className="home__img_div">
           <img width={250} src={placeholder_logo} alt="" />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
         <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4>
-        <HomeChapterNav/>
-        <div className="home__chapters__display"></div>
+        {windowWidth > 1070 ? <HomeChapterNav/> : ""}
+        <div className="ext__links__div">
+          <img height={30} src={github__logo} alt="" />
+          <img height={30} src={linked__in__logo} alt="" />
+        </div>
       </section>
+      {windowWidth <= 1070 ? <HomeChapterNav/> : ""}
       <section ref={sectionRightRef} className="home__right">
         <div ref={scrollRef} className='home__right__scrollable'>
           <About/>

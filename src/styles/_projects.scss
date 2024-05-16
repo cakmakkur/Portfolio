@@ -1,8 +1,11 @@
-@use "variables";
+@import "variables";
 
 .projects__main__div {
   position: relative;
   width: 100%;
+  @include MOBILE {
+    padding-top: 10vh;
+  }
   & h1 {
     margin-bottom: 2vh;
     color: var(--highlight);
@@ -29,6 +32,7 @@
   }
   & p {
     margin-bottom: 3vh;
+    max-height: 150px;
   }
   &:hover {
     cursor: pointer;
@@ -84,4 +88,11 @@
   border-radius: 1px;
   transition: 0.3s;
   transform: rotate(-45deg);
+}
+
+.between_tn_bar {
+  width: 60%;
+  height: 1px;
+  margin: 0px 20%;
+  background-color: var(--secondary);
 }

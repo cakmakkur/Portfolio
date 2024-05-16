@@ -44,6 +44,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({title, route, img, technolo
 
   return (
     <Link to={route}>
+      <>
       <div
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -59,7 +60,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({title, route, img, technolo
             className="project__link__button"
           ></span>
           <span ref={arrowRef} className="project__link__arrow">
-            {arrow(theme.highlight)}
+            {arrow(theme.text)}
           </span>
 
           <p>
@@ -73,6 +74,8 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({title, route, img, technolo
           </div>
         </section>
       </div>
+      <div className="between_tn_bar"></div>
+      </>
     </Link>
   );
 }

@@ -2,7 +2,7 @@ import laptop_top from "../Assets/laptop_top.png"
 import laptop_bottom from "../Assets/laptop_bottom.png"
 import smartphone from "../Assets/smartphone.png"
 import githubIcon from "../Assets/github.svg"
-import youtubeIcon from "../Assets/youtube.svg"
+import playIcon from "../Assets/play.svg"
 
 import ts_logo from "../Assets/icons/ts.png";
 import sass_logo from "../Assets/icons/sass.png";
@@ -75,8 +75,8 @@ export default function BuyBuyHomepage () {
               </button>
             </div>
             <div ref={youtubeBtnRef} onMouseEnter={() => {toggleFxBtn('youtube')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
-            <button>Watch <span>Demo</span> on YouTube 
-              <img width={50} src={youtubeIcon} alt="" />
+            <button>Watch <span>Demo</span>
+              <img width={40} src={playIcon} alt="" />
             </button>
             </div>
           </div>

@@ -16,6 +16,7 @@ export default function HomeChapterNav() {
   const [ignoreScroll, setIgnoreScroll] = useState(false);
 
   const {
+    windowWidth,
     currentScrollPosition,
     projectsPosition,
     resumePosition,
@@ -61,23 +62,48 @@ export default function HomeChapterNav() {
   }, [currentChapter, isHovering, ignoreScroll]);
 
   const handleClick = (arg) => {
-    ignoreScrollCheck.current = true;
-    setIgnoreScroll(true);
+    if (windowWidth > 1070) {
+      ignoreScrollCheck.current = true;
+      setIgnoreScroll(true);
 
-    if (arg === "about") {
-      setNewScrollPosition(-10);
-    } else if (arg === "projects") {
-      setNewScrollPosition(projectsPosition);
+      if (arg === "about") {
+        setNewScrollPosition(-10);
+      } else if (arg === "projects") {
+        setNewScrollPosition(projectsPosition);
+      } else {
+        setNewScrollPosition(resumePosition);
+      }
+
+      setTimeout(() => {
+        ignoreScrollCheck.current = false;
+        setIgnoreScroll(false);
+      }, 600);
+
+      setCurrentChapter(arg);
     } else {
-      setNewScrollPosition(resumePosition);
+      if (arg === "about") {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      } else if (arg === "projects") {
+        document
+          .getElementById("projects_start")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        document
+          .getElementById("resume_start")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      setCurrentChapter("");
     }
-    setCurrentChapter(arg);
-
-    setTimeout(() => {
-      ignoreScrollCheck.current = false;
-      setIgnoreScroll(false);
-    }, 600);
   };
+
+  // don't 'highlight' current chapter in mobile mode
+  useEffect(() => {
+    if (window.innerWidth < 1070) setCurrentChapter("");
+  }, []);
 
   return (
     <div className="chapterNavDiv">

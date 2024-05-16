@@ -7,6 +7,16 @@
   justify-content: center;
 }
 
+.th__swich__div {
+  transition: 0.2s ease-out;
+  transform: translateY(-100px);
+}
+
+.lg__switch__div {
+  transition: 0.2s ease-out;
+  transform: translateY(-100px);
+}
+
 .menu__switch__btn {
   padding: 8px;
   transition: 0.4s;

@@ -1,3 +1,5 @@
+@import "variables";
+
 .chapterNavDiv {
   // border: 1px solid black;
   margin-top: 5vh;
@@ -6,6 +8,18 @@
   flex-direction: column;
   row-gap: 1vh;
   align-items: end;
+  @include MOBILE {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: 0.4s;
+    background-color: var(--background);
+  }
 }
 
 .chapterDiv {
@@ -27,6 +41,9 @@
   height: 1px;
   background-color: var(--text);
   margin-left: 15px;
+  @include MOBILE {
+    display: none;
+  }
 }
 
 .textSpan--active {

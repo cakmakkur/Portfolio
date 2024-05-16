@@ -1,3 +1,5 @@
+@import "variables";
+
 .home__main {
   //menu bar: 40px, margin: 10px, root padding: 2.5vw
   height: calc(100vh - 50px - 2.5vw);
@@ -8,6 +10,14 @@
   justify-content: center;
   overflow: hidden;
   color: var(--text);
+  //starting animation:
+  opacity: 0;
+  transition: 1s;
+  @include MOBILE {
+    flex-direction: column;
+    height: 100%;
+    overflow: visible;
+  }
   & section {
     width: 100%;
     height: 100%;
@@ -19,19 +29,45 @@
     font-size: 3rem;
     color: var(--highlight);
     padding: 2.5vh 0px;
+    @include adjustImage-small {
+      font-size: 2.5rem;
+      text-align: center;
+    }
   }
   & h4 {
     color: var(--primary);
+    @include adjustImage-small {
+      font-size: 1.2rem;
+      text-align: center;
+    }
   }
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.ext__links__div {
+  display: flex;
+  width: 100%;
+  margin-top: 6vh;
+  column-gap: 35px;
+  justify-content: center;
+  & img {
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 .home__right {
   // padding: 0px 30px;
   position: relative;
   overflow: hidden;
+  @include MOBILE {
+    overflow: visible;
+  }
   transition: 0.3s;
   &::before,
   &::after {

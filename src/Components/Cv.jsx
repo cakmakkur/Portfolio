@@ -4,7 +4,7 @@ export default function Cv() {
   const { theme } = useThemeContext();
 
   return (
-    <div className="cv__div">
+    <div id="resume_start" className="cv__div">
       <h1 id="cv_start">RESUME</h1>
       <div className="cv__chapter__div">
         <section
@@ -257,7 +257,7 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__bottom__right--light" : ""
             }`}
           >
-            Daycare for Children <br /> Sternenwerkstad, Divina Art
+            Daycare for Children <br /> Sternenwerkstatt, Divina Art
           </section>
         </section>
 

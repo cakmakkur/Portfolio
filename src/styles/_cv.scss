@@ -1,8 +1,12 @@
 @use "variables" as *;
+@import "variables";
 
 .cv__div {
   padding: 0px 30px;
   width: 100%;
+  @include MOBILE {
+    padding-top: 10vh;
+  }
   & section {
     border: none;
   }

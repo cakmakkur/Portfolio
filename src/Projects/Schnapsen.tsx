@@ -1,7 +1,7 @@
 import laptop_top from "../Assets/laptop_top.png"
 import laptop_bottom from "../Assets/laptop_bottom.png"
 import githubIcon from "../Assets/github.svg"
-import youtubeIcon from "../Assets/youtube.svg"
+import playIcon from "../Assets/play.svg"
 
 import js_logo from "../Assets/icons/js.png";
 import sass_logo from "../Assets/icons/sass.png";
@@ -67,8 +67,8 @@ export default function Schnapsen () {
               </button>
             </div>
             <div ref={youtubeBtnRef} onMouseEnter={() => {toggleFxBtn('youtube')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
-            <button>Watch <span>Demo</span> on YouTube 
-              <img width={50} src={youtubeIcon} alt="" />
+            <button>Watch <span>Demo</span>
+              <img width={40} src={playIcon} alt="" />
             </button>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Schnapsen () {
       <div className="single__product__right">
           <article className="product__description">
             <span className="product__description--accent--pr">Schnapsen</span> is a popular card game mainly in Bavaria, also known as <span className="product__description--accent"> Game of 66</span>. This project demonstrates a short 2-player version of this game, played agains a computer with a fixed difficulty. <br /> <br /> Player can choose between different textures for the table and different types of cards. The tutorial can be viewed anytime for a quick reference. The scoreboard displays the points of each player. The winner of 2 of 3 rounds wins! <br /> <br /> The project is build in <span className="product__description--accent">React</span> framework and intended only for wide-screen devices. <br /> <br />
-            → This project is an ongoing project. It will feature in the future an online-mode, which will be playable against another player. It will also include differen difficulty settings for the CPU.
+            <span className="product__description--accent">→</span> This project is an ongoing project. In the future it will feature an online-mode, which will be playable against another player. It will also include differen difficulty settings for the CPU.
           </article>
           <div className="used__tech__div">
           <img className="tech__icon__img" height={45} src={react_logo} alt="" />

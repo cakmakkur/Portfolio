@@ -1,7 +1,7 @@
 import { useThemeContext } from "../GlobalContext/ThemeContext";
 import darkModeIcon from "../Assets/dark_mode_icon";
 import lightModeIcon from "../Assets/light_mode_icon";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function ThemeToggleButton() {
   const [isThemeOpen, setIsThemeOpen] = useState(false);
@@ -10,6 +10,25 @@ export default function ThemeToggleButton() {
   const optionRef = useRef<HTMLSpanElement>(null);
   const currentRef = useRef<HTMLSpanElement>(null);
   const { theme, toggleTheme } = useThemeContext();
+
+
+  //beginning- sliding into position animation:
+  const buttonDivRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const mountedBefore = sessionStorage.getItem('pageMountedBefore')
+    if (mountedBefore === 'true') {
+      if (!buttonDivRef.current) return
+      buttonDivRef.current.style.transform = "translateY(0px)"
+      return
+    }
+    const timeoutId = setTimeout(() => {
+      if (!buttonDivRef.current) return
+      buttonDivRef.current.style.transform = "translateY(0px)"
+    }, 2900);
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
 
   const toggleThemeOptions = () => {
     setTransitionEnabled(true);
@@ -38,8 +57,10 @@ export default function ThemeToggleButton() {
     }, 300);
   };
 
+  
+
   return (
-    <div className="menu__switch__div">
+    <div ref={buttonDivRef} className="menu__switch__div th__swich__div">
       <span
         ref={currentRef}
         style={currentButtonStyles}

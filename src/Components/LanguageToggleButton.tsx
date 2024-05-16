@@ -1,5 +1,5 @@
 import { useThemeContext } from "../GlobalContext/ThemeContext";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 import languageIcon from "../Assets/language_icon";
 
@@ -11,6 +11,25 @@ export default function LanguageToggleButton() {
   const currentRef = useRef<HTMLSpanElement>(null);
   const { theme } = useThemeContext();
   const { language, toggleLanguage } = useLanguageContext();
+
+
+  //beginning- sliding into position animation:
+  const buttonDivRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const mountedBefore = sessionStorage.getItem('pageMountedBefore')
+    if (mountedBefore === 'true') {
+      if (!buttonDivRef.current) return
+      buttonDivRef.current.style.transform = "translateY(0px)"
+      return
+    }
+    const timeoutId = setTimeout(() => {
+      if (!buttonDivRef.current) return
+      buttonDivRef.current.style.transform = "translateY(0px)"
+    }, 2600);
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
 
   const toggleOptions = () => {
     setTransitionEnabled(true);
@@ -45,7 +64,7 @@ export default function LanguageToggleButton() {
   };
 
   return (
-    <div className="menu__switch__div">
+    <div ref={buttonDivRef} className="menu__switch__div lg__switch__div">
       {languageIcon(theme.text)}
       <span
         ref={currentRef}

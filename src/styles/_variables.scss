@@ -33,3 +33,23 @@ $color-schemes: (
 }
 
 $small: 1070px;
+$breakpoint-projectPage: 1230px;
+$breakpoint2-projectPage: 580px;
+
+@mixin MOBILE {
+  @media (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin adjustImage-medium {
+  @media (max-width: $breakpoint-projectPage) {
+    @content;
+  }
+}
+
+@mixin adjustImage-small {
+  @media (max-width: $breakpoint2-projectPage) {
+    @content;
+  }
+}
