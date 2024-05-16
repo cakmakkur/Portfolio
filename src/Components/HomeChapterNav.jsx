@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useScrollContext } from "../GlobalContext/ScrollPositionsContext";
+import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 export default function HomeChapterNav() {
   const [isHovering, setIsHovering] = useState("");
@@ -11,6 +12,7 @@ export default function HomeChapterNav() {
   const resumeTextRef = useRef(null);
 
   const [currentChapter, setCurrentChapter] = useState("about");
+  const { language } = useLanguageContext();
 
   const ignoreScrollCheck = useRef(false);
   const [ignoreScroll, setIgnoreScroll] = useState(false);
@@ -114,7 +116,7 @@ export default function HomeChapterNav() {
         onClick={() => handleClick("about")}
       >
         <span ref={aboutTextRef} className="textSpan">
-          About
+          {language === "EN" ? "About" : "Über mich"}
         </span>
         <div ref={aboutBarRef} className="barDiv"></div>
       </div>
@@ -126,7 +128,7 @@ export default function HomeChapterNav() {
           onClick={() => handleClick("projects")}
         >
           <span ref={projectsTextRef} className="textSpan">
-            Projects
+            {language === "EN" ? "Projects" : "Projekte"}
           </span>
           <div ref={projectsBarRef} className="barDiv"></div>
         </div>
@@ -139,7 +141,7 @@ export default function HomeChapterNav() {
           onClick={() => handleClick("resume")}
         >
           <span ref={resumeTextRef} className="textSpan">
-            Resumè
+            {language === "EN" ? "Resumè" : "Lebenslauf"}
           </span>
           <div ref={resumeBarRef} className="barDiv"></div>
         </div>

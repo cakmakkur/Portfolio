@@ -21,11 +21,14 @@ import TypewriterTitle from "../Animations/TypewriterTitle"
 import CarouselAnm from "../Animations/CarouselAnm";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguageContext } from "../GlobalContext/LanguageContext";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm"
 
 type ImageArrayType = string[]
 
 export default function BuyBuyHomepage () {
+  const {language} = useLanguageContext()
+
   const [isHovering, setIsHovering] = useState('')
   const githubBtnRef = useRef<HTMLDivElement>(null)
   const youtubeBtnRef = useRef<HTMLDivElement>(null)
@@ -52,8 +55,10 @@ export default function BuyBuyHomepage () {
   return (
     <div className="single__project__main">
       <div className="single__project__main__top">
-        <span>Project Name:</span>
-        <div className="single__project__title__div">
+      {language === 'EN' 
+          ? <span>Project Name:</span>
+          : <span>Projekttitel:</span>
+          }        <div className="single__project__title__div">
           <TypewriterTitle text="Portfolio (Current Website)" />
         </div>
       </div>
@@ -71,13 +76,21 @@ export default function BuyBuyHomepage () {
           <div className="laptop__shadow"></div>
           <div className="lefthand__links__div">
             <div ref={githubBtnRef} onMouseEnter={() => {toggleFxBtn('github')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
-              <button>Viev<span>Repository</span>on Github <img width={30} src={githubIcon} alt="" />
-              </button>
+            {language === 'EN'
+              ? <a>Go to<span>Github Repository</span> <img width={30} src={githubIcon} alt="" />
+              </a>
+              :  <a>Zum<span>Github</span> gehen <img style={{marginLeft: '20px'}} width={30} src={githubIcon} alt="" />
+              </a>
+            }
             </div>
             <div ref={youtubeBtnRef} onMouseEnter={() => {toggleFxBtn('youtube')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
-            <button>Watch <span>Demo</span>
+            {/* {language === 'EN'
+              ? <button>Watch<span>Demo</span>
               <img width={40} src={playIcon} alt="" />
             </button>
+              : <button><span>Beispielvideo</span>ansehen
+              <img width={40} style={{marginLeft: '20px'}} src={playIcon} alt="" />
+            </button>} */}
             </div>
           </div>
         </div>
@@ -104,9 +117,14 @@ export default function BuyBuyHomepage () {
           </div>
         </div>
       </div>
-      <div className="single__product__footer">
-        <span> Project Year: <span>2024</span> </span> &copy; Kürsat Cakmak
-      </div>
+      {language === 'EN'
+        ? <div className="single__product__footer">
+            <span> Project Year: <span>2024</span> </span> &copy; Kürsat Cakmak
+          </div>
+        : <div className="single__product__footer">
+            <span> Projektjahr: <span>2024</span> </span> &copy; Kürsat Cakmak
+          </div>
+      }
     </div>
   )
 }

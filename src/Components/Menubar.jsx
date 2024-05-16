@@ -5,9 +5,11 @@ import { useThemeContext } from "../GlobalContext/ThemeContext";
 import nameLogo__o from "../Assets/main-o.png";
 import nameLogo__b from "../Assets/main-b.png";
 import { useEffect, useRef } from "react";
+import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 export default function Menubar() {
   const { theme } = useThemeContext();
+  const { language } = useLanguageContext();
   const menuHomeBtnRef = useRef();
   const menuContactBtnRef = useRef();
   const logoImgRef = useRef();
@@ -58,7 +60,7 @@ export default function Menubar() {
         className={`menu__contact__btn`}
         to="/contact"
       >
-        CONTACT
+        {language === "EN" ? "CONTACT" : "KONTAKT"}
       </Link>
       <LanguageToggleButton />
       <ThemeToggleButton />

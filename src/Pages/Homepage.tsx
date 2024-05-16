@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from 'react'
 import { useScrollContext } from '../GlobalContext/ScrollPositionsContext'
 import { useThemeContext } from '../GlobalContext/ThemeContext'
+import { useLanguageContext } from "../GlobalContext/LanguageContext";
+
 
 import { projects} from "../Projects/projects"
 import ProjectThumbnail from '../Components/ProjectThumbnail'
@@ -17,6 +19,7 @@ import linked__in__logo from "../Assets/linkedin.svg"
 export default function Homepage () {
   const {setProjectsPosition, setResumePosition, setCurrentScrollPosition, setWindowWidth, windowWidth, newScrollPosition} = useScrollContext()
   const {theme} = useThemeContext()
+  const {language} = useLanguageContext()
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const sectionRightRef = useRef<HTMLDivElement>(null)
@@ -103,10 +106,12 @@ export default function Homepage () {
           <img width={250} src={placeholder_logo} alt="" />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
-        <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4>
+        {language === 'EN' ? <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4> : <h4>JUNIOR FRONT-END WEBENTWICKLER</h4>}
+        
         {windowWidth > 1070 ? <HomeChapterNav/> : ""}
         <div className="ext__links__div">
-          <img height={30} src={github__logo} alt="" />
+          <a href="https://github.com/cakmakkur"><img height={30} src={github__logo} alt="" /></a>
+          
           <img height={30} src={linked__in__logo} alt="" />
         </div>
       </section>
@@ -115,7 +120,7 @@ export default function Homepage () {
         <div ref={scrollRef} className='home__right__scrollable'>
           <About/>
           <div id="projects_start" className="projects__main__div">
-            <h1>Projects</h1>
+          {language === 'EN' ? <h1>Projects</h1> : <h1>Projekte</h1>}
             {projects.map((project, i) => (
               <ProjectThumbnail
                 key={i}
@@ -123,12 +128,13 @@ export default function Homepage () {
                 route={project.route} 
                 img={project.img}
                 technologies={project.technologies}
-                text={project.text}
+                text={language === 'EN' ? project.text[0] : project.text[1]}
               />
             ))}
           </div>
           <Cv/>
-          <a className='resume__dl__btn' download="MyResume.pdf" href="/public/Lebenslauf.pdf">DOWNLOAD RESUMÈ <br /> <span>as PDF File</span></a>
+          
+          <a className='resume__dl__btn' download="MyResume.pdf" href="/public/Lebenslauf.pdf">{language === 'EN' ? 'DOWNLOAD RESUMÈ' : 'LEBENSLAUF HERUNTERLADEN'} <br /> <span>{language === 'EN' ? 'as PDF File' : 'als PDF-Datei'}</span></a>
         </div>
       </section>
     </div>

@@ -13,6 +13,10 @@ import cssIcon from '../Assets/icons/css.png';
 import expressIcon from '../Assets/icons/express.png';
 import reactIcon from '../Assets/icons/react.png';
 
+// import { useLanguageContext } from "../GlobalContext/LanguageContext";
+// const {language} = useLanguageContext()
+
+
 export const icons: IconType = {
   ts: tsIcon,
   sass: sassIcon,
@@ -35,35 +39,50 @@ export const projects = [
     route: "/projects/buybuy-homepage",
     img: buybuyImg,
     technologies: ['react', 'ts', 'node', 'express', 'vitest', 'sass'],
-    text: "lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorempraesentium sint fugit expedita recusandae at, temporibus nostrum"
+    text: [
+      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+    ]
   },
   {
     title: "Buy-Buy Administrator",
     route: "/projects/buybuy-admin",
     img: buybuyAdminImg,
     technologies: ['react', 'node', 'sass', 'js', 'express'],
-    text: "lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorempraesentium sint fugit expedita recusandae at, temporibus nostrum"
+    text: [
+      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+    ]
   },
   {
     title: "Schnapsen",
     route: "/projects/schnapsen",
     img: schnapsenImg,
     technologies: ['react', 'js', 'sass'],
-    text: "lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorempraesentium sint fugit expedita recusandae at, temporibus nostrum"
+    text: [
+      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+    ]
   },
   {
     title: "Mondatelier",
     route: "/projects/mondatelier",
     img: mondatelierImg,
     technologies: ['js', 'css'],
-    text: "lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorempraesentium sint fugit expedita recusandae at, temporibus nostrum"
+    text: [
+      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+    ]
   },
   {
     title: "Portfolio",
     route: "/projects/portfolio",
     img: portfolioImg,
     technologies: ['react', 'sass', 'ts'],
-    text: "lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorempraesentium sint fugit expedita recusandae at, temporibus nostrum"
+    text: [
+      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+    ]
   }
 
 ]
