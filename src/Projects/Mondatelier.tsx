@@ -31,6 +31,7 @@ export default function BuyBuyHomepage () {
   const [isHovering, setIsHovering] = useState('')
   const githubBtnRef = useRef<HTMLDivElement>(null)
   const youtubeBtnRef = useRef<HTMLDivElement>(null)
+  const viewProductBtnRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLDivElement>(null)
 
 
@@ -46,11 +47,14 @@ export default function BuyBuyHomepage () {
   useEffect(() => {
     githubBtnRef.current?.classList.remove('button__wrapper--active')
     youtubeBtnRef.current?.classList.remove('button__wrapper--active')
+    viewProductBtnRef.current?.classList.remove('button__wrapper--active')
 
     if (isHovering === 'github') {
       githubBtnRef.current?.classList.add('button__wrapper--active')
     } else if (isHovering === 'youtube') {
       youtubeBtnRef.current?.classList.add('button__wrapper--active')
+    } else if (isHovering === 'viewProduct') {
+      viewProductBtnRef.current?.classList.add('button__wrapper--active')
     }
   }, [isHovering])
 
@@ -129,11 +133,14 @@ export default function BuyBuyHomepage () {
               <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers.
           </article>
           <div className="used__tech__div">
-          <img className="tech__icon__img" height={45} src={js_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={css_logo} alt="" />
+          <img className="tech__icon__img" height={35} src={js_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={css_logo} alt="" />
           </div>
           <div className="view__product__btn__div">
-            <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}</button>
+          <div ref={viewProductBtnRef} onMouseEnter={() => {toggleFxBtn('viewProduct')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper pr__button__wrapper">
+              <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
+              </button>
+            </div>
           </div>
           <div className="product__links__div">
           </div>

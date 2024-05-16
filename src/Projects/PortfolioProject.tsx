@@ -59,7 +59,7 @@ export default function BuyBuyHomepage () {
           ? <span>Project Name:</span>
           : <span>Projekttitel:</span>
           }        <div className="single__project__title__div">
-          <TypewriterTitle text="Portfolio (Current Website)" />
+          <TypewriterTitle text="Portfolio" />
         </div>
       </div>
       <div className="single__project__main__bottom">
@@ -109,9 +109,9 @@ export default function BuyBuyHomepage () {
               <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers.
           </article>
           <div className="used__tech__div">
-          <img className="tech__icon__img" height={45} src={react_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={sass_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={ts_logo} alt="" />
+          <img className="tech__icon__img" height={35} src={react_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={sass_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={ts_logo} alt="" />
           </div>
           <div className="product__links__div">
           </div>

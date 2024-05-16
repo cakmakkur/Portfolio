@@ -43,6 +43,10 @@
   @include MOBILE {
     padding: 0px;
     margin: 0px;
+    font-size: 3rem;
+  }
+  @include adjustImage-small {
+    font-size: 2rem;
   }
 }
 

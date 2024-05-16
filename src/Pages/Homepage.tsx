@@ -10,8 +10,8 @@ import Cv from '../Components/Cv'
 import HomeChapterNav from '../Components/HomeChapterNav'
 import About from '../Components/About'
 
-// import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
-import placeholder_logo from "../Assets/icons/react.png"
+import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
+// import placeholder_logo from "../Assets/icons/react.png"
 import github__logo from "../Assets/github-hp.png"
 import linked__in__logo from "../Assets/linkedin.svg"
 
@@ -62,16 +62,25 @@ export default function Homepage () {
 
   const updateCurrentScrollPosition = () => {
     if (!scrollRef.current) return
-    setCurrentScrollPosition(scrollRef.current.scrollTop)
+    if (window.innerWidth > 1070) {
+      setCurrentScrollPosition(scrollRef.current.scrollTop)
+    } else {
+      setCurrentScrollPosition(window.scrollY)
+    }
   }
 
   useEffect(() => {
     if (!scrollRef.current) return
-    scrollRef.current.addEventListener('scroll', updateCurrentScrollPosition);
+    if (window.innerWidth > 1070) {
+      scrollRef.current.addEventListener('scroll', updateCurrentScrollPosition);
+    } else {
+      window.addEventListener('scroll', updateCurrentScrollPosition)
+    }
     getScrollPositions();
     window.addEventListener('resize', getScrollPositions);
     return () => {
       window.removeEventListener('resize', getScrollPositions)
+      window.removeEventListener('scroll', updateCurrentScrollPosition)
       scrollRef.current?.removeEventListener('scroll', updateCurrentScrollPosition);
       setCurrentScrollPosition(0)
     };
@@ -103,7 +112,7 @@ export default function Homepage () {
     <div ref={mainPageRef} className="home__main">
       <section className="home__left">
         <div className="home__img_div">
-          <img width={250} src={placeholder_logo} alt="" />
+          <img width={250} src={lebenslauf_bild} alt="" />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
         {language === 'EN' ? <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4> : <h4>JUNIOR FRONT-END WEBENTWICKLER</h4>}

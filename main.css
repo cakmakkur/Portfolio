@@ -39,6 +39,7 @@
     flex-direction: column;
     height: 100%;
     overflow: visible;
+    padding: 10vh 0px;
   }
 }
 .home__main section {
@@ -235,6 +236,12 @@
   .typewriter {
     padding: 0px;
     margin: 0px;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 580px) {
+  .typewriter {
+    font-size: 2rem;
   }
 }
 
@@ -893,6 +900,11 @@
   border-radius: 2px;
   transition: 0.3s;
 }
+@media (max-width: 580px) {
+  .project__link__button {
+    display: none;
+  }
+}
 .project__link__button::after {
   content: "";
   position: absolute;
@@ -1121,7 +1133,7 @@
   height: 90%;
   z-index: 40;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 11px;
   display: flex;
   justify-content: center;
 }
@@ -1131,7 +1143,10 @@
   height: 97%;
   display: flex;
   transition: transform 1s ease-out;
-  margin: 1px 2px 2px 0px;
+  margin: 1px 1px 2px 0px;
+}
+.mobile__carousel__div img {
+  margin-top: 2.5px;
 }
 
 *,

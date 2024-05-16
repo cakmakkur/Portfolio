@@ -11,6 +11,16 @@ export default function MobileCarouselAnm({images}: CarouselProps) {
 
   const extendedImages = [...images, images[0]]
 
+  const [imageLoaded, setImageLoaded] = useState<boolean[]>(Array(images.length).fill(false));
+
+  const handleImageLoad = (index: number) => {
+    setImageLoaded(prev => {
+      const newLoaded = [...prev];
+      newLoaded[index] = true;
+      return newLoaded;
+    });
+  };
+
 
   useEffect(() => {
     startSlide();
@@ -53,7 +63,18 @@ export default function MobileCarouselAnm({images}: CarouselProps) {
   return (
     <div className="mobile__carousel__wrapper">
       <div ref={carouselRef} className="mobile__carousel__div">
-        {extendedImages.map((image, i) => (<img key={i} loading="lazy" src={image} alt="" />))}
+        {extendedImages.map((image, i) => (
+          <img
+            style={{
+            backgroundImage: imageLoaded[i] ? 'none' : "url('../Assets/main-o.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+            src={image}
+            alt=""
+            onLoad={() => handleImageLoad(i)}
+          />
+        ))}
       </div>
     </div>
   );

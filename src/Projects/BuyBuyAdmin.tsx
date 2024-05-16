@@ -29,6 +29,7 @@ export default function BuyBuyAdmin () {
   const [isHovering, setIsHovering] = useState('')
   const githubBtnRef = useRef<HTMLDivElement>(null)
   const youtubeBtnRef = useRef<HTMLDivElement>(null)
+  const viewProductBtnRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLDivElement>(null)
 
 
@@ -43,11 +44,14 @@ export default function BuyBuyAdmin () {
   useEffect(() => {
     githubBtnRef.current?.classList.remove('button__wrapper--active')
     youtubeBtnRef.current?.classList.remove('button__wrapper--active')
+    viewProductBtnRef.current?.classList.remove('button__wrapper--active')
 
     if (isHovering === 'github') {
       githubBtnRef.current?.classList.add('button__wrapper--active')
     } else if (isHovering === 'youtube') {
       youtubeBtnRef.current?.classList.add('button__wrapper--active')
+    } else if (isHovering === 'viewProduct') {
+      viewProductBtnRef.current?.classList.add('button__wrapper--active')
     }
   }, [isHovering])
 
@@ -122,15 +126,18 @@ export default function BuyBuyAdmin () {
             <a>Go git repo</a>
           </article>
           <div className="used__tech__div">
-          <img className="tech__icon__img" height={45} src={react_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={node_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={sass_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={js_logo} alt="" />
-            <img className="tech__icon__img" height={45} src={express_logo} alt="" />
+          <img className="tech__icon__img" height={35} src={react_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={node_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={sass_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={js_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={express_logo} alt="" />
 
           </div>
           <div className="view__product__btn__div">
-            <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}</button>
+          <div ref={viewProductBtnRef} onMouseEnter={() => {toggleFxBtn('viewProduct')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper pr__button__wrapper">
+              <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
+              </button>
+            </div>
           </div>
           <div className="product__links__div">
           </div>
