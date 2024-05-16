@@ -66,6 +66,9 @@
   border: 1px solid black;
   border-radius: 2px;
   transition: 0.3s;
+  @include adjustImage-small {
+    display: none;
+  }
   &::after {
     content: "";
     position: absolute;

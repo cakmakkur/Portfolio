@@ -40,6 +40,7 @@ export default function HomeChapterNav() {
   }, [currentScrollPosition, projectsPosition, resumePosition]);
 
   useEffect(() => {
+    // if (windowWidth < 1070) return;
     if (ignoreScrollCheck.current) return;
 
     aboutBarRef.current.classList.remove("barDiv--active");
@@ -93,19 +94,22 @@ export default function HomeChapterNav() {
         document
           .getElementById("projects_start")
           .scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
+      } else if (arg === "resume") {
         document
           .getElementById("resume_start")
           .scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        setCurrentChapter("");
+        return;
       }
-      setCurrentChapter("");
+      setCurrentChapter(arg);
     }
   };
 
   // don't 'highlight' current chapter in mobile mode
-  useEffect(() => {
-    if (window.innerWidth < 1070) setCurrentChapter("");
-  }, []);
+  // useEffect(() => {
+  //   if (window.innerWidth < 1070) setCurrentChapter("");
+  // }, []);
 
   return (
     <div className="chapterNavDiv">
