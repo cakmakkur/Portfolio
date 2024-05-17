@@ -27,8 +27,10 @@ import TypewriterTitle from "../Animations/TypewriterTitle"
 import CarouselAnm from "../Animations/CarouselAnm";
 
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { Link } from "react-router-dom"
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm"
+import Loading from "../Components/Loading"
 
 type ImageArrayType = string[]
 
@@ -143,14 +145,15 @@ export default function BuyBuyHomepage () {
           <article className="product__description">
             <span className="product__description--accent--pr">Buy-Buy</span> is an e-commerce website that sells imaginary musical instruments. It is created in <span className="product__description--accent">React</span> framework as an <span className="product__description--accent">SPA</span>  that renders on the client-side. It demonstrates the full functionality of a modern e-commerce website. <br /> <br /><span className="product__description--underline">Users can: </span> 
             <ul>
-              <li>create and edit their account, search for products based on queries and filters,</li>
+              <li>create and edit their account,</li> 
+              <li>search for products based on queries and filters,</li>
               <li>add products to and remove them from their cart</li>
               <li>view previously placed orders,</li>
               <li>view and submit reviews on products,</li>
               <li>and many more...</li>
             </ul>
-              <br /> Buy-Buy Homepage is a part of my comprehensive full-stack project Buy-Buy, a portfolio project that also includes a back-end and an <a href="">administrator\'s portal</a>. <br />  <br />Never provide any authentic data like personal info.
-              <br /> <br /> Cookies are only used for essential functionality like persistent log-in and shopping cart.
+              <br /> Buy-Buy Homepage is a part of my comprehensive full-stack project Buy-Buy, a portfolio project that also includes a back-end and an <Link to="/projects/buybuy-admin">administrator's portal</Link>. <br />  <br />Never provide any authentic data like personal info.
+              <br /> <br /> Cookies are only used for essential functionality of the website.
               <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers.
           </article>
           <div className="used__tech__div">
@@ -188,6 +191,7 @@ export default function BuyBuyHomepage () {
           : ""
         }
       </Suspense>
+      
     </div>
   )
 }
