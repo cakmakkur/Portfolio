@@ -3,6 +3,7 @@ import Menubar from "./Components/Menubar";
 import Homepage from "./Pages/Homepage";
 import ContactPage from "./Pages/ContactPage";
 import { lazy, Suspense } from "react";
+import Loading from "./Components/Loading";
 
 const BuyBuyHomepage = lazy(() => import("./Projects/BuyBuyHomepage"));
 const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
@@ -14,7 +15,8 @@ export default function App() {
   return (
     <div>
       <Menubar />
-      <Suspense fallback={<div>Loading...</div>}>
+
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Homepage />} />
 
