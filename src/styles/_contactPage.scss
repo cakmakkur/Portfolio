@@ -1,0 +1,116 @@
+@import "variables";
+
+.contact__page__main {
+  display: flex;
+  justify-content: center;
+  padding: 10vh 5vw 5vh;
+  column-gap: 10vw;
+  height: 83vh;
+  @include adjustContact-small {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    height: 100vh;
+  }
+}
+
+.sentSuccessfully {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  row-gap: 100px;
+  @include adjustImage-small {
+    row-gap: 50px;
+  }
+  & h3 {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    color: var(--primary);
+    @include adjustImage-small {
+      font-size: 1rem;
+    }
+    & img {
+      display: inline;
+      width: 30px;
+    }
+  }
+}
+
+.contact__form__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  row-gap: 15px;
+  & h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    @include adjustContact-small {
+      font-size: 2rem;
+    }
+  }
+  & h6 {
+    color: red;
+  }
+  & input,
+  & textarea {
+    background-color: var(--background);
+    border: 1px solid var(--background-highlight);
+    width: 300px;
+    color: var(--text);
+    padding-left: 10px;
+    &::placeholder {
+      color: var(--text);
+    }
+  }
+  & input {
+    height: 35px;
+    color: var(--highlight);
+  }
+  & textarea {
+    height: 180px;
+    color: var(--highlight);
+  }
+  & button {
+    background-color: var(--highlight);
+  }
+}
+
+.contact__label {
+  position: relative;
+}
+
+.form__ph__text {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.form__ph__text--active {
+  top: -8px;
+  background-color: var(--background);
+  padding: 0px 4px;
+  font-size: 0.7rem;
+}
+
+.contact__info__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 1vh;
+  color: var(--text);
+  & h2 {
+    color: var(--highlight);
+  }
+}
+
+.ext__links__div--contact {
+  margin-top: 15px;
+  justify-content: start;
+}

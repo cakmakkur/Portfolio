@@ -30,7 +30,6 @@ import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom"
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm"
-import Loading from "../Components/Loading"
 
 type ImageArrayType = string[]
 
@@ -142,20 +141,39 @@ export default function BuyBuyHomepage () {
             </div>
           </div>
           <div className="single__product__right">
-          <article className="product__description">
-            <span className="product__description--accent--pr">Buy-Buy</span> is an e-commerce website that sells imaginary musical instruments. It is created in <span className="product__description--accent">React</span> framework as an <span className="product__description--accent">SPA</span>  that renders on the client-side. It demonstrates the full functionality of a modern e-commerce website. <br /> <br /><span className="product__description--underline">Users can: </span> 
-            <ul>
-              <li>create and edit their account,</li> 
-              <li>search for products based on queries and filters,</li>
-              <li>add products to and remove them from their cart</li>
-              <li>view previously placed orders,</li>
-              <li>view and submit reviews on products,</li>
-              <li>and many more...</li>
-            </ul>
-              <br /> Buy-Buy Homepage is a part of my comprehensive full-stack project Buy-Buy, a portfolio project that also includes a back-end and an <Link to="/projects/buybuy-admin">administrator's portal</Link>. <br />  <br />Never provide any authentic data like personal info.
-              <br /> <br /> Cookies are only used for essential functionality of the website.
-              <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers.
-          </article>
+          {language === 'EN'
+            ? (
+              <article className="product__description">
+              <span className="product__description--accent--pr">Buy-Buy</span> is an e-commerce website that sells imaginary musical instruments. It is created in <span className="product__description--accent">React</span> framework as an <span className="product__description--accent">SPA</span>  that renders on the client-side. It demonstrates the full functionality of a modern e-commerce website. <br /> <br /><span className="product__description--underline">Users can: </span> 
+              <ul>
+                <li>create and edit their account,</li> 
+                <li>search for products based on queries and filters,</li>
+                <li>add products to and remove them from their cart</li>
+                <li>view previously placed orders,</li>
+                <li>view and submit reviews on products,</li>
+                <li>and many more...</li>
+              </ul>
+                <br /> Buy-Buy Homepage is a part of my comprehensive full-stack project Buy-Buy, a portfolio project that also includes a Express.js back-end and an <Link to="/projects/buybuy-admin">administrator's portal</Link>. <br />  <br /><span style={{fontSize: "0.8rem", fontWeight: "600"}}>→ While testing the website, don't provide any authentic data like personal info.</span>
+                <br /> <br /> This site doesn't use any tracking cookies. They are only used for essential functionality.
+                <br /> <br /> All the used assets like images and icons used are either created by me or sourced from novelty-free 3rd-party providers. Please consider asking for <Link to={"/contact"}>permission</Link> if you want to use an asset in your own projects.
+            </article>
+            )
+            : (
+                <article className="product__description">
+                  <span className="product__description--accent--pr">Buy-Buy</span> ist eine E-Commerce-Website, die imaginäre Musikinstrumente verkauft. Sie wurde mit dem <span className="product__description--accent">React</span> Framework als <span className="product__description--accent">SPA</span> erstellt, das clientseitig gerendert wird. Sie demonstriert die vollständige Funktionalität einer modernen E-Commerce-Website. <br /> <br /><span className="product__description--underline">Benutzer können: </span> 
+                  <ul>
+                    <li>ein Konto erstellen und bearbeiten,</li> 
+                    <li>nach Produkten basierend auf Anfragen und Filtern suchen,</li>
+                    <li>Produkte zum Warenkorb hinzufügen und daraus entfernen,</li>
+                    <li>frühere Bestellungen ansehen,</li>
+                    <li>Bewertungen zu Produkten ansehen und einreichen,</li>
+                    <li>und vieles mehr...</li>
+                  </ul>
+                  <br /> Die Buy-Buy Homepage ist Teil meines umfassenden Full-Stack-Projekts Buy-Buy, ein Portfolio-Projekt, das auch ein Express.js Backend und ein <Link to="/projects/buybuy-admin">Administrationsportal</Link> umfasst. <br />  <br /><span style={{fontSize: "0.8rem", fontWeight: "600"}}>→ Beim Testen der Website bitte keine echten Daten wie persönliche Informationen angeben.</span>
+                  <br /> <br /> Diese Seite verwendet keine Tracking-Cookies. Sie werden nur für essentielle Funktionen verwendet.
+                  <br /> <br /> Alle verwendeten Assets wie Bilder und Symbole wurden entweder von mir erstellt oder stammen von gebührenfreien Drittanbietern. Bitte erwägen Sie, um <Link to={"/contact"}>Erlaubnis</Link> zu bitten, wenn Sie ein Asset in Ihren eigenen Projekten verwenden möchten.
+                </article>
+            )}
           <div className="used__tech__div">
           <img className="tech__icon__img" height={35} src={react_logo} alt="" />
             <img className="tech__icon__img" height={35} src={ts_logo} alt="" />
@@ -166,8 +184,8 @@ export default function BuyBuyHomepage () {
           </div>
           <div className="view__product__btn__div">
             <div ref={viewProductBtnRef} onMouseEnter={() => {toggleFxBtn('viewProduct')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper pr__button__wrapper">
-              <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
-              </button>
+              <a href="https://buybuy.cakmakkursat.com/" className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
+              </a>
             </div>
           </div>
           <div className="product__links__div">
@@ -191,7 +209,6 @@ export default function BuyBuyHomepage () {
           : ""
         }
       </Suspense>
-      
     </div>
   )
 }

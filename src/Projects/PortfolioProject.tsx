@@ -2,7 +2,6 @@ import laptop_top from "../Assets/laptop_top.png"
 import laptop_bottom from "../Assets/laptop_bottom.png"
 import smartphone from "../Assets/smartphone.png"
 import githubIcon from "../Assets/github.svg"
-import playIcon from "../Assets/play.svg"
 
 import ts_logo from "../Assets/icons/ts.png";
 import sass_logo from "../Assets/icons/sass.png";
@@ -77,20 +76,11 @@ export default function BuyBuyHomepage () {
           <div className="lefthand__links__div">
             <div ref={githubBtnRef} onMouseEnter={() => {toggleFxBtn('github')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
             {language === 'EN'
-              ? <a>Go to<span>Github Repository</span> <img width={30} src={githubIcon} alt="" />
+              ? <a href="https://github.com/cakmakkur/Portfolio">Go to<span>Github Repository</span> <img width={30} src={githubIcon} alt="" />
               </a>
               :  <a>Zum<span>Github</span> gehen <img style={{marginLeft: '20px'}} width={30} src={githubIcon} alt="" />
               </a>
             }
-            </div>
-            <div ref={youtubeBtnRef} onMouseEnter={() => {toggleFxBtn('youtube')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
-            {/* {language === 'EN'
-              ? <button>Watch<span>Demo</span>
-              <img width={40} src={playIcon} alt="" />
-            </button>
-              : <button><span>Beispielvideo</span>ansehen
-              <img width={40} style={{marginLeft: '20px'}} src={playIcon} alt="" />
-            </button>} */}
             </div>
           </div>
         </div>

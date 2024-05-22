@@ -8,16 +8,17 @@ export default function Loading() {
     top: "0",
     left: "0",
     display: "flex",
-    // justifyContent: "center",
-    // alighItems: "center"
-    objectFit: "contain",
+    justifyContent: "center",
+    alignItems: "center",
   };
-  // const imageStyle = {
-
-  // }
+  const imageStyle = {
+    width: "30vw",
+    height: "30vw",
+    opacity: "0.01",
+  };
   return (
-    <div>
-      <img style={loadingPageStyle} src={logo} alt="" />
+    <div style={loadingPageStyle}>
+      <img style={imageStyle} src={logo} alt="" />
     </div>
   );
 }

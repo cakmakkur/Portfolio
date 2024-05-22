@@ -40,7 +40,6 @@ export default function HomeChapterNav() {
   }, [currentScrollPosition, projectsPosition, resumePosition]);
 
   useEffect(() => {
-    // if (windowWidth < 1070) return;
     if (ignoreScrollCheck.current) return;
 
     aboutBarRef.current.classList.remove("barDiv--active");
@@ -105,11 +104,6 @@ export default function HomeChapterNav() {
       setCurrentChapter(arg);
     }
   };
-
-  // don't 'highlight' current chapter in mobile mode
-  // useEffect(() => {
-  //   if (window.innerWidth < 1070) setCurrentChapter("");
-  // }, []);
 
   return (
     <div className="chapterNavDiv">
