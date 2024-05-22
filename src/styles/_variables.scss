@@ -35,6 +35,7 @@ $color-schemes: (
 $small: 1070px;
 $breakpoint-projectPage: 1230px;
 $breakpoint2-projectPage: 580px;
+$breakpoint-contactPage: 800px;
 
 @mixin MOBILE {
   @media (max-width: $small) {
@@ -50,6 +51,12 @@ $breakpoint2-projectPage: 580px;
 
 @mixin adjustImage-small {
   @media (max-width: $breakpoint2-projectPage) {
+    @content;
+  }
+}
+
+@mixin adjustContact-small {
+  @media (max-width: $breakpoint-contactPage) {
     @content;
   }
 }

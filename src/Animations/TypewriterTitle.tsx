@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
-export default function TypewriterTitle({ text, speed = 300 }) {
+type PropTypes = {
+  text: string,
+  speed?: number
+}
+
+export default function TypewriterTitle({ text, speed = 300 }: PropTypes) {
   const [index, setIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [cursor, setCursor] = useState(" ");
@@ -35,14 +40,14 @@ export default function TypewriterTitle({ text, speed = 300 }) {
   useEffect(() => {
     let speed = index > text.length - 1 ? 600 : 300;
 
-    let timeoutId;
+    let timeoutId: number;
     if (cursor === "_") {
-      timeoutId = setTimeout(() => {
+      timeoutId = window.setTimeout(() => {
         setCursor(" ");
       }, speed);
       return () => clearTimeout(timeoutId);
     } else {
-      timeoutId = setTimeout(() => {
+      timeoutId = window.setTimeout(() => {
         setCursor("_");
       }, speed);
       return () => clearTimeout(timeoutId);

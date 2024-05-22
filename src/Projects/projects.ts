@@ -40,8 +40,8 @@ export const projects = [
     img: buybuyImg,
     technologies: ['react', 'ts', 'node', 'express', 'vitest', 'sass'],
     text: [
-      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+      "Buy-Buy is a modern e-commerce website that offers musical instruments from pianos to drums and more...",
+      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet."
     ]
   },
   {
@@ -50,8 +50,8 @@ export const projects = [
     img: buybuyAdminImg,
     technologies: ['react', 'node', 'sass', 'js', 'express'],
     text: [
-      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+      "Buy-Buy-Admin is the administrator's portal that takes care of editing, adding and removing the products.",
+      "Buy-Buy-Admin ist die Admin-Plattform von Buy-Buy, die Inventarmanagement erleichtert."
     ]
   },
   {
@@ -60,8 +60,8 @@ export const projects = [
     img: schnapsenImg,
     technologies: ['react', 'js', 'sass'],
     text: [
-      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+      "Schnapsen is a small version of a well-known card game 66.",
+      "Schnapsen ist eine kleine Version eines wohlbekannten Kartenspiels Schnapsen"
     ]
   },
   {
@@ -70,8 +70,8 @@ export const projects = [
     img: mondatelierImg,
     technologies: ['js', 'css'],
     text: [
-      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+      "Mondatelier is currently a personal exhibition platform that will turn itself into an artists' gathering platform.",
+      "Aktuell ist Mondatelier eine persönliche Ausstellungsseite, die sich noch in Entwicklung zu einer Künstlerplattform befindet"
     ]
   },
   {
@@ -80,8 +80,8 @@ export const projects = [
     img: portfolioImg,
     technologies: ['react', 'sass', 'ts'],
     text: [
-      "Buy-Buy is an e-commerce website that sells different musical instruments from pianos to drums.",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet. "
+      "Portfolio is a personal portfolio website, coded by me. It is also available as standalone template",
+      "Portfolio ist mein persönliches Portfolio. Es ist auch als Vorlage erhältlich."
     ]
   }
 

@@ -114,17 +114,35 @@ export default function BuyBuyAdmin () {
           </div>
         </div>
       <div className="single__product__right">
-          <article className="product__description">
-            <span className="product__description--accent--pr">Buy-Buy Admin</span> is the administrator\'s portal of Buy-Buy, a comprehensive full-stack portfolio project that also includes a homepage and a server. <br /> <br /> On this portal, administrators can:
-            <ul>
-              <li>edit data of the existing products,</li>
-              <li>create new products.</li>
-            </ul>
-            
-            <span className="product__description--accent">React</span> <br /> <br />
-            An Express.js server powers both the homepage and the admin\'s portal. It also hosts a simple database of products, reviews and users, handles their data securely and efficiently.
-            <a>Go git repo</a>
-          </article>
+            {language === 'EN'
+              ? (
+                <article className="product__description">
+                <span className="product__description--accent--pr">Buy-Buy Admin</span> is the administrator\'s portal of Buy-Buy, a comprehensive full-stack portfolio project that also includes a homepage and a server. <br /> <br /> On this portal, administrators can:
+                <ul>
+                  <li>edit data of the existing products,</li>
+                  <li>create new products.</li>
+                </ul>
+                
+                <span className="product__description--accent">React</span> <br /> <br />
+                An Express.js server powers both the homepage and the admin's portal. It also hosts a simple database for products, reviews and users info, handles their data securely and efficiently.
+                The source code of the server can be viewed on a separate <a href="https://github.com/cakmakkur/buy-buy__server">Github Repository</a>.
+              </article>
+              )
+              : (
+                <article className="product__description">
+                  <span className="product__description--accent--pr">Buy-Buy Admin</span> ist das Administratorenportal von Buy-Buy, einem umfassenden Full-Stack-Portfolio-Projekt, das auch eine Homepage und einen Server umfasst. <br /> <br /> Auf diesem Portal können Administratoren:
+                  <ul>
+                    <li>Daten bestehender Produkte bearbeiten,</li>
+                    <li>neue Produkte erstellen.</li>
+                  </ul>
+                  
+                  <span className="product__description--accent">React</span> <br /> <br />
+                  Ein Express.js-Server betreibt sowohl die Homepage als auch das Administratorenportal. Er hostet auch eine einfache Datenbank für Produkte, Bewertungen und Benutzerinformationen, und verwaltet deren Daten sicher und effizient.
+                  Der Quellcode des Servers kann in einem separaten <a href="https://github.com/cakmakkur/buy-buy__server">Github-Repository</a> eingesehen werden.
+                </article>
+
+              )
+            }
           <div className="used__tech__div">
           <img className="tech__icon__img" height={35} src={react_logo} alt="" />
             <img className="tech__icon__img" height={35} src={node_logo} alt="" />
@@ -135,8 +153,8 @@ export default function BuyBuyAdmin () {
           </div>
           <div className="view__product__btn__div">
           <div ref={viewProductBtnRef} onMouseEnter={() => {toggleFxBtn('viewProduct')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper pr__button__wrapper">
-              <button className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
-              </button>
+              <a href="https://buybuy-admin.cakmakkursat.com/" className="view__product__btn">{language === 'EN' ? 'VIEW PROJECT' : 'PROJEKT ANSEHEN'}
+              </a>
             </div>
           </div>
           <div className="product__links__div">

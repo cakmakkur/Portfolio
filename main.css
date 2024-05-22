@@ -561,6 +561,7 @@
   box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.379);
   color: var(--background);
   background-color: var(--highlight);
+  padding-top: 7px;
 }
 .view__product__btn:hover {
   cursor: pointer;
@@ -658,6 +659,152 @@
   width: 80vw;
   z-index: 370;
   pointer-events: auto;
+}
+
+[data-theme=dark] {
+  --highlight: rgb(209, 241, 252);
+  --primary: rgb(151, 119, 37);
+  --secondary: rgb(180, 225, 223);
+  --background: rgb(58, 88, 99);
+  --background-highlight: rgb(65, 99, 112);
+  --text: rgb(150, 187, 200);
+  --menu-btn-bg-hl: rgb(79, 111, 123);
+  --menu-btn-tx-hl: rgb(209, 241, 252);
+  --highlight-fx: rgb(158, 226, 168);
+}
+
+[data-theme=light] {
+  --secondary: rgb(0, 0, 0);
+  --highlight: rgb(45, 158, 145);
+  --primary: rgb(208, 159, 74);
+  --background: rgb(243, 244, 240);
+  --background-highlight: rgb(225, 228, 215);
+  --text: rgb(123, 124, 98);
+  --menu-btn-bg-hl: rgb(225, 228, 215);
+  --menu-btn-tx-hl: rgb(208, 159, 74);
+  --highlight-fx: rgb(200, 94, 80);
+}
+
+.contact__page__main {
+  display: flex;
+  justify-content: center;
+  padding: 10vh 5vw 5vh;
+  column-gap: 10vw;
+  height: 83vh;
+}
+@media (max-width: 800px) {
+  .contact__page__main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    height: 100vh;
+  }
+}
+
+.sentSuccessfully {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  row-gap: 100px;
+}
+@media (max-width: 580px) {
+  .sentSuccessfully {
+    row-gap: 50px;
+  }
+}
+.sentSuccessfully h3 {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  color: var(--primary);
+}
+@media (max-width: 580px) {
+  .sentSuccessfully h3 {
+    font-size: 1rem;
+  }
+}
+.sentSuccessfully h3 img {
+  display: inline;
+  width: 30px;
+}
+
+.contact__form__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  row-gap: 15px;
+}
+.contact__form__div h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .contact__form__div h1 {
+    font-size: 2rem;
+  }
+}
+.contact__form__div h6 {
+  color: red;
+}
+.contact__form__div input, .contact__form__div textarea {
+  background-color: var(--background);
+  border: 1px solid var(--background-highlight);
+  width: 300px;
+  color: var(--text);
+  padding-left: 10px;
+}
+.contact__form__div input::placeholder, .contact__form__div textarea::placeholder {
+  color: var(--text);
+}
+.contact__form__div input {
+  height: 35px;
+  color: var(--highlight);
+}
+.contact__form__div textarea {
+  height: 180px;
+  color: var(--highlight);
+}
+.contact__form__div button {
+  background-color: var(--highlight);
+}
+
+.contact__label {
+  position: relative;
+}
+
+.form__ph__text {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.form__ph__text--active {
+  top: -8px;
+  background-color: var(--background);
+  padding: 0px 4px;
+  font-size: 0.7rem;
+}
+
+.contact__info__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 1vh;
+  color: var(--text);
+}
+.contact__info__div h2 {
+  color: var(--highlight);
+}
+
+.ext__links__div--contact {
+  margin-top: 15px;
+  justify-content: start;
 }
 
 .menu__nav__div {
@@ -1112,7 +1259,7 @@
 .carousel__wrapper {
   padding-top: 5px;
   padding-left: 3px;
-  width: 100%;
+  width: 99.5%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;

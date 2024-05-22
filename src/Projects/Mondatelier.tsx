@@ -3,7 +3,7 @@ import laptop_bottom from "../Assets/laptop_bottom.png"
 import smartphone from "../Assets/smartphone.png"
 import githubIcon from "../Assets/github.svg"
 import playIcon from "../Assets/play.svg"
-
+import check__green from "../Assets/checkLogo-green.svg"
 import js_logo from "../Assets/icons/js.png";
 import css_logo from "../Assets/icons/css.png";
 
@@ -97,7 +97,14 @@ export default function BuyBuyHomepage () {
           <div className="laptop__bottom">
             <img className="laptop__img3" src={laptop_bottom} alt="" />
           </div>
-          <div className="laptop__shadow"></div>
+          <div className="laptop__shadow">
+          <div className="feature__checks">
+            <div>
+              <img height={15} src={check__green} alt="green check icon" /> Responsive Design
+            </div>
+          </div>
+          </div>
+
           <div className="lefthand__links__div">
             <div ref={githubBtnRef} onMouseEnter={() => {toggleFxBtn('github')}} onMouseLeave={() => {toggleFxBtn('')}} className="button__wrapper">
             {language === 'EN'
