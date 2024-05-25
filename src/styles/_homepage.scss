@@ -79,7 +79,7 @@
     height: 100px;
     position: absolute;
     height: 30px;
-    width: 100%;
+    width: 95%;
     z-index: 2;
     background: linear-gradient(
       to top,
@@ -109,7 +109,17 @@
 .home__right__scrollable {
   padding-top: 5vh;
   &::-webkit-scrollbar {
-    display: none;
+    background-color: var(--background);
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-highlight);
+    border-radius: 10px;
+  }
+  @include MOBILE {
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   overflow-y: auto;
   max-height: 100%;

@@ -1,6 +1,6 @@
-import projectVideo from "../../Assets/projectVideos/buybuy_demo.mp4";
+import projectVideo from "../../Assets/projectVideos/buybuy_admin_demo.mp4";
 
-export default function BuyBuyMainVideo() {
+export default function BuyBuyAdminVideo() {
   return (
     <video controls>
       <source src={projectVideo} type="video/mp4" />
