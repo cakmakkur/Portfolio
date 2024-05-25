@@ -158,15 +158,27 @@ export default function Homepage() {
           </div>
           <Cv />
 
-          <a
-            className="resume__dl__btn"
-            download="MyResume.pdf"
-            href="/lebenslauf.pdf"
-          >
-            {language === "EN" ? "DOWNLOAD RESUMÈ" : "LEBENSLAUF HERUNTERLADEN"}{" "}
-            <br />{" "}
-            <span>{language === "EN" ? "as PDF File" : "als PDF-Datei"}</span>
-          </a>
+          {language === "EN" ? (
+            <a
+              className="resume__dl__btn"
+              download="MyResume.pdf"
+              href="/resume_kursat_cakmak.pdf"
+            >
+              DOWNLOAD RESUMÈ
+              <br />
+              <span>as PDF File</span>
+            </a>
+          ) : (
+            <a
+              className="resume__dl__btn"
+              download="MyResume.pdf"
+              href="/lebenslauf_kursat_cakmak.pdf"
+            >
+              LEBENSLAUF HERUNTERLADEN
+              <br />
+              <span>als PDF-Datei</span>
+            </a>
+          )}
         </div>
       </section>
     </div>
