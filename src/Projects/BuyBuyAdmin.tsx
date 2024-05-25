@@ -159,21 +159,32 @@ export default function BuyBuyAdmin() {
               </span>{" "}
               is the administrator\'s portal of Buy-Buy, a comprehensive
               full-stack portfolio project that also includes a homepage and a
-              server. <br /> <br /> On this portal, administrators can:
+              server. <br /> <br />{" "}
+              <span className="product__description--underline">
+                On this portal, administrators can:
+              </span>
               <ul>
                 <li>edit data of the existing products,</li>
                 <li>create new products.</li>
               </ul>
               <span className="product__description--accent">React</span> <br />{" "}
               <br />
-              An Express.js server powers both the homepage and the admin's
-              portal. It also hosts a simple database for products, reviews and
-              users info, handles their data securely and efficiently. The
-              source code of the server can be viewed on a separate{" "}
+              <span className="product__description--accent">
+                The Express.js
+              </span>{" "}
+              server that runs on Amazon EC2 powers both the homepage and the
+              admin's portal. It also hosts a simple database for products,
+              reviews and users info, handles their data securely and
+              efficiently. The source code of the server can be viewed on a
+              separate{" "}
               <a href="https://github.com/cakmakkur/buy-buy__server">
-                Github Repository
-              </a>
-              .
+                Github Repository.
+              </a>{" "}
+              <br /> <br />
+              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
+                → Due to the small-scale nature of this project, server
+                interruptions may take place. Please contact me in such case.
+              </span>
             </article>
           ) : (
             <article className="product__description">
@@ -182,23 +193,33 @@ export default function BuyBuyAdmin() {
               </span>{" "}
               ist das Administratorenportal von Buy-Buy, einem umfassenden
               Full-Stack-Portfolio-Projekt, das auch eine Homepage und einen
-              Server umfasst. <br /> <br /> Auf diesem Portal können
-              Administratoren:
+              Server umfasst. <br /> <br />{" "}
+              <span className="product__description--underline">
+                Auf diesem Portal können Administratoren:
+              </span>
               <ul>
                 <li>Daten bestehender Produkte bearbeiten,</li>
                 <li>neue Produkte erstellen.</li>
               </ul>
               <span className="product__description--accent">React</span> <br />{" "}
               <br />
-              Ein Express.js-Server betreibt sowohl die Homepage als auch das
-              Administratorenportal. Er hostet auch eine einfache Datenbank für
-              Produkte, Bewertungen und Benutzerinformationen, und verwaltet
-              deren Daten sicher und effizient. Der Quellcode des Servers kann
-              in einem separaten{" "}
+              Der{" "}
+              <span className="product__description--accent">
+                Express.js Server
+              </span>{" "}
+              betreibt sowohl die Homepage als auch das Administratorenportal.
+              Er hostet auch eine einfache Datenbank für Produkte, Bewertungen
+              und Benutzerinformationen, und verwaltet deren Daten sicher und
+              effizient. Der Quellcode des Servers kann in einem separaten{" "}
               <a href="https://github.com/cakmakkur/buy-buy__server">
                 Github-Repository
               </a>{" "}
-              eingesehen werden.
+              eingesehen werden. <br /> <br />
+              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
+                → Aufgrund der kleinen Größe dieses Projekts können
+                Serverunterbrechungen auftreten. Bitte kontaktieren Sie mich in
+                einem solchen Fall.
+              </span>
             </article>
           )}
           <div className="used__tech__div">

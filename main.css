@@ -139,6 +139,9 @@
   background-color: var(--background-highlight);
   border-radius: 10px;
 }
+.home__right__scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text);
+}
 @media (max-width: 1070px) {
   .home__right__scrollable::-webkit-scrollbar {
     display: none;
@@ -389,6 +392,7 @@
   border-radius: 10px;
   margin-bottom: 3vh;
   background-color: var(--background);
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.399);
   font-size: 1.1rem;
   font-weight: 600;
   z-index: 20;
@@ -523,6 +527,9 @@
 .product__description::-webkit-scrollbar-thumb {
   background-color: var(--background-highlight);
   border-radius: 10px;
+}
+.product__description::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text);
 }
 .product__description--accent--pr {
   color: var(--secondary);
@@ -967,6 +974,7 @@
   text-align: end;
   font-size: 0.7rem;
   color: var(--text);
+  margin-top: 3px;
 }
 
 [data-theme=dark] {
