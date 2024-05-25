@@ -6,6 +6,8 @@
   padding: 10vh 5vw 5vh;
   column-gap: 10vw;
   height: 83vh;
+  box-shadow: inset -0px 0px 15px 3px var(--text);
+  border-radius: 10px;
   @include adjustContact-small {
     flex-direction: column;
     align-items: center;

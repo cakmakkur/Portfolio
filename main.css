@@ -691,6 +691,8 @@
   padding: 10vh 5vw 5vh;
   column-gap: 10vw;
   height: 83vh;
+  box-shadow: inset 0px 0px 15px 3px var(--text);
+  border-radius: 10px;
 }
 @media (max-width: 800px) {
   .contact__page__main {
@@ -997,15 +999,21 @@
 }
 
 .project__div {
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px;
   width: calc(100% - 30px);
-  height: 250px;
+  height: 220px;
   transition: 0.3s;
   border-radius: 7px;
-  margin: 6vh 15px 6vh 15px;
+  margin: 3vh 15px;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   column-gap: 10px;
+}
+@media (max-width: 1070px) {
+  .project__div {
+    margin: 3vh 15px;
+    height: 250px;
+  }
 }
 .project__div h4 {
   transition: 0.3s;
@@ -1014,6 +1022,11 @@
 .project__div p {
   margin-bottom: 3vh;
   max-height: 150px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .project__div:hover {
   cursor: pointer;
