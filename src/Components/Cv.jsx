@@ -541,7 +541,7 @@ export default function Cv() {
               }`}
             >
               Elektrotechnik <br />
-              Technische Universität Istanbul <br />
+              Technische Universität Istanbul
               <br /> (nicht abgeschlossen)
             </section>
           </section>

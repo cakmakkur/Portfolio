@@ -11,7 +11,7 @@ import HomeChapterNav from '../Components/HomeChapterNav'
 import About from '../Components/About'
 
 import lebenslauf_bild from '../Assets/lebenslauf_bild.png'
-import placeholder_logo from "../Assets/icons/react.png"
+// import placeholder_logo from "../Assets/icons/react.png"
 import github__logo from "../Assets/github-hp.png"
 import linked__in__logo from "../Assets/linkedin.svg"
 
@@ -112,7 +112,7 @@ export default function Homepage () {
     <div ref={mainPageRef} className="home__main">
       <section className="home__left">
         <div className="home__img_div">
-          <img width={250} src={placeholder_logo} alt="" />
+          <img width={250} src={lebenslauf_bild} alt="" />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
         {language === 'EN' ? <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4> : <h4>JUNIOR FRONT-END WEBENTWICKLER</h4>}
