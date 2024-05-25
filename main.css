@@ -104,7 +104,7 @@
   height: 100px;
   position: absolute;
   height: 30px;
-  width: 100%;
+  width: 95%;
   z-index: 2;
   background: linear-gradient(to top, var(--background) 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -132,7 +132,17 @@
   row-gap: 10vh;
 }
 .home__right__scrollable::-webkit-scrollbar {
-  display: none;
+  background-color: var(--background);
+  width: 10px;
+}
+.home__right__scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--background-highlight);
+  border-radius: 10px;
+}
+@media (max-width: 1070px) {
+  .home__right__scrollable::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .about__text {
@@ -659,6 +669,7 @@
   width: 80vw;
   z-index: 370;
   pointer-events: auto;
+  max-height: 80%;
 }
 
 [data-theme=dark] {
