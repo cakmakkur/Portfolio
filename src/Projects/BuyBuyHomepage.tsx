@@ -188,7 +188,7 @@ export default function BuyBuyHomepage() {
               framework as an{" "}
               <span className="product__description--accent">SPA</span> that
               renders on the client-side. It demonstrates the full functionality
-              of a modern e-commerce website. <br /> <br />
+              (except payment) of a modern e-commerce website. <br /> <br />
               <span className="product__description--underline">
                 Users can:{" "}
               </span>
@@ -201,13 +201,21 @@ export default function BuyBuyHomepage() {
                 <li>and many more...</li>
               </ul>
               <br /> Buy-Buy Homepage is a part of my comprehensive full-stack
-              project Buy-Buy, a portfolio project that also includes a
-              Express.js back-end and an{" "}
+              project Buy-Buy, a portfolio project that also includes an{" "}
+              <a href="https://github.com/cakmakkur/buy-buy__server">
+                Express.js back-end
+              </a>{" "}
+              and an{" "}
               <Link to="/projects/buybuy-admin">administrator's portal</Link>.{" "}
               <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
                 → While testing the website, don't provide any authentic data
                 like personal info.
+              </span>{" "}
+              <br /> <br />
+              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
+                → Due to the small-scale nature of this project, server
+                interruptions may take place. Please contact me in such case.
               </span>
               <br /> <br /> This site doesn't use any tracking cookies. They are
               only used for essential functionality.
@@ -226,8 +234,8 @@ export default function BuyBuyHomepage() {
               Framework als{" "}
               <span className="product__description--accent">SPA</span>{" "}
               erstellt, das clientseitig gerendert wird. Sie demonstriert die
-              vollständige Funktionalität einer modernen E-Commerce-Website.{" "}
-              <br /> <br />
+              vollständige (ausgenommen Zahlungen) Funktionalität einer modernen
+              E-Commerce-Website. <br /> <br />
               <span className="product__description--underline">
                 Benutzer können:{" "}
               </span>
@@ -242,13 +250,22 @@ export default function BuyBuyHomepage() {
                 <li>und vieles mehr...</li>
               </ul>
               <br /> Die Buy-Buy Homepage ist Teil meines umfassenden
-              Full-Stack-Projekts Buy-Buy, ein Portfolio-Projekt, das auch ein
-              Express.js Backend und ein{" "}
+              Full-Stack-Projekts Buy-Buy, ein Portfolio-Projekt, das auch ein{" "}
+              <a href="https://github.com/cakmakkur/buy-buy__server">
+                Express.js Backend
+              </a>{" "}
+              und ein{" "}
               <Link to="/projects/buybuy-admin">Administrationsportal</Link>{" "}
               umfasst. <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
                 → Beim Testen der Website bitte keine echten Daten wie
                 persönliche Informationen angeben.
+              </span>{" "}
+              <br /> <br />
+              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
+                → Aufgrund der kleinen Größe dieses Projekts können
+                Serverunterbrechungen auftreten. Bitte kontaktieren Sie mich in
+                einem solchen Fall.
               </span>
               <br /> <br /> Diese Seite verwendet keine Tracking-Cookies. Sie
               werden nur für essentielle Funktionen verwendet.

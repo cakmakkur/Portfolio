@@ -71,22 +71,6 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              E-MAIL ADDRESS
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              cakmakkur@hotmail.com
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
               RESIDENCE PERMISSION
             </section>
             <section
@@ -139,24 +123,6 @@ export default function Cv() {
             >
               Highschool of Natural Sciences, Yalova-Termal <br />{" "}
               (Yalova-Termal Fen Lisesi)
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2012-2015
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Electronical Engineering <br />
-              Technical University Istanbul <br />
-              <br /> (not graduated)
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -222,6 +188,23 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
+              2017
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Biologische Landwirtschaft <br /> Am Seebacher Hof, Bad
+              Mitterndorf
+            </section>
+          </section>
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
               2017 - 2018
             </section>
             <section
@@ -261,7 +244,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Daycare for Children <br /> Sternenwerkstatt, Divina Art
+              Child Care <br /> Sternenwerkstatt, Divina Art
             </section>
           </section>
 
@@ -288,7 +271,7 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Languages</h3>
+            <h3>Language Skills</h3>
           </section>
           <section className="cv__sub__bottom">
             <section
@@ -303,7 +286,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 <br /> Latest Certificate: ÖSD-B2, 2015{" "}
+              C1 written and spoken <br /> Latest Certificate: ÖSD-B2, 2015{" "}
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -319,7 +302,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1
+              C1 written and spoken
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -352,7 +335,9 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
@@ -366,13 +351,15 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Programming
+              Web Development
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -380,14 +367,18 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
               Painting <br />
-              Digital Exposition: ausstellung.cakmakkursat.com
+              <span style={{ fontSize: "0.8rem", textDecoration: "underline" }}>
+                Online Exposition: ausstellung.cakmakkursat.com
+              </span>
             </section>
           </section>
         </div>
@@ -434,7 +425,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Turkisch
+              Türkisch
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -451,22 +442,6 @@ export default function Cv() {
               }`}
             >
               Hernalser Hauptstraße 221/7/13, 1170, WIEN
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              E-MAIL-ADRESSE
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              cakmakkur@hotmail.com
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -533,24 +508,6 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2012-2015
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Elektrotechnik <br />
-              Technische Universität Istanbul
-              <br /> (nicht abgeschlossen)
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
               2017-2023
             </section>
             <section
@@ -600,6 +557,23 @@ export default function Cv() {
               }`}
             >
               Barista <br /> Starbucks Coffee
+            </section>
+          </section>
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              2017
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Biologische Landwirtschaft <br /> Am Seebacher Hof, Bad
+              Mitterndorf
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -689,7 +663,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 <br /> Aktuellstes Zertifikat: ÖSD-B2, 2015
+              C1 in Wort und Schrift <br /> Aktuellstes Zertifikat: ÖSD-B2, 2015
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -705,7 +679,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1
+              C1 in Wort und Schrift
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -738,7 +712,9 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
@@ -752,13 +728,15 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Programmieren
+              Webentwicklung
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -766,14 +744,18 @@ export default function Cv() {
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            ></section>
+            >
+              ⏺
+            </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
               Malerei <br />
-              Digitale Ausstellung: ausstellung.cakmakkursat.com
+              <span style={{ fontSize: "0.8rem", textDecoration: "underline" }}>
+                Online-Ausstellung: ausstellung.cakmakkursat.com
+              </span>
             </section>
           </section>
         </div>
