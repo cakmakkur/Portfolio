@@ -37,7 +37,7 @@ export default function About() {
         Projekte zu erweitern. Ich liebe es, zugängliche, schnelle Websites zu
         erstellen, die gleichermaßen ästhetisch, stilvoll und benutzerfreundlich
         sind, und die ein reibungsloses angenehmes Benutzererlebnis bieten. Ich
-        verbinde dies gerne mit meiner Wertschätzung für Programmieren digitale
+        verbinde dies gerne mit meiner Wertschätzung für Programmieren, digitale
         Kunst und auch Animation. <br />
         <br />
         Derzeit suche ich eine Entwicklerstelle, in der ich meine Fähigkeiten
