@@ -161,7 +161,7 @@ export default function Homepage() {
           {language === "EN" ? (
             <a
               className="resume__dl__btn"
-              download="MyResume.pdf"
+              download="Resume_Kursat_Cakmak.pdf"
               href="/resume_kursat_cakmak.pdf"
             >
               DOWNLOAD RESUMÈ
@@ -171,7 +171,7 @@ export default function Homepage() {
           ) : (
             <a
               className="resume__dl__btn"
-              download="MyResume.pdf"
+              download="Lebenslauf_Kursat_Cakmak.pdf"
               href="/lebenslauf_kursat_cakmak.pdf"
             >
               LEBENSLAUF HERUNTERLADEN
