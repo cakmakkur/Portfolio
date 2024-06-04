@@ -216,9 +216,12 @@ export default function BuyBuyHomepage() {
               }}
               className="button__wrapper pr__button__wrapper"
             >
-              <button className="view__product__btn">
+              <a
+                href="https://ausstellung.cakmakkursat.com/"
+                className="view__product__btn"
+              >
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
-              </button>
+              </a>
             </div>
           </div>
           <div className="product__links__div"></div>
