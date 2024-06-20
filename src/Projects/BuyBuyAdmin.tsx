@@ -173,10 +173,11 @@ export default function BuyBuyAdmin() {
                 The Express.js
               </span>{" "}
               server that runs on Amazon EC2 powers both the homepage and the
-              admin's portal. It also hosts a simple database for products,
-              reviews and users info, handles their data securely and
-              efficiently. The source code of the server can be viewed on a
-              separate{" "}
+              admin's portal. It is connected to a database on{" "}
+              <span className="product__description--accent">MongoDB</span> that
+              stores products, reviews and users info, handles their data
+              securely and efficiently. The source code of the server can be
+              viewed on a separate{" "}
               <a href="https://github.com/cakmakkur/buy-buy__server">
                 Github Repository.
               </a>{" "}
@@ -208,9 +209,11 @@ export default function BuyBuyAdmin() {
                 Express.js Server
               </span>{" "}
               betreibt sowohl die Homepage als auch das Administratorenportal.
-              Er hostet auch eine einfache Datenbank für Produkte, Bewertungen
-              und Benutzerinformationen, und verwaltet deren Daten sicher und
-              effizient. Der Quellcode des Servers kann in einem separaten{" "}
+              Er ist verbunden mit einer{" "}
+              <span className="product__description--accent">MongoDB</span>{" "}
+              Datenbank für Produkte, Bewertungen und Benutzerinformationen, und
+              verwaltet deren Daten sicher und effizient. Der Quellcode des
+              Servers kann in einem separaten{" "}
               <a href="https://github.com/cakmakkur/buy-buy__server">
                 Github-Repository
               </a>{" "}
