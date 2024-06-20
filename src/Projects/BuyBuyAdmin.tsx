@@ -178,7 +178,7 @@ export default function BuyBuyAdmin() {
               stores products, reviews and users info, handles their data
               securely and efficiently. The source code of the server can be
               viewed on a separate{" "}
-              <a href="https://github.com/cakmakkur/buy-buy__server">
+              <a href="https://github.com/cakmakkur/buybuy_server_MERN">
                 Github Repository.
               </a>{" "}
               <br /> <br />
@@ -214,7 +214,7 @@ export default function BuyBuyAdmin() {
               Datenbank für Produkte, Bewertungen und Benutzerinformationen, und
               verwaltet deren Daten sicher und effizient. Der Quellcode des
               Servers kann in einem separaten{" "}
-              <a href="https://github.com/cakmakkur/buy-buy__server">
+              <a href="https://github.com/cakmakkur/buybuy_server_MERN">
                 Github-Repository
               </a>{" "}
               eingesehen werden. <br /> <br />
