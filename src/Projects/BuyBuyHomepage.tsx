@@ -202,7 +202,7 @@ export default function BuyBuyHomepage() {
               </ul>
               <br /> Buy-Buy Homepage is a part of my comprehensive full-stack
               project Buy-Buy, a portfolio project that also includes an{" "}
-              <a href="https://github.com/cakmakkur/buy-buy__server">
+              <a href="https://github.com/cakmakkur/buybuy_server_MERN">
                 Express.js back-end
               </a>{" "}
               and an{" "}
