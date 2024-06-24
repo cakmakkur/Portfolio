@@ -1,26 +1,28 @@
 import { useState, useEffect, useRef } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 type CarouselProps = {
-  images: string[]
-}
+  images: string[];
+};
 
-export default function CarouselAnm({images}: CarouselProps) {
+export default function CarouselAnm({ images }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<undefined | number>(undefined);
 
-  const [imageLoaded, setImageLoaded] = useState<boolean[]>(Array(images.length).fill(false));
+  const [imageLoaded, setImageLoaded] = useState<boolean[]>(
+    Array(images.length).fill(false)
+  );
 
-  const extendedImages = [...images, images[0]]
+  const extendedImages = [...images, images[0]];
 
   const handleImageLoad = (index: number) => {
-    setImageLoaded(prev => {
+    setImageLoaded((prev) => {
       const newLoaded = [...prev];
       newLoaded[index] = true;
       return newLoaded;
     });
   };
-
 
   useEffect(() => {
     startSlide();
@@ -62,19 +64,21 @@ export default function CarouselAnm({images}: CarouselProps) {
 
   return (
     <div className="carousel__wrapper">
-      <div  ref={carouselRef} className="carousel__div">
+      <div ref={carouselRef} className="carousel__div">
         {extendedImages.map((image, i) => (
-            <img
+          <img
             style={{
-              backgroundImage: imageLoaded[i] ? 'none' : "url('../Assets/main-o.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundImage: imageLoaded[i]
+                ? "none"
+                : "url('../Assets/main-o.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
-              src={image}
-              alt=""
-              onLoad={() => handleImageLoad(i)}
-            />
-          ))}
+            src={image}
+            alt=""
+            onLoad={() => handleImageLoad(i)}
+          />
+        ))}
       </div>
     </div>
   );
