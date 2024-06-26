@@ -8,6 +8,7 @@ import js_logo from "../Assets/icons/js.png";
 import node_logo from "../Assets/icons/node.png";
 import express_logo from "../Assets/icons/express.png";
 import react_logo from "../Assets/icons/react.png";
+import mongo_logo from "../Assets/icons/mongo.png";
 
 import img1 from "../Assets/carousel__images/buybuy-admin/bb_admin_1.png";
 import img2 from "../Assets/carousel__images/buybuy-admin/bb_admin_2.png";
@@ -249,6 +250,12 @@ export default function BuyBuyAdmin() {
               className="tech__icon__img"
               height={35}
               src={express_logo}
+              alt=""
+            />
+            <img
+              className="tech__icon__img"
+              height={35}
+              src={mongo_logo}
               alt=""
             />
           </div>
