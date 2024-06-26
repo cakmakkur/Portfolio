@@ -1,31 +1,34 @@
 import { useState, useEffect, useRef } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 type CarouselProps = {
-  images: string[]
-}
+  images: string[];
+};
 
-export default function MobileCarouselAnm({images}: CarouselProps) {
+export default function MobileCarouselAnm({ images }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<undefined | number>(undefined);
+  const [allImagesLoaded, setAllImagesLoaded] = useState<boolean>(false);
 
-  const extendedImages = [...images, images[0]]
+  const [imageLoaded, setImageLoaded] = useState<boolean[]>(
+    Array(images.length).fill(false)
+  );
 
-  const [imageLoaded, setImageLoaded] = useState<boolean[]>(Array(images.length).fill(false));
+  const extendedImages = [...images, images[0]];
 
   const handleImageLoad = (index: number) => {
-    setImageLoaded(prev => {
+    setImageLoaded((prev) => {
       const newLoaded = [...prev];
       newLoaded[index] = true;
       return newLoaded;
     });
   };
 
-
   useEffect(() => {
-    startSlide();
-    return () => clearInterval(intervalRef.current);
-  });
+    if (imageLoaded.includes(false)) return;
+    setAllImagesLoaded(true);
+  }, [imageLoaded]);
 
   const startSlide = () => {
     clearInterval(intervalRef.current);
@@ -54,6 +57,11 @@ export default function MobileCarouselAnm({images}: CarouselProps) {
   };
 
   useEffect(() => {
+    startSlide();
+    return () => clearInterval(intervalRef.current);
+  });
+
+  useEffect(() => {
     if (carouselRef.current) {
       const newTranslate = currentIndex * -100;
       carouselRef.current.style.transform = `translateX(${newTranslate}%)`;
@@ -62,14 +70,23 @@ export default function MobileCarouselAnm({images}: CarouselProps) {
 
   return (
     <div className="mobile__carousel__wrapper">
+      {allImagesLoaded ? (
+        ""
+      ) : (
+        <div className="cliploader__div--mobile">
+          <ClipLoader
+            loading={true}
+            color={"rgb(255, 122, 19)"}
+            size={55}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      )}
       <div ref={carouselRef} className="mobile__carousel__div">
         {extendedImages.map((image, i) => (
           <img
-            style={{
-            backgroundImage: imageLoaded[i] ? 'none' : "url('../Assets/main-o.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+            style={{ opacity: allImagesLoaded ? "1" : "0" }}
             src={image}
             alt=""
             onLoad={() => handleImageLoad(i)}

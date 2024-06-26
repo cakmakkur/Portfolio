@@ -76,7 +76,7 @@
 .ext__links__div {
   display: flex;
   width: 100%;
-  margin-top: 6vh;
+  margin-top: 4vh;
   column-gap: 35px;
   justify-content: center;
 }
@@ -1015,6 +1015,7 @@
   color: var(--highlight);
   border-bottom: 1px solid var(--primary);
   margin: 0px 30px;
+  transition: 0.5s ease-in;
 }
 
 .project__div {
@@ -1112,6 +1113,23 @@
   height: 1px;
   margin: 0px 20%;
   background-color: var(--secondary);
+}
+
+.project__link__div {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.project__link__div--visible {
+  opacity: 1;
+}
+
+.homepage__header--hidden {
+  transform: translateX(-225px);
+}
+
+.homepage__header--visible {
+  transform: translateX(0px);
 }
 
 .menu__switch__div {
@@ -1295,6 +1313,25 @@
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.cliploader__div {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cliploader__div--mobile {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel__div {

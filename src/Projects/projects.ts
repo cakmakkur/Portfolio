@@ -12,6 +12,7 @@ import jsIcon from '../Assets/icons/js.png';
 import cssIcon from '../Assets/icons/css.png';
 import expressIcon from '../Assets/icons/express.png';
 import reactIcon from '../Assets/icons/react.png';
+import mongoIcon from '../Assets/icons/mongo.png'
 
 // import { useLanguageContext } from "../GlobalContext/LanguageContext";
 // const {language} = useLanguageContext()
@@ -26,6 +27,7 @@ export const icons: IconType = {
   css: cssIcon,
   express: expressIcon,
   react: reactIcon,
+  mongo: mongoIcon
 };
 
 type IconType = {
@@ -40,18 +42,18 @@ export const projects = [
     img: buybuyImg,
     technologies: ['react', 'ts', 'node', 'express', 'vitest', 'sass'],
     text: [
-      "Buy-Buy is a modern e-commerce website that offers musical instruments from pianos to drums and more...",
-      "Buy-Buy ist eine e-Kommerz Website, die diverse Musikinstrumente von unterschiedlichen Kategorien anbietet."
+      "Buy-Buy E-Commerce is the fronend of my demo project: a RESTful MERN e-commerce web application.",
+      "Buy-Buy E-Commerce ist das Frontend meines Demo-Projekts: einer RESTful MERN E-Commerce-Webanwendung."
     ]
   },
   {
     title: "Buy-Buy Administrator",
     route: "/projects/buybuy-admin",
     img: buybuyAdminImg,
-    technologies: ['react', 'node', 'sass', 'js', 'express'],
+    technologies: ['react', 'node', 'sass', 'js', 'express', 'mongo'],
     text: [
-      "Buy-Buy-Admin is the administrator's portal that takes care of editing, adding and removing the products.",
-      "Buy-Buy-Admin ist die Admin-Plattform von Buy-Buy, die Inventarmanagement erleichtert."
+      "Buy-Buy-Admin is the administrative interface for performing CRUD tasks on the Buy-Buy project.",
+      "Buy-Buy-Admin ist die Administrationsoberfläche für die Durchführung von CRUD-Aufgaben im Buy-Buy-Projekt."
     ]
   },
   {
@@ -60,8 +62,8 @@ export const projects = [
     img: schnapsenImg,
     technologies: ['react', 'js', 'sass'],
     text: [
-      "Schnapsen is a small version of a well-known card game 66.",
-      "Schnapsen ist eine kleine Version eines wohlbekannten Kartenspiels Schnapsen"
+      "Schnapsen is a JavaScript-based, simplified version of the well-known card game Sixty-Six, where players can compete against the computer.",
+      "Schnapsen ist eine JavaScript-basierte, vereinfachte Version des bekannten Kartenspiels Schnapsens, bei dem die Spieler gegen den Computer antreten können."
     ]
   },
   {
@@ -80,8 +82,8 @@ export const projects = [
     img: portfolioImg,
     technologies: ['react', 'sass', 'ts'],
     text: [
-      "Portfolio is a personal portfolio website, coded by me. It is also available as standalone template",
-      "Portfolio ist mein persönliches Portfolio. Es ist auch als Vorlage erhältlich."
+      "Portfolio is my personal portfolio website, designed and developed by me.",
+      "Meine persönliche Portfolio-Website, die von mir entworfen und entwickelt wurde."
     ]
   }
 

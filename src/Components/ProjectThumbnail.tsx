@@ -47,7 +47,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({
   }, [isHovering, theme]);
 
   return (
-    <Link to={route}>
+    <Link className="project__link__div" to={route}>
       <>
         <div
           onMouseEnter={() => setIsHovering(true)}

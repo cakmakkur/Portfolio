@@ -29,7 +29,7 @@ export default function Homepage() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRightRef = useRef<HTMLDivElement>(null);
 
-  //starting animation
+  // Starting animation
   const mainPageRef = useRef<HTMLDivElement>(null);
   const [initialLoad, setInitialLoad] = useState<boolean>(false);
   useEffect(() => {
@@ -49,6 +49,65 @@ export default function Homepage() {
     }
     setInitialLoad(true);
   }, [initialLoad]);
+
+  // Observer for headers
+
+  const headerRef1 = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const headingElement = headerRef1.current;
+    if (!headingElement) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          e.target.classList.toggle(
+            "homepage__header--visible",
+            e.isIntersecting
+          );
+        });
+      },
+      {
+        rootMargin: "200px",
+      }
+    );
+    observer.observe(headingElement);
+    return () => {
+      observer.unobserve(headingElement);
+    };
+  }, [headerRef1]);
+
+  // Observer for project thumbnails
+
+  const projectsContainerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!projectsContainerRef.current) return;
+
+    const parentElement = projectsContainerRef.current;
+    const children = parentElement.children;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          e.target.classList.toggle(
+            "project__link__div--visible",
+            e.isIntersecting
+          );
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+    Array.from(children).forEach((child) => {
+      observer.observe(child);
+    });
+
+    return () => {
+      Array.from(children).forEach((child) => {
+        observer.unobserve(child);
+      });
+    };
+  }, [projectsContainerRef]);
 
   const getScrollPositions = () => {
     const projectsCurrentPosition =
@@ -143,8 +202,16 @@ export default function Homepage() {
       <section ref={sectionRightRef} className="home__right">
         <div ref={scrollRef} className="home__right__scrollable">
           <About />
-          <div id="projects_start" className="projects__main__div">
-            {language === "EN" ? <h1>Projects</h1> : <h1>Projekte</h1>}
+          <div
+            id="projects_start"
+            ref={projectsContainerRef}
+            className="projects__main__div"
+          >
+            {language === "EN" ? (
+              <h1 ref={headerRef1}>Projects</h1>
+            ) : (
+              <h1 ref={headerRef1}>Projekte</h1>
+            )}
             {projects.map((project, i) => (
               <ProjectThumbnail
                 key={i}
