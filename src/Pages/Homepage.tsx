@@ -10,6 +10,7 @@ import HomeChapterNav from "../Components/HomeChapterNav";
 import About from "../Components/About";
 
 import lebenslauf_bild from "../Assets/lebenslauf_bild.png";
+import profilImg_tiny from "../Assets/lebenslauf_bild_tiny.png";
 // import placeholder_logo from "../Assets/icons/react.png"
 import github__logo from "../Assets/github-hp.png";
 import linked__in__logo from "../Assets/linkedin.svg";
@@ -28,6 +29,7 @@ export default function Homepage() {
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRightRef = useRef<HTMLDivElement>(null);
+  const bildRef = useRef<HTMLImageElement>(null);
 
   // Starting animation
   const mainPageRef = useRef<HTMLDivElement>(null);
@@ -50,10 +52,23 @@ export default function Homepage() {
     setInitialLoad(true);
   }, [initialLoad]);
 
+  // Profil Picture Loading Animation
+  useEffect(() => {
+    if (!bildRef.current) return;
+    const loaded = () => {
+      console.log("hi");
+      bildRef.current?.classList.add("profil__img--active");
+    };
+    bildRef.current.addEventListener("load", loaded);
+
+    return () => {
+      if (!bildRef.current) return;
+      bildRef.current.removeEventListener("load", loaded);
+    };
+  }, []);
+
   // Observer for headers
-
   const headerRef1 = useRef<HTMLHeadingElement>(null);
-
   useEffect(() => {
     const headingElement = headerRef1.current;
     if (!headingElement) return;
@@ -178,8 +193,22 @@ export default function Homepage() {
   return (
     <div ref={mainPageRef} className="home__main">
       <section className="home__left">
-        <div className="home__img_div">
-          <img width={250} src={lebenslauf_bild} alt="" />
+        <div
+          className="home__img_div"
+          style={{
+            width: "250px",
+            height: "288px",
+            backgroundImage: `url(${profilImg_tiny})`,
+            backgroundSize: "cover",
+          }}
+        >
+          <img
+            className="profil__img"
+            ref={bildRef}
+            width={250}
+            src={lebenslauf_bild}
+            alt="profil picture"
+          />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
         {language === "EN" ? (

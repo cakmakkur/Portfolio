@@ -1,24 +1,24 @@
 import { doc } from "prettier";
+
 import { createContext, useState, useContext, useEffect } from "react";
 
-
 type ComponentProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 interface ThemeType {
-  type: string,
-  background: string,
-  backgroundHighlight: string,
-  primary: string,
+  type: string;
+  background: string;
+  backgroundHighlight: string;
+  primary: string;
   secondary: string;
   highlight: string;
   text: string;
   menuBtnBgHl: string;
   menuBtnTxHl: string;
-  highlightFx: string
+  highlightFx: string;
 }
 export const DarkTheme: ThemeType = {
-  type: 'dark',
+  type: "dark",
   highlight: "rgb(209, 241, 252)",
   primary: "rgb(151, 119, 37)",
   secondary: "rgb(0, 1, 2)",
@@ -28,10 +28,9 @@ export const DarkTheme: ThemeType = {
   menuBtnBgHl: "rgb(79, 111, 123)",
   menuBtnTxHl: "rgb(209, 241, 252)",
   highlightFx: "rgb(158, 226, 168)",
-
-}
+};
 export const LightTheme: ThemeType = {
-  type: 'light',
+  type: "light",
   backgroundHighlight: "rgb(225, 228, 215)",
   background: "rgb(243, 244, 240)",
   primary: "rgb(160, 162, 95)",
@@ -41,17 +40,16 @@ export const LightTheme: ThemeType = {
   menuBtnBgHl: "rgb(225, 228, 215)",
   menuBtnTxHl: "rgb(208, 159, 74)",
   highlightFx: "rgb(200, 94, 80)",
-
-}
+};
 interface ThemeContextType {
   theme: ThemeType;
-  setTheme: React.Dispatch<React.SetStateAction<ThemeType>>
-  toggleTheme: () => void
+  setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
+  toggleTheme: () => void;
 }
 const defaultThemeValue: ThemeContextType = {
   theme: DarkTheme,
   setTheme: () => {},
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 };
 
 const ThemeContext = createContext<ThemeContextType>(defaultThemeValue);
@@ -59,37 +57,35 @@ const ThemeContext = createContext<ThemeContextType>(defaultThemeValue);
 export const useThemeContext = () => useContext(ThemeContext);
 
 export const ThemeContextProvider = ({ children }: ComponentProps) => {
-
   const [theme, setTheme] = useState<ThemeType>(DarkTheme);
 
-
   useEffect(() => {
-      const storedThemeType = (localStorage.getItem("theme"));
-      let initialTheme: ThemeType = DarkTheme
-      if (storedThemeType) {
-        initialTheme = JSON.parse(storedThemeType) === 'dark' ? DarkTheme : LightTheme;
-      }
-      setTheme(initialTheme);
-      document.documentElement.setAttribute('data-theme', initialTheme.type);
-
+    const storedThemeType = localStorage.getItem("theme");
+    let initialTheme: ThemeType = DarkTheme;
+    if (storedThemeType) {
+      initialTheme =
+        JSON.parse(storedThemeType) === "dark" ? DarkTheme : LightTheme;
+    }
+    setTheme(initialTheme);
+    document.documentElement.setAttribute("data-theme", initialTheme.type);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme.type === 'light' ? DarkTheme : LightTheme;
-    document.documentElement.setAttribute('data-theme', newTheme.type);
-    localStorage.setItem('theme', JSON.stringify(newTheme.type));
+    const newTheme = theme.type === "light" ? DarkTheme : LightTheme;
+    document.documentElement.setAttribute("data-theme", newTheme.type);
+    localStorage.setItem("theme", JSON.stringify(newTheme.type));
     setTheme(newTheme);
-    console.log('change theme: ' + document.documentElement.getAttribute('data-theme'));
+    console.log(
+      "change theme: " + document.documentElement.getAttribute("data-theme")
+    );
   };
 
   const value = {
     theme,
     setTheme,
-    toggleTheme
+    toggleTheme,
   };
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
-  )
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 };
