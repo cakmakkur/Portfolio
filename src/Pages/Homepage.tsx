@@ -3,6 +3,8 @@ import { useScrollContext } from "../GlobalContext/ScrollPositionsContext";
 import { useThemeContext } from "../GlobalContext/ThemeContext";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
+import LoadingHexagonal from "../utils/LoadingHexagonal";
+
 import { projects } from "../Projects/projects";
 import ProjectThumbnail from "../Components/ProjectThumbnail";
 import Cv from "../Components/Cv";
@@ -29,7 +31,9 @@ export default function Homepage() {
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRightRef = useRef<HTMLDivElement>(null);
+
   const bildRef = useRef<HTMLImageElement>(null);
+  const [isProfilImgLoading, setIsProfilImgLoading] = useState<boolean>(true);
 
   // Starting animation
   const mainPageRef = useRef<HTMLDivElement>(null);
@@ -56,7 +60,7 @@ export default function Homepage() {
   useEffect(() => {
     if (!bildRef.current) return;
     const loaded = () => {
-      console.log("hi");
+      setIsProfilImgLoading(false);
       bildRef.current?.classList.add("profil__img--active");
     };
     bildRef.current.addEventListener("load", loaded);
@@ -202,6 +206,7 @@ export default function Homepage() {
             backgroundSize: "cover",
           }}
         >
+          {isProfilImgLoading ? <LoadingHexagonal /> : ""}
           <img
             className="profil__img"
             ref={bildRef}

@@ -1,0 +1,37 @@
+.hexIcon__div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexIcon {
+  animation: loading 1.8s ease-in-out infinite;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 0.6;
+  }
+  30% {
+    transform: rotate(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: rotate(720deg) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    opacity: 0.6;
+  }
+}
