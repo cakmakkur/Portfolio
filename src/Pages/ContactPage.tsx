@@ -26,7 +26,6 @@ export default function ContactPage() {
 
   // INPUT FX
   useEffect(() => {
-    console.log(formData);
     namePhRef.current?.classList.remove("form__ph__text--active");
     emailPhRef.current?.classList.remove("form__ph__text--active");
     subjectPhRef.current?.classList.remove("form__ph__text--active");

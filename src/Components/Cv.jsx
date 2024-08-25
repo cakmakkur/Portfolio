@@ -254,7 +254,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2021-current
+              2021-2024
             </section>
             <section
               className={`cv__sub__bottom__right ${
@@ -631,7 +631,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2021-laufend
+              2021-2024
             </section>
             <section
               className={`cv__sub__bottom__right ${
