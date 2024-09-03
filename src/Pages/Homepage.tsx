@@ -35,7 +35,7 @@ export default function Homepage() {
   const bildRef = useRef<HTMLImageElement>(null);
   const [isProfilImgLoading, setIsProfilImgLoading] = useState<boolean>(true);
 
-  // Starting animation
+  // Starting fade-in animation
   const mainPageRef = useRef<HTMLDivElement>(null);
   const [initialLoad, setInitialLoad] = useState<boolean>(false);
   useEffect(() => {
@@ -217,9 +217,9 @@ export default function Homepage() {
         </div>
         <h1>KÜRSAT CAKMAK</h1>
         {language === "EN" ? (
-          <h4>JUNIOR FRONT-END WEB-DEVELOPER</h4>
+          <h4>JUNIOR FRONTEND WEB-DEVELOPER</h4>
         ) : (
-          <h4>JUNIOR FRONT-END WEBENTWICKLER</h4>
+          <h4>JUNIOR FRONTEND WEBENTWICKLER</h4>
         )}
 
         {windowWidth > 1070 ? <HomeChapterNav /> : ""}

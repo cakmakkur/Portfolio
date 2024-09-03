@@ -1,53 +1,45 @@
 import laptop_top from "../Assets/laptop_top.png";
 import laptop_bottom from "../Assets/laptop_bottom.png";
-import smartphone from "../Assets/smartphone.png";
 import githubIcon from "../Assets/github.svg";
 import playIcon from "../Assets/play.svg";
-import check__yellow from "../Assets/checkLogo copy-yellow.svg";
+import smartphone from "../Assets/smartphone.png";
 import check__green from "../Assets/checkLogo-green.svg";
 
 import ts_logo from "../Assets/icons/ts.png";
 import sass_logo from "../Assets/icons/sass.png";
-import vitest_logo from "../Assets/icons/vitest.png";
-import node_logo from "../Assets/icons/node.png";
-import express_logo from "../Assets/icons/express.png";
-import react_logo from "../Assets/icons/react.png";
+import next_logo from "../Assets/icons/nextjs.png";
+import mongo_logo from "../Assets/icons/mongo.png";
 
-import img1 from "../Assets/carousel__images/buybuy_main/demo_buybuy_1.png";
-import img2 from "../Assets/carousel__images/buybuy_main/demo_buybuy_2.png";
-import img3 from "../Assets/carousel__images/buybuy_main/demo_buybuy_3.png";
-import img4 from "../Assets/carousel__images/buybuy_main/demo_buybuy_4.png";
-import img5 from "../Assets/carousel__images/buybuy_main/mobile/demo_buybuy_5.png";
-import img6 from "../Assets/carousel__images/buybuy_main/mobile/demo_buybuy_6.png";
-import img7 from "../Assets/carousel__images/buybuy_main/mobile/demo_buybuy_7.png";
-import img8 from "../Assets/carousel__images/buybuy_main/mobile/demo_buybuy_8.png";
+import img1 from "../Assets/carousel__images/band/band_1.png";
+import img2 from "../Assets/carousel__images/band/band_2.png";
+import img3 from "../Assets/carousel__images/band/band_3.png";
+import img4 from "../Assets/carousel__images/band/band_4.png";
+import img5 from "../Assets/carousel__images/band/mobile/band_1.png";
 
 import TypewriterTitle from "../Animations/TypewriterTitle";
 import CarouselAnm from "../Animations/CarouselAnm";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm";
 
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { Link } from "react-router-dom";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 type ImageArrayType = string[];
 
-export default function BuyBuyHomepage() {
+export default function BandHomepage() {
   const { language } = useLanguageContext();
-
-  const [isHovering, setIsHovering] = useState("");
   const [toggleVideo, setToggleVideo] = useState(false);
+  const [isHovering, setIsHovering] = useState("");
   const githubBtnRef = useRef<HTMLDivElement>(null);
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
 
   const VideoPlayer = lazy(
-    () => import("../Components/VideoPlayers/BuyBuyMainVideo")
+    () => import("../Components/VideoPlayers/BuyBuyAdminVideo")
   );
 
-  const buybuyImages: ImageArrayType = [img1, img2, img3, img4];
-  const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
+  const bandImages: ImageArrayType = [img1, img2, img3, img4];
+  const bandMobileImages: ImageArrayType = [img5, img5, img5, img5];
 
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
@@ -93,16 +85,16 @@ export default function BuyBuyHomepage() {
           <span>Projekttitel:</span>
         )}
         <div className="single__project__title__div">
-          <TypewriterTitle text="Buy-Buy" />
+          <TypewriterTitle text="Band Page&Dashboard" />
         </div>
       </div>
       <div className="single__project__main__bottom">
         <div className="single__product__left">
           <div className="laptop__top">
             <img className="laptop__scr" src={laptop_top} alt="" />
-            <CarouselAnm images={buybuyImages} />
+            <CarouselAnm images={bandImages} />
             <img src={smartphone} alt="" className="smartphone__scr" />
-            <MobileCarouselAnm images={buybuyMobileImages} />
+            <MobileCarouselAnm images={bandMobileImages} />
           </div>
           <div className="laptop__bottom">
             <img className="laptop__img3" src={laptop_bottom} alt="" />
@@ -113,10 +105,6 @@ export default function BuyBuyHomepage() {
               <div>
                 <img height={15} src={check__green} alt="green check icon" />{" "}
                 Responsive Design
-              </div>
-              <div>
-                <img height={15} src={check__yellow} alt="yellow check icon" />{" "}
-                Including tests
               </div>
             </div>
           </div>
@@ -133,12 +121,12 @@ export default function BuyBuyHomepage() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a href="https://github.com/cakmakkur/buybuy_main_MERN">
+                <a href="https://github.com/cakmakkur/vierVorZwoelf">
                   Go to<span>Github Repository</span>{" "}
                   <img width={30} src={githubIcon} alt="" />
                 </a>
               ) : (
-                <a href="https://github.com/cakmakkur/buybuy_main_MERN">
+                <a href="https://github.com/cakmakkur/vierVorZwoelf">
                   Zum<span>Github</span> gehen{" "}
                   <img
                     style={{ marginLeft: "20px" }}
@@ -181,113 +169,79 @@ export default function BuyBuyHomepage() {
         <div className="single__product__right">
           {language === "EN" ? (
             <article className="product__description">
-              <span className="product__description--accent--pr">Buy-Buy</span>{" "}
-              is an e-commerce website that sells imaginary musical instruments.
-              It is created in{" "}
-              <span className="product__description--accent">React</span>{" "}
-              framework as an{" "}
-              <span className="product__description--accent">SPA</span> that
-              renders on the client-side. It demonstrates the full functionality
-              (except payment) of a modern e-commerce website. <br /> <br />
+              <span className="product__description--accent--pr">
+                Band Homepage & Dashboard
+              </span>{" "}
+              is an upcoming{" "}
+              <span className="product__description--accent">Next.js</span> app
+              which will serve as homepage for music bands. Fans will have an
+              option to subscribe and contact the band. Besides, it will feature
+              an internal management and communication dashbord accessible only
+              to band members. <br />
+              <br />
               <span className="product__description--underline">
-                Users can:{" "}
+                Band members will be able to:{" "}
               </span>
               <ul>
-                <li>create and edit their account,</li>
-                <li>search for products based on queries and filters,</li>
-                <li>add products to and remove them from their cart</li>
-                <li>view previously placed orders,</li>
-                <li>view and submit reviews on products,</li>
+                <li>create and exchange playlists</li>
+                <li>share and edit sheet music</li>
+                <li>view and send mails internally and externally</li>
+                <li>update the homepage</li>
+                <li>create and schedule newsletters to members</li>
                 <li>and many more...</li>
               </ul>
-              <br /> Buy-Buy Homepage is a part of my comprehensive full-stack
-              project Buy-Buy, a portfolio project that also includes an{" "}
-              <a href="https://github.com/cakmakkur/buybuy_server_MERN">
-                Express.js back-end
-              </a>{" "}
-              and an{" "}
-              <Link to="/projects/buybuy-admin">administrator's portal</Link>.{" "}
               <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → While testing the website, don't provide any authentic data
-                like personal info.
-              </span>{" "}
-              <br /> <br />
-              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → Due to the small-scale nature of this project, server
-                interruptions may take place. Please contact me in such case.
+                → This project is still in development. However you can view
+                some completed features in the video to have a feeling of its
+                style and functionality.
               </span>
-              <br /> <br /> This site doesn't use any tracking cookies. They are
-              only used for essential functionality.
-              <br /> <br /> All the used assets like images and icons used are
-              either created by me or sourced from novelty-free 3rd-party
-              providers. Please consider asking for{" "}
-              <Link to={"/contact"}>permission</Link> if you want to use an
-              asset in your own projects.
             </article>
           ) : (
             <article className="product__description">
-              <span className="product__description--accent--pr">Buy-Buy</span>{" "}
-              ist eine E-Commerce-Website, die imaginäre Musikinstrumente
-              verkauft. Sie wurde mit dem{" "}
-              <span className="product__description--accent">React</span>{" "}
-              Framework als{" "}
-              <span className="product__description--accent">SPA</span>{" "}
-              erstellt, das clientseitig gerendert wird. Sie demonstriert die
-              vollständige (ausgenommen Zahlungen) Funktionalität einer modernen
-              E-Commerce-Website. <br /> <br />
+              <span className="product__description--accent--pr">
+                Band Homepage & Dashboard
+              </span>{" "}
+              ist eine kommende{" "}
+              <span className="product__description--accent">Next.js</span> App,
+              die als Homepage für Musikbands dienen wird. Fans haben die
+              Möglichkeit, sich zu abonnieren und die Band zu kontaktieren.
+              Zudem wird es ein internes Verwaltungs- und
+              Kommunikationsdashboard geben, das nur für Bandmitglieder
+              zugänglich ist.
+              <br /> <br />
               <span className="product__description--underline">
-                Benutzer können:{" "}
+                Bandmitglieder können:{" "}
               </span>
               <ul>
-                <li>ein Konto erstellen und bearbeiten,</li>
-                <li>
-                  nach Produkten basierend auf Anfragen und Filtern suchen,
-                </li>
-                <li>Produkte zum Warenkorb hinzufügen und daraus entfernen,</li>
-                <li>frühere Bestellungen ansehen,</li>
-                <li>Bewertungen zu Produkten ansehen und einreichen,</li>
+                <li>Playlisten erstellen und austauschen</li>
+                <li>Noten teilen und bearbeiten</li>
+                <li>Mails intern und extern ansehen und senden</li>
+                <li>Die Homepage aktualisieren</li>
+                <li>Newsletter für Mitglieder erstellen und planen</li>
                 <li>und vieles mehr...</li>
               </ul>
-              <br /> Die Buy-Buy Homepage ist Teil meines umfassenden
-              Full-Stack-Projekts Buy-Buy, ein Portfolio-Projekt, das auch ein{" "}
-              <a href="https://github.com/cakmakkur/buy-buy__server">
-                Express.js Backend
-              </a>{" "}
-              und ein{" "}
-              <Link to="/projects/buybuy-admin">Administrationsportal</Link>{" "}
-              umfasst. <br /> <br />
-              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → Beim Testen der Website bitte keine echten Daten wie
-                persönliche Informationen angeben.
-              </span>{" "}
               <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → Aufgrund der kleinen Größe dieses Projekts können
-                Serverunterbrechungen auftreten. Bitte kontaktieren Sie mich in
-                einem solchen Fall.
+                → Dieses Projekt befindet sich noch in der Entwicklung. Sie
+                können jedoch einige fertiggestellte Funktionen im Video
+                ansehen, um einen Eindruck von Stil und Funktionalität zu
+                erhalten.
               </span>
-              <br /> <br /> Diese Seite verwendet keine Tracking-Cookies. Sie
-              werden nur für essentielle Funktionen verwendet.
-              <br /> <br /> Alle verwendeten Assets wie Bilder und Symbole
-              wurden entweder von mir erstellt oder stammen von gebührenfreien
-              Drittanbietern. Bitte erwägen Sie, um{" "}
-              <Link to={"/contact"}>Erlaubnis</Link> zu bitten, wenn Sie ein
-              Asset in Ihren eigenen Projekten verwenden möchten.
             </article>
           )}
           <div className="used__tech__div">
             <img
               className="tech__icon__img"
               height={35}
-              src={react_logo}
+              src={next_logo}
               alt=""
             />
             <img className="tech__icon__img" height={35} src={ts_logo} alt="" />
             <img
               className="tech__icon__img"
               height={35}
-              src={node_logo}
+              src={mongo_logo}
               alt=""
             />
             <img
@@ -296,21 +250,9 @@ export default function BuyBuyHomepage() {
               src={sass_logo}
               alt=""
             />
-            <img
-              className="tech__icon__img"
-              height={35}
-              src={express_logo}
-              alt=""
-            />
-            <img
-              className="tech__icon__img"
-              height={35}
-              src={vitest_logo}
-              alt=""
-            />
           </div>
           <div className="view__product__btn__div">
-            <div
+            {/* <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("viewProduct");
@@ -325,6 +267,20 @@ export default function BuyBuyHomepage() {
                 className="view__product__btn"
               >
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
+              </a>
+            </div> */}
+            <div
+              ref={viewProductBtnRef}
+              onMouseEnter={() => {
+                toggleFxBtn("viewProduct");
+              }}
+              onMouseLeave={() => {
+                toggleFxBtn("");
+              }}
+              className="button__wrapper pr__button__wrapper"
+            >
+              <a href="" className="view__product__btn">
+                {language === "EN" ? "IN DEVELOPMENT" : "IN ENTWICKLUNG"}
               </a>
             </div>
           </div>
