@@ -3,6 +3,8 @@ import buybuyAdminImg from '../Assets/project_thumbnails/buybuy-admin.png';
 import schnapsenImg from '../Assets/project_thumbnails/schnapsen.png';
 import mondatelierImg from '../Assets/project_thumbnails/mondatelier.png';
 import portfolioImg from '../Assets/project_thumbnails/portfolio.png';
+import bandImg from '../Assets/project_thumbnails/band.png';
+
 
 import tsIcon from '../Assets/icons/ts.png';
 import sassIcon from '../Assets/icons/sass.png';
@@ -13,10 +15,7 @@ import cssIcon from '../Assets/icons/css.png';
 import expressIcon from '../Assets/icons/express.png';
 import reactIcon from '../Assets/icons/react.png';
 import mongoIcon from '../Assets/icons/mongo.png'
-
-// import { useLanguageContext } from "../GlobalContext/LanguageContext";
-// const {language} = useLanguageContext()
-
+import nextjsIcon from '../Assets/icons/nextjs.png';
 
 export const icons: IconType = {
   ts: tsIcon,
@@ -27,7 +26,8 @@ export const icons: IconType = {
   css: cssIcon,
   express: expressIcon,
   react: reactIcon,
-  mongo: mongoIcon
+  mongo: mongoIcon,
+  next: nextjsIcon
 };
 
 type IconType = {
@@ -36,6 +36,16 @@ type IconType = {
 
 
 export const projects = [
+  {
+    title: "Band Homepage + Dashboard",
+    route: "/projects/band-homepage",
+    img: bandImg,
+    technologies: ['next', 'ts', 'sass', "mongo"],
+    text: [
+      "Band Homepage+Dashboard is a Next.js app that it currently IN DEVELOPMENT. It will serve as a landing page for a music band and a dashboard for the band members to manage their content.",
+      "Band Homepage + Dashboard ist eine Next.js-App, die sich derzeit IN ENTWICKLUNG befindet. Sie wird als Landingpage für eine Musikband dienen und ein Dashboard für die Bandmitglieder bieten, um ihre Inhalte zu verwalten."
+    ]
+  },
   {
     title: "Buy-Buy E-Commerce",
     route: "/projects/buybuy-homepage",

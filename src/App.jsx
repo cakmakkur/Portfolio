@@ -10,6 +10,7 @@ const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
 const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
 const PortfolioProject = lazy(() => import("./Projects/PortfolioProject"));
+const BandHomepage = lazy(() => import("./Projects/BandHomepage"));
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/projects/buybuy-admin" element={<BuyBuyAdmin />} />
           <Route path="/projects/mondatelier" element={<Mondatelier />} />
           <Route path="/projects/portfolio" element={<PortfolioProject />} />
+          <Route path="/projects/band-homepage" element={<BandHomepage />} />
 
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
