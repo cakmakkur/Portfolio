@@ -37,6 +37,7 @@ export default function Homepage() {
 
   // Starting fade-in animation
   const mainPageRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [initialLoad, setInitialLoad] = useState<boolean>(false);
   useEffect(() => {
     const mountedBefore = sessionStorage.getItem("pageMountedBefore");
@@ -44,13 +45,15 @@ export default function Homepage() {
       if (!mainPageRef.current) return;
       mainPageRef.current.style.opacity = "1";
     } else {
-      const timeoutId = setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         sessionStorage.setItem("pageMountedBefore", "true");
         if (!mainPageRef.current) return;
         mainPageRef.current.style.opacity = "1";
       }, 3200);
       return () => {
-        clearTimeout(timeoutId);
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
       };
     }
     setInitialLoad(true);

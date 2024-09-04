@@ -35,7 +35,7 @@ export default function BandHomepage() {
   const videoRef = useRef<HTMLDivElement>(null);
 
   const VideoPlayer = lazy(
-    () => import("../Components/VideoPlayers/BuyBuyAdminVideo")
+    () => import("../Components/VideoPlayers/BandVideo")
   );
 
   const bandImages: ImageArrayType = [img1, img2, img3, img4];
@@ -252,7 +252,7 @@ export default function BandHomepage() {
             />
           </div>
           <div className="view__product__btn__div">
-            {/* <div
+            <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("viewProduct");
@@ -263,13 +263,13 @@ export default function BandHomepage() {
               className="button__wrapper pr__button__wrapper"
             >
               <a
-                href="https://buybuy.cakmakkursat.com/"
+                href="https://vier-vor-zwoelf.vercel.app/"
                 className="view__product__btn"
               >
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
               </a>
-            </div> */}
-            <div
+            </div>
+            {/* <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("viewProduct");
@@ -282,7 +282,7 @@ export default function BandHomepage() {
               <a href="" className="view__product__btn">
                 {language === "EN" ? "IN DEVELOPMENT" : "IN ENTWICKLUNG"}
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="product__links__div"></div>
         </div>
