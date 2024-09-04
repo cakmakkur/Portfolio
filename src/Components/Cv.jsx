@@ -328,6 +328,30 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
+            <h3>Programming Languages & Technologies</h3>
+          </section>
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            ></section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
+              GitHub, npm, Tailwind, MongoDB
+            </section>
+          </section>
+        </div>
+        <div className="cv__chapter__div">
+          <section
+            className={`cv__sub__top ${
+              theme.type === "light" ? "cv__sub__top--light" : ""
+            }`}
+          >
             <h3>Interests & Projects</h3>
           </section>
           <section className="cv__sub__bottom">
@@ -696,6 +720,30 @@ export default function Cv() {
               }`}
             >
               Muttersprache
+            </section>
+          </section>
+        </div>
+        <div className="cv__chapter__div">
+          <section
+            className={`cv__sub__top ${
+              theme.type === "light" ? "cv__sub__top--light" : ""
+            }`}
+          >
+            <h3>Programmiersprachen & Technologien</h3>
+          </section>
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            ></section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
+              GitHub, npm, Tailwind, MongoDB
             </section>
           </section>
         </div>
