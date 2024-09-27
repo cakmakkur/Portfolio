@@ -166,36 +166,32 @@ export default function BuyBuyHomepage() {
           </div>
         </div>
         <div className="single__product__right">
-          <article className="product__description">
-            <span className="product__description--accent--pr">Buy-Buy</span> is
-            an e-commerce website that sells imaginary musical instruments. It
-            is created in{" "}
-            <span className="product__description--accent">React</span>{" "}
-            framework as an{" "}
-            <span className="product__description--accent">SPA</span> that
-            renders on the client-side. It demonstrates the full functionality
-            of a modern e-commerce website. <br /> <br />
-            <span className="product__description--underline">Users can: </span>
-            <ul>
-              <li>
-                create and edit their account, search for products based on
-                queries and filters,
-              </li>
-              <li>add products to and remove them from their cart</li>
-              <li>view previously placed orders,</li>
-              <li>view and submit reviews on products,</li>
-              <li>and many more...</li>
-            </ul>
-            <br /> Buy-Buy Homepage is a part of a comprehensive project that
-            also includes a <a href="">back-end</a> and an{" "}
-            <a href="">administrative portal</a>. <br /> <br />
-            Never provide any authentic data like personal info.
-            <br /> <br /> Cookies are only used for essential functionality like
-            persistent log-in and shopping cart.
-            <br /> <br /> All the used assets like images and icons used are
-            either created by me or sourced from novelty-free 3rd-party
-            providers.
-          </article>
+          {language === "EN" ? (
+            <article className="product__description">
+              <span className="product__description--accent--pr">
+                Mondatelier
+              </span>{" "}
+              is the first-ever website, that I built at the beginning of my
+              career as a web developer. <br /> <br />
+              It is currently only a temporary home for my exhibition. <br />{" "}
+              <br /> Mondatelier as Brand is still in the making and planned to
+              be a platform for artists from different genres to showcase their
+              work, connect with other artists and potantially sell their work.
+            </article>
+          ) : (
+            <article className="product__description">
+              <span className="product__description--accent--pr">
+                Mondatelier
+              </span>{" "}
+              ist die erste Webseite, die ich zu Beginn meiner Karriere als
+              Webentwickler erstellt habe. <br /> <br /> Sie dient momentan nur
+              als temporäres Zuhause für meine persönliche Kunstausstellung.{" "}
+              <br /> <br /> Langfristig ist Mondatelier als Marke geplant, die
+              eine Plattform für Künstler aus verschiedenen Genres bietet, um
+              ihre Werke zu präsentieren, sich mit anderen Künstlern zu
+              vernetzen und möglicherweise ihre Arbeiten zu verkaufen.
+            </article>
+          )}
           <div className="used__tech__div">
             <img className="tech__icon__img" height={35} src={js_logo} alt="" />
             <img

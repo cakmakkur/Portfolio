@@ -15,97 +15,6 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Personal Information</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              BIRTHDAY
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              14.02.1994
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              NATIONALITY
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Turkish
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ADDRESS
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Hernalser Hauptstraße 221/7/13, 1170, WIEN
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              RESIDENCE PERMISSION
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Permanent Residence Persmission - EU (Issued on 7.12.2021 Vienna){" "}
-              <br />
-              With unrestricted access to the labor market
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              MARITAL STATUS
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              In Partnership
-            </section>
-          </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
             <h3>Education</h3>
           </section>
           <section className="cv__sub__bottom">
@@ -342,7 +251,7 @@ export default function Cv() {
               }`}
             >
               HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
-              GitHub, npm, Tailwind, MongoDB
+              GitHub, npm, Tailwind, MongoDB, SQL
             </section>
           </section>
         </div>
@@ -412,96 +321,6 @@ export default function Cv() {
     return (
       <div id="resume_start" className="cv__div">
         <h1 id="cv_start">LEBENSLAUF</h1>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Persönliche Information</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              GEBURTSTAG
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              14.02.1994
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              STAATSANGEHÖRIGKEIT
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Türkisch
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ADRESSE
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Hernalser Hauptstraße 221/7/13, 1170, WIEN
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              AUFENTHALTSTITEL
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Daueraufenthalt - EU (Ausgestellt am 7.12.2021 Wien) <br />
-              Mit unbeschränktem Zugang zum Arbeitsmarkt
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              FAMILIENSTAND
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              In Partnerschaft
-            </section>
-          </section>
-        </div>
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${
@@ -743,7 +562,7 @@ export default function Cv() {
               }`}
             >
               HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
-              GitHub, npm, Tailwind, MongoDB
+              GitHub, npm, Tailwind, MongoDB, SQL
             </section>
           </section>
         </div>

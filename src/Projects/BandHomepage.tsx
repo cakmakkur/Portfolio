@@ -269,20 +269,6 @@ export default function BandHomepage() {
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
               </a>
             </div>
-            {/* <div
-              ref={viewProductBtnRef}
-              onMouseEnter={() => {
-                toggleFxBtn("viewProduct");
-              }}
-              onMouseLeave={() => {
-                toggleFxBtn("");
-              }}
-              className="button__wrapper pr__button__wrapper"
-            >
-              <a href="" className="view__product__btn">
-                {language === "EN" ? "IN DEVELOPMENT" : "IN ENTWICKLUNG"}
-              </a>
-            </div> */}
           </div>
           <div className="product__links__div"></div>
         </div>
