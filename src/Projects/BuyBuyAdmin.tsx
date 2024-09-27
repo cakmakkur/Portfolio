@@ -168,8 +168,7 @@ export default function BuyBuyAdmin() {
                 <li>edit data of the existing products,</li>
                 <li>create new products.</li>
               </ul>
-              <span className="product__description--accent">React</span> <br />{" "}
-              <br />
+              <br /> <br />
               <span className="product__description--accent">
                 The Express.js
               </span>{" "}
@@ -203,8 +202,7 @@ export default function BuyBuyAdmin() {
                 <li>Daten bestehender Produkte bearbeiten,</li>
                 <li>neue Produkte erstellen.</li>
               </ul>
-              <span className="product__description--accent">React</span> <br />{" "}
-              <br />
+              <br /> <br />
               Der{" "}
               <span className="product__description--accent">
                 Express.js Server
