@@ -8,7 +8,7 @@ export default function Cv() {
   if (language === "EN") {
     return (
       <div id="resume_start" className="cv__div">
-        <h1 id="cv_start">RESUME</h1>
+        <h1 id="cv_start">resume</h1>
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${
@@ -320,7 +320,7 @@ export default function Cv() {
   } else {
     return (
       <div id="resume_start" className="cv__div">
-        <h1 id="cv_start">LEBENSLAUF</h1>
+        <h1 id="cv_start">lebenslauf</h1>
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${

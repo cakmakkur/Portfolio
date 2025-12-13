@@ -199,13 +199,16 @@ export default function Homepage() {
 
   return (
     <div ref={mainPageRef} className="home__main">
+      <div
+        style={{ backgroundColor: theme.backgroundHighlight }}
+        className="homepage-right-shape"
+      ></div>
+
       <section className="home__left">
         <div
           className="home__img_div"
           style={{
-            width: "250px",
-            height: "288px",
-            backgroundImage: `url(${profilImg_tiny})`,
+            // backgroundImage: `url(${profilImg_tiny})`,
             backgroundSize: "cover",
           }}
         >
@@ -219,21 +222,22 @@ export default function Homepage() {
           />
         </div>
         <h1>KÜRSAT CAKMAK</h1>
-        {language === "EN" ? (
-          <h4>JUNIOR FRONTEND WEB-DEVELOPER</h4>
-        ) : (
-          <h4>JUNIOR FRONTEND WEBENTWICKLER</h4>
-        )}
-
-        {windowWidth > 1070 ? <HomeChapterNav /> : ""}
-        <div className="ext__links__div">
-          <a href="https://github.com/cakmakkur">
-            <img height={30} src={github__logo} alt="" />
-          </a>
-          <a href="https://www.linkedin.com/in/kursat-cakmak/">
-            <img height={30} src={linked__in__logo} alt="" />
-          </a>
+        <div>
+          {language === "EN" ? (
+            <h4>SOFTWARE DEVELOPER</h4>
+          ) : (
+            <h4>SOFTWAREENTWICKLER</h4>
+          )}
+          <div className="ext__links__div">
+            <a href="https://github.com/cakmakkur">
+              <img height={30} src={github__logo} alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/kursat-cakmak/">
+              <img height={30} src={linked__in__logo} alt="" />
+            </a>
+          </div>
         </div>
+        {windowWidth > 1070 ? <HomeChapterNav /> : ""}
       </section>
       {windowWidth <= 1070 ? <HomeChapterNav /> : ""}
       <section ref={sectionRightRef} className="home__right">
@@ -245,9 +249,9 @@ export default function Homepage() {
             className="projects__main__div"
           >
             {language === "EN" ? (
-              <h1 ref={headerRef1}>Projects</h1>
+              <h1 ref={headerRef1}>projects</h1>
             ) : (
-              <h1 ref={headerRef1}>Projekte</h1>
+              <h1 ref={headerRef1}>projekte</h1>
             )}
             {projects.map((project, i) => (
               <ProjectThumbnail

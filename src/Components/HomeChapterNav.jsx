@@ -114,7 +114,7 @@ export default function HomeChapterNav() {
         onClick={() => handleClick("about")}
       >
         <span ref={aboutTextRef} className="textSpan">
-          {language === "EN" ? "About" : "Über mich"}
+          {language === "EN" ? "about" : "über mich"}
         </span>
         <div ref={aboutBarRef} className="barDiv"></div>
       </div>
@@ -126,7 +126,7 @@ export default function HomeChapterNav() {
           onClick={() => handleClick("projects")}
         >
           <span ref={projectsTextRef} className="textSpan">
-            {language === "EN" ? "Projects" : "Projekte"}
+            {language === "EN" ? "projects" : "projekte"}
           </span>
           <div ref={projectsBarRef} className="barDiv"></div>
         </div>
@@ -139,7 +139,7 @@ export default function HomeChapterNav() {
           onClick={() => handleClick("resume")}
         >
           <span ref={resumeTextRef} className="textSpan">
-            {language === "EN" ? "Resumè" : "Lebenslauf"}
+            {language === "EN" ? "resumè" : "lebenslauf"}
           </span>
           <div ref={resumeBarRef} className="barDiv"></div>
         </div>

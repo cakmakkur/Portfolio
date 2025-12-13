@@ -12,6 +12,7 @@ export default function Menubar() {
   const { language } = useLanguageContext();
   const menuHomeBtnRef = useRef();
   const menuContactBtnRef = useRef();
+  const menuExhibitionBtnRef = useRef();
   const logoImgRef = useRef();
 
   //starting animation
@@ -22,6 +23,7 @@ export default function Menubar() {
       // logoImgRef.current.style.transform = "scale(1)";
       menuHomeBtnRef.current.style.transform = "translateY(0px)";
       menuContactBtnRef.current.style.transform = "translateY(0px)";
+      menuExhibitionBtnRef.current.style.transform = "translateY(0px)";
       return;
     }
 
@@ -35,11 +37,15 @@ export default function Menubar() {
     const timeoutId2 = setTimeout(() => {
       menuContactBtnRef.current.style.transform = "translateY(0px)";
     }, 2300);
+    const timeoutId4 = setTimeout(() => {
+      menuExhibitionBtnRef.current.style.transform = "translateY(0px)";
+    }, 2300);
 
     return () => {
       clearTimeout(timeoutId);
       clearTimeout(timeoutId2);
       clearTimeout(timeoutId3);
+      clearTimeout(timeoutId4);
     };
   }, []);
 
@@ -54,6 +60,12 @@ export default function Menubar() {
       />
       <Link ref={menuHomeBtnRef} className={`menu__home__btn`} to="/">
         HOME
+      </Link>
+      <Link ref={menuExhibitionBtnRef} className={`menu__home__btn`} to="/">
+        EXHIBITION
+      </Link>
+      <Link ref={menuExhibitionBtnRef} className={`menu__home__btn`} to="/">
+        UI CATALOG
       </Link>
       <Link
         ref={menuContactBtnRef}

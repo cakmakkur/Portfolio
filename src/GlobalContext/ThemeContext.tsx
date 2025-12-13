@@ -1,5 +1,3 @@
-import { doc } from "prettier";
-
 import { createContext, useState, useContext, useEffect } from "react";
 
 type ComponentProps = {
@@ -31,11 +29,11 @@ export const DarkTheme: ThemeType = {
 };
 export const LightTheme: ThemeType = {
   type: "light",
-  backgroundHighlight: "rgb(225, 228, 215)",
-  background: "rgb(243, 244, 240)",
+  backgroundHighlight: "rgb(246, 247, 244)",
+  background: "rgb(233, 233, 220)",
   primary: "rgb(160, 162, 95)",
   secondary: "rgb(148, 117, 71)",
-  highlight: "rgb(45, 158, 145)",
+  highlight: "rgb(98, 78, 49)",
   text: "rgb(123, 124, 98)",
   menuBtnBgHl: "rgb(225, 228, 215)",
   menuBtnTxHl: "rgb(208, 159, 74)",
@@ -47,7 +45,7 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 const defaultThemeValue: ThemeContextType = {
-  theme: DarkTheme,
+  theme: LightTheme,
   setTheme: () => {},
   toggleTheme: () => {},
 };
