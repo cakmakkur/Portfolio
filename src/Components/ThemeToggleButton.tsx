@@ -11,24 +11,23 @@ export default function ThemeToggleButton() {
   const currentRef = useRef<HTMLSpanElement>(null);
   const { theme, toggleTheme } = useThemeContext();
 
-
   //beginning- sliding into position animation:
-  const buttonDivRef = useRef<HTMLDivElement>(null)
+  const buttonDivRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const mountedBefore = sessionStorage.getItem('pageMountedBefore')
-    if (mountedBefore === 'true') {
-      if (!buttonDivRef.current) return
-      buttonDivRef.current.style.transform = "translateY(0px)"
-      return
+    const mountedBefore = sessionStorage.getItem("pageMountedBefore");
+    if (mountedBefore === "true") {
+      if (!buttonDivRef.current) return;
+      buttonDivRef.current.style.transform = "translateY(0px)";
+      return;
     }
     const timeoutId = setTimeout(() => {
-      if (!buttonDivRef.current) return
-      buttonDivRef.current.style.transform = "translateY(0px)"
-    }, 2900);
+      if (!buttonDivRef.current) return;
+      buttonDivRef.current.style.transform = "translateY(0px)";
+    }, 3100);
     return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   const toggleThemeOptions = () => {
     setTransitionEnabled(true);
@@ -56,8 +55,6 @@ export default function ThemeToggleButton() {
       setIsThemeOpen(false);
     }, 300);
   };
-
-  
 
   return (
     <div ref={buttonDivRef} className="menu__switch__div th__swich__div">

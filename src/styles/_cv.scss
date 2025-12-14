@@ -6,6 +6,7 @@
   width: 100%;
   @include MOBILE {
     padding-top: 10vh;
+    text-align: start;
   }
   & section {
     border: none;

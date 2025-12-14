@@ -12,24 +12,23 @@ export default function LanguageToggleButton() {
   const { theme } = useThemeContext();
   const { language, toggleLanguage } = useLanguageContext();
 
-
   //beginning- sliding into position animation:
-  const buttonDivRef = useRef<HTMLDivElement>(null)
+  const buttonDivRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const mountedBefore = sessionStorage.getItem('pageMountedBefore')
-    if (mountedBefore === 'true') {
-      if (!buttonDivRef.current) return
-      buttonDivRef.current.style.transform = "translateY(0px)"
-      return
+    const mountedBefore = sessionStorage.getItem("pageMountedBefore");
+    if (mountedBefore === "true") {
+      if (!buttonDivRef.current) return;
+      buttonDivRef.current.style.transform = "translateY(0px)";
+      return;
     }
     const timeoutId = setTimeout(() => {
-      if (!buttonDivRef.current) return
-      buttonDivRef.current.style.transform = "translateY(0px)"
-    }, 2600);
+      if (!buttonDivRef.current) return;
+      buttonDivRef.current.style.transform = "translateY(0px)";
+    }, 2800);
     return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   const toggleOptions = () => {
     setTransitionEnabled(true);
@@ -50,10 +49,9 @@ export default function LanguageToggleButton() {
 
   const togglePageTheme = () => {
     if (optionRef.current && currentRef.current) {
-
-    optionRef.current.classList.remove("switch__options--open");
-    optionRef.current.classList.add("switch__options--closing");
-    currentRef.current.classList.add("menu__switch__btn--closing");
+      optionRef.current.classList.remove("switch__options--open");
+      optionRef.current.classList.add("switch__options--closing");
+      currentRef.current.classList.add("menu__switch__btn--closing");
     }
 
     setTimeout(() => {

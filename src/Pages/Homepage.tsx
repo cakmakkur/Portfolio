@@ -230,10 +230,13 @@ export default function Homepage() {
             <h4>SOFTWAREENTWICKLER</h4>
           )}
           <div className="ext__links__div">
-            <a href="https://github.com/cakmakkur">
+            <a href="https://github.com/cakmakkur" target="_blank">
               <img height={30} src={github__logo} alt="" />
             </a>
-            <a href="https://www.linkedin.com/in/kursat-cakmak/">
+            <a
+              href="https://www.linkedin.com/in/kursat-cakmak/"
+              target="_blank"
+            >
               <img height={30} src={linked__in__logo} alt="" />
             </a>
           </div>

@@ -21,7 +21,6 @@ export default function Menubar() {
     const mountedBefore = sessionStorage.getItem("pageMountedBefore");
     if (mountedBefore === "true") {
       logoImgRef.current.style.opacity = "1";
-      // logoImgRef.current.style.transform = "scale(1)";
       menuHomeBtnRef.current.style.transform = "translateY(0px)";
       menuContactBtnRef.current.style.transform = "translateY(0px)";
       menuExhibitionBtnRef.current.style.transform = "translateY(0px)";
@@ -29,29 +28,30 @@ export default function Menubar() {
       return;
     }
 
-    const timeoutId3 = setTimeout(() => {
+    const timeoutIdLogo = setTimeout(() => {
       logoImgRef.current.style.opacity = "1";
-      // logoImgRef.current.style.transform = "scale(1)";
-    }, 1000);
-    const timeoutId = setTimeout(() => {
+    }, 800);
+
+    const timeoutIdHome = setTimeout(() => {
       menuHomeBtnRef.current.style.transform = "translateY(0px)";
-    }, 2000);
-    const timeoutId2 = setTimeout(() => {
-      menuContactBtnRef.current.style.transform = "translateY(0px)";
-    }, 2300);
-    const timeoutId4 = setTimeout(() => {
+    }, 1600);
+    const timeoutIdExhibition = setTimeout(() => {
       menuExhibitionBtnRef.current.style.transform = "translateY(0px)";
-    }, 2300);
-    const timeoutId5 = setTimeout(() => {
+    }, 1900);
+    const timeoutIdUICatalog = setTimeout(() => {
       uiCatalogBtnRef.current.style.transform = "translateY(0px)";
-    }, 2300);
+    }, 2200);
+
+    const timeoutIdContact = setTimeout(() => {
+      menuContactBtnRef.current.style.transform = "translateY(0px)";
+    }, 2500);
 
     return () => {
-      clearTimeout(timeoutId);
-      clearTimeout(timeoutId2);
-      clearTimeout(timeoutId3);
-      clearTimeout(timeoutId4);
-      clearTimeout(timeoutId5);
+      clearTimeout(timeoutIdLogo);
+      clearTimeout(timeoutIdHome);
+      clearTimeout(timeoutIdContact);
+      clearTimeout(timeoutIdExhibition);
+      clearTimeout(timeoutIdUICatalog);
     };
   }, []);
 
@@ -76,8 +76,10 @@ export default function Menubar() {
       </Link>
       <Link
         ref={uiCatalogBtnRef}
-        className={`menu-button animated-text`}
-        style={{ fontWeight: "nurmal important!" }}
+        className={`menu-button ${
+          theme.type === "light" ? "animated-text" : "animated-text--dark"
+        }`}
+        style={{ fontWeight: "normal important!" }}
         to="/ui-catalog"
       >
         UI CATALOGUE

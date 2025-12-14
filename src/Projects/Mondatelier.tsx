@@ -4,8 +4,11 @@ import smartphone from "../Assets/smartphone.png";
 import githubIcon from "../Assets/github.svg";
 import playIcon from "../Assets/play.svg";
 import check__green from "../Assets/checkLogo-green.svg";
-import js_logo from "../Assets/icons/js.png";
-import css_logo from "../Assets/icons/css.png";
+import react_logo from "../Assets/icons/react.png";
+import maven from "../Assets/maven.png";
+import postgres from "../Assets/postgres.svg";
+import springboot from "../Assets/spring-boot.webp";
+import java from "../Assets/java.svg";
 
 import img1 from "../Assets/carousel__images/mondatelier/mondatelier_1.png";
 import img2 from "../Assets/carousel__images/mondatelier/mondatelier_2.png";
@@ -120,12 +123,12 @@ export default function BuyBuyHomepage() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a>
+                <a target="_blank" href="https://github.com/mondatelier">
                   Go to<span>Github Repository</span>{" "}
                   <img width={30} src={githubIcon} alt="" />
                 </a>
               ) : (
-                <a>
+                <a target="_blank" href="https://github.com/mondatelier">
                   Zum<span>Github</span> gehen{" "}
                   <img
                     style={{ marginLeft: "20px" }}
@@ -136,7 +139,7 @@ export default function BuyBuyHomepage() {
                 </a>
               )}
             </div>
-            <div
+            {/* <div
               ref={youtubeBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("youtube");
@@ -162,7 +165,7 @@ export default function BuyBuyHomepage() {
                   />
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="single__product__right">
@@ -171,33 +174,52 @@ export default function BuyBuyHomepage() {
               <span className="product__description--accent--pr">
                 Mondatelier
               </span>{" "}
-              is the first-ever website, that I built at the beginning of my
-              career as a web developer. <br /> <br />
-              It is currently only a temporary home for my exhibition. <br />{" "}
-              <br /> Mondatelier as Brand is still in the making and planned to
-              be a platform for artists from different genres to showcase their
-              work, connect with other artists and potantially sell their work.
+              is an online platform designed for artists to showcase and manage
+              their creative work. Users can create personalized portfolios,
+              share and promote their artworks, explore and organize events,
+              connect with other artists, and watch live streams. <br /> <br />
+              The platform aims to foster collaboration, networking, and
+              professional growth within the art community. <br /> <br /> This
+              project is currently under active development and continues to
+              expand its features to provide a comprehensive space for artistic
+              engagement.
             </article>
           ) : (
             <article className="product__description">
               <span className="product__description--accent--pr">
                 Mondatelier
               </span>{" "}
-              ist die erste Webseite, die ich zu Beginn meiner Karriere als
-              Webentwickler erstellt habe. <br /> <br /> Sie dient momentan nur
-              als temporäres Zuhause für meine persönliche Kunstausstellung.{" "}
-              <br /> <br /> Langfristig ist Mondatelier als Marke geplant, die
-              eine Plattform für Künstler aus verschiedenen Genres bietet, um
-              ihre Werke zu präsentieren, sich mit anderen Künstlern zu
-              vernetzen und möglicherweise ihre Arbeiten zu verkaufen.
+              ist eine Online-Plattform für Künstlerinnen, auf der sie ihre
+              kreativen Arbeiten präsentieren und verwalten können. Nutzerinnen
+              können persönliche Portfolios erstellen, ihre Werke teilen und
+              vermarkten, Veranstaltungen entdecken und organisieren, sich mit
+              anderen Künstler*innen vernetzen und Live-Streams ansehen. <br />{" "}
+              <br /> Die Plattform fördert Zusammenarbeit, Networking und
+              berufliches Wachstum innerhalb der Kunstgemeinschaft. <br />{" "}
+              <br /> Das Projekt befindet sich derzeit in aktiver Entwicklung
+              und wird kontinuierlich erweitert, um einen umfassenden Raum für
+              künstlerisches Engagement zu bieten.
             </article>
           )}
           <div className="used__tech__div">
-            <img className="tech__icon__img" height={35} src={js_logo} alt="" />
+            <img className="tech__icon__img" height={35} src={java} alt="" />
             <img
               className="tech__icon__img"
               height={35}
-              src={css_logo}
+              src={springboot}
+              alt=""
+            />
+            <img
+              className="tech__icon__img"
+              height={35}
+              src={postgres}
+              alt=""
+            />
+            <img className="tech__icon__img" height={35} src={maven} alt="" />
+            <img
+              className="tech__icon__img"
+              height={35}
+              src={react_logo}
               alt=""
             />
           </div>
@@ -227,7 +249,7 @@ export default function BuyBuyHomepage() {
         <div className="single__product__footer">
           <span>
             {" "}
-            Project Year: <span>2024</span>{" "}
+            Project Year: <span>2025</span>{" "}
           </span>{" "}
           &copy; Kürsat Cakmak
         </div>
@@ -235,7 +257,7 @@ export default function BuyBuyHomepage() {
         <div className="single__product__footer">
           <span>
             {" "}
-            Projektjahr: <span>2024</span>{" "}
+            Projektjahr: <span>2025</span>{" "}
           </span>{" "}
           &copy; Kürsat Cakmak
         </div>

@@ -107,12 +107,18 @@ export default function BuyBuyAdmin() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a href="https://github.com/cakmakkur/buybuy_admin_MERN">
+                <a
+                  href="https://github.com/cakmakkur/buybuy_admin_MERN"
+                  target="_blank"
+                >
                   Go to<span>Github Repository</span>{" "}
                   <img width={30} src={githubIcon} alt="" />
                 </a>
               ) : (
-                <a href="https://github.com/cakmakkur/buybuy_admin_MERN">
+                <a
+                  href="https://github.com/cakmakkur/buybuy_admin_MERN"
+                  target="_blank"
+                >
                   Zum<span>Github</span> gehen{" "}
                   <img
                     style={{ marginLeft: "20px" }}

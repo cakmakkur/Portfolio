@@ -157,7 +157,7 @@
   display: block;
   padding-top: 10vh;
   & h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: var(--highlight);
   }
   & h3 {
@@ -173,6 +173,22 @@
     #8a8aff,
     #8a2be2,
     #00f
+  ); /* purple ↔ blue */
+  background-size: 400% 400%; /* make gradient large for smooth animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* clip background to text */
+  animation: gradient-rotate 5s ease infinite;
+  // animation: hue-rotate 10s linear infinite;
+}
+
+.animated-text--dark {
+  background: linear-gradient(
+    270deg,
+    #a35de4,
+    rgb(110, 110, 242),
+    #dfdffb,
+    #a35de4,
+    rgb(110, 110, 242)
   ); /* purple ↔ blue */
   background-size: 400% 400%; /* make gradient large for smooth animation */
   -webkit-background-clip: text;

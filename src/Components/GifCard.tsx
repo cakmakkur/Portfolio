@@ -1,12 +1,14 @@
+import { useRef, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+
 interface VideoCardProps {
   src: string;
   css?: string;
 }
 
-import { useRef } from "react";
-
 function VideoCard({ src, css }: VideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <div
@@ -19,7 +21,18 @@ function VideoCard({ src, css }: VideoCardProps) {
         }
       }}
     >
-      <div className="gif-card__media">
+      {!videoLoaded && (
+        <div className="cliploader__div--mobile">
+          <ClipLoader
+            loading={true}
+            color={"rgb(255, 122, 19)"}
+            size={55}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      )}
+      <div className="gif-card__media" style={{ opacity: videoLoaded ? 1 : 0 }}>
         <video
           ref={videoRef}
           src={src}
@@ -28,6 +41,7 @@ function VideoCard({ src, css }: VideoCardProps) {
           playsInline
           preload="metadata"
           width="100%"
+          onLoadedData={() => setVideoLoaded(true)}
         />
       </div>
     </div>

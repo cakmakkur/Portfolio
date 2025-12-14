@@ -66,7 +66,7 @@ export default function UICatalog() {
           ></div>
           <h1>
             Discover My{" "}
-            <span className="animated-text" style={{ fontWeight: "bold" }}>
+            <span className="animated-text" style={{ fontWeight: "700" }}>
               UI
             </span>{" "}
             Design

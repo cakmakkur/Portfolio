@@ -104,12 +104,18 @@ export default function Schnapsen() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a href="https://github.com/cakmakkur/schnapsen">
+                <a
+                  href="https://github.com/cakmakkur/schnapsen"
+                  target="_blank"
+                >
                   Go to<span>Github Repository</span>{" "}
                   <img width={30} src={githubIcon} alt="" />
                 </a>
               ) : (
-                <a href="https://github.com/cakmakkur/schnapsen">
+                <a
+                  href="https://github.com/cakmakkur/schnapsen"
+                  target="_blank"
+                >
                   Zum<span>Github</span> gehen{" "}
                   <img
                     style={{ marginLeft: "20px" }}
@@ -120,7 +126,7 @@ export default function Schnapsen() {
                 </a>
               )}
             </div>
-            <div
+            {/* <div
               ref={playBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("play");
@@ -146,7 +152,7 @@ export default function Schnapsen() {
                   />
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="single__product__right">

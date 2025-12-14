@@ -15,6 +15,11 @@ import expressIcon from "../Assets/icons/express.png";
 import reactIcon from "../Assets/icons/react.png";
 import mongoIcon from "../Assets/icons/mongo.png";
 import nextjsIcon from "../Assets/icons/nextjs.png";
+import javaIcon from "../Assets/java.svg";
+import mavenIcon from "../Assets/maven.png";
+import postgres from "../Assets/postgres.svg";
+import springboot from "../Assets/spring-boot.webp";
+import three from "../Assets/three.webp";
 
 export const icons: IconType = {
   ts: tsIcon,
@@ -27,6 +32,11 @@ export const icons: IconType = {
   react: reactIcon,
   mongo: mongoIcon,
   next: nextjsIcon,
+  maven: mavenIcon,
+  java: javaIcon,
+  postgres: postgres,
+  springboot: springboot,
+  three: three,
 };
 
 type IconType = {
@@ -34,6 +44,16 @@ type IconType = {
 };
 
 export const projects = [
+  {
+    title: "Mondatelier",
+    route: "/projects/mondatelier",
+    img: mondatelierImg,
+    technologies: ["java", "springboot", "postgres", "three", "react"],
+    text: [
+      "Mondatelier is artists' platfrom, where users create a portfolio, share and market their work, browse and create events, connect with other artists, watch live streams and much more. This project is currently in development.",
+      "Mondatelier ist eine Plattform für Künstlerinnen, auf der Nutzerinnen ein Portfolio erstellen, ihre Arbeiten teilen und vermarkten, Veranstaltungen durchsuchen und erstellen, sich mit anderen Künstler*innen vernetzen, Live-Streams ansehen und vieles mehr. Dieses Projekt befindet sich derzeit in der Entwicklung.",
+    ],
+  },
   {
     title: "Music Band App with Landing Page",
     route: "/projects/band-homepage",
@@ -72,16 +92,6 @@ export const projects = [
     text: [
       "Schnapsen is a JavaScript-based, simplified version of the well-known card game Sixty-Six, where players can compete against the computer.",
       "Schnapsen ist eine JavaScript-basierte, vereinfachte Version des bekannten Kartenspiels Schnapsens, bei dem die Spieler gegen den Computer antreten können.",
-    ],
-  },
-  {
-    title: "Mondatelier",
-    route: "/projects/mondatelier",
-    img: mondatelierImg,
-    technologies: ["js", "css"],
-    text: [
-      "Mondatelier is currently a personal exhibition platform that will turn itself into an artists' gathering platform.",
-      "Aktuell ist Mondatelier eine persönliche Ausstellungsseite, die sich noch in Entwicklung zu einer Künstlerplattform befindet",
     ],
   },
   {

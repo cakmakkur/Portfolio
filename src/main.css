@@ -777,6 +777,7 @@
 }
 
 .contact__page__main {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1003,6 +1004,7 @@
 @media (max-width: 1070px) {
   .cv__div {
     padding-top: 10vh;
+    text-align: start;
   }
 }
 .cv__div section {
@@ -1653,7 +1655,7 @@
   padding-top: 10vh;
 }
 .ui-catalogue-title h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: var(--highlight);
 }
 .ui-catalogue-title h3 {
@@ -1662,6 +1664,14 @@
 
 .animated-text {
   background: linear-gradient(270deg, #8a2be2, #00f, #8a8aff, #8a2be2, #00f); /* purple ↔ blue */
+  background-size: 400% 400%; /* make gradient large for smooth animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* clip background to text */
+  animation: gradient-rotate 5s ease infinite;
+}
+
+.animated-text--dark {
+  background: linear-gradient(270deg, #a35de4, rgb(110, 110, 242), #dfdffb, #a35de4, rgb(110, 110, 242)); /* purple ↔ blue */
   background-size: 400% 400%; /* make gradient large for smooth animation */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* clip background to text */

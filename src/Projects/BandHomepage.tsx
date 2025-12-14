@@ -121,12 +121,18 @@ export default function BandHomepage() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a href="https://github.com/cakmakkur/vierVorZwoelf">
+                <a
+                  href="https://github.com/cakmakkur/vierVorZwoelf"
+                  target="_blank"
+                >
                   Go to<span>Github Repository</span>{" "}
                   <img width={30} src={githubIcon} alt="" />
                 </a>
               ) : (
-                <a href="https://github.com/cakmakkur/vierVorZwoelf">
+                <a
+                  href="https://github.com/cakmakkur/vierVorZwoelf"
+                  target="_blank"
+                >
                   Zum<span>Github</span> gehen{" "}
                   <img
                     style={{ marginLeft: "20px" }}
