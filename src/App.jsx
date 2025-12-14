@@ -4,6 +4,8 @@ import Homepage from "./Pages/Homepage";
 import ContactPage from "./Pages/ContactPage";
 import { lazy, Suspense } from "react";
 import Loading from "./Components/Loading";
+import UICatalog from "./Pages/UICatalog";
+import Exhibition from "./Pages/Exhibition";
 
 const BuyBuyHomepage = lazy(() => import("./Projects/BuyBuyHomepage"));
 const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="/projects/portfolio" element={<PortfolioProject />} />
           <Route path="/projects/band-homepage" element={<BandHomepage />} />
 
+          <Route path="/ui-catalog" element={<UICatalog />} />
+          <Route path="/exhibitions" element={<Exhibition />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>
