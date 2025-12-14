@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 .gif-card {
+  border: 1px solid var(--menu-btn-bg-hl);
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -50,6 +51,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   padding-top: 20vh;
 }
 
@@ -90,8 +92,8 @@
   height: 8vw;
 }
 .ui-catalog-card-10 {
-  width: 40vw;
-  height: 30vw;
+  width: 75vw;
+  height: 56vw;
 }
 .ui-catalog-card-11 {
   width: 80vw;
@@ -112,4 +114,77 @@
 .ui-catalog-card-15 {
   width: 50vw;
   height: 25vw;
+}
+.ui-catalog-card-16 {
+  width: 30vw;
+  height: 30vw;
+}
+.ui-catalog-card-17 {
+  width: 40vw;
+  height: 8vw;
+}
+.ui-catalog-card-18 {
+  width: 75vw;
+  height: 38vw;
+}
+.ui-catalog-card-19 {
+  width: 75vw;
+  height: 38vw;
+}
+.ui-catalog-card-20 {
+  width: 75vw;
+  height: 38vw;
+}
+
+.ui-catalogue-title {
+  width: 100%;
+  font-size: 2.5rem;
+  margin-bottom: 15vh;
+  display: block;
+  & h1 {
+    font-size: 4rem;
+    color: var(--highlight);
+  }
+  & h2 {
+    color: var(--primary);
+  }
+}
+
+.animated-text {
+  font-weight: bold;
+  background: linear-gradient(
+    270deg,
+    #8a2be2,
+    #00f,
+    #8a8aff,
+    #8a2be2,
+    #00f
+  ); /* purple ↔ blue */
+  background-size: 400% 400%; /* make gradient large for smooth animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* clip background to text */
+  animation: gradient-rotate 5s ease infinite;
+  // animation: hue-rotate 10s linear infinite;
+}
+
+/* Keyframes for rotating/moving gradient */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

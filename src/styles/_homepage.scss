@@ -66,7 +66,6 @@
 }
 
 .home__left {
-  transform: translateY(0px);
   max-width: 500px;
   & h1 {
     font-size: 3rem;
@@ -100,7 +99,7 @@
 .ext__links__div {
   display: flex;
   width: 100%;
-  margin-top: 1vh;
+  margin-top: 1.5vh;
   column-gap: 25px;
   & img {
     cursor: pointer;

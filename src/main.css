@@ -1,8 +1,10 @@
+@charset "UTF-8";
 [data-theme=dark] {
   --highlight: rgb(209, 241, 252);
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -15,6 +17,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -88,7 +91,6 @@
   }
 }
 .home__left {
-  transform: translateY(0px);
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -128,7 +130,7 @@
 .ext__links__div {
   display: flex;
   width: 100%;
-  margin-top: 1vh;
+  margin-top: 1.5vh;
   column-gap: 25px;
 }
 .ext__links__div img {
@@ -244,6 +246,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -256,6 +259,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -746,6 +750,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -758,6 +763,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -937,6 +943,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -949,6 +956,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -961,6 +969,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -973,6 +982,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -1030,6 +1040,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -1042,6 +1053,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -1275,6 +1287,7 @@
   --primary: rgb(151, 119, 37);
   --secondary: rgb(180, 225, 223);
   --background: rgb(58, 88, 99);
+  --background-grad2: rgb(49, 70, 77);
   --background-highlight: rgb(65, 99, 112);
   --text: rgb(150, 187, 200);
   --menu-btn-bg-hl: rgb(79, 111, 123);
@@ -1287,6 +1300,7 @@
   --highlight: rgb(98, 78, 49);
   --primary: rgb(208, 159, 74);
   --background: rgb(233, 233, 227);
+  --background-grad2: #ffffff;
   --background-highlight: rgb(246, 246, 246);
   --text: rgb(123, 124, 98);
   --menu-btn-bg-hl: rgb(225, 228, 215);
@@ -1452,6 +1466,7 @@
   }
 }
 .gif-card {
+  border: 1px solid var(--menu-btn-bg-hl);
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -1499,6 +1514,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   padding-top: 20vh;
 }
 
@@ -1548,8 +1564,8 @@
 }
 
 .ui-catalog-card-10 {
-  width: 40vw;
-  height: 30vw;
+  width: 75vw;
+  height: 56vw;
 }
 
 .ui-catalog-card-11 {
@@ -1577,6 +1593,74 @@
   height: 25vw;
 }
 
+.ui-catalog-card-16 {
+  width: 30vw;
+  height: 30vw;
+}
+
+.ui-catalog-card-17 {
+  width: 40vw;
+  height: 8vw;
+}
+
+.ui-catalog-card-18 {
+  width: 75vw;
+  height: 38vw;
+}
+
+.ui-catalog-card-19 {
+  width: 75vw;
+  height: 38vw;
+}
+
+.ui-catalog-card-20 {
+  width: 75vw;
+  height: 38vw;
+}
+
+.ui-catalogue-title {
+  width: 100%;
+  font-size: 2.5rem;
+  margin-bottom: 15vh;
+  display: block;
+}
+.ui-catalogue-title h1 {
+  font-size: 4rem;
+  color: var(--highlight);
+}
+.ui-catalogue-title h2 {
+  color: var(--primary);
+}
+
+.animated-text {
+  font-weight: bold;
+  background: linear-gradient(270deg, #8a2be2, #00f, #8a8aff, #8a2be2, #00f); /* purple ↔ blue */
+  background-size: 400% 400%; /* make gradient large for smooth animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* clip background to text */
+  animation: gradient-rotate 5s ease infinite;
+}
+
+/* Keyframes for rotating/moving gradient */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 *,
 *::before,
 *::after {
@@ -1590,8 +1674,8 @@
 
 :root {
   background-color: var(--background);
+  background: linear-gradient(290deg, var(--background), var(--background-grad2));
   width: 100%;
-  height: 100vh;
   padding: 2.5vw;
   color: var(--text-color);
   border: none;

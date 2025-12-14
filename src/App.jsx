@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/projects/band-homepage" element={<BandHomepage />} />
 
           <Route path="/ui-catalog" element={<UICatalog />} />
-          <Route path="/exhibitions" element={<Exhibition />} />
+          <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>

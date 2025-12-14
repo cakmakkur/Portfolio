@@ -204,7 +204,7 @@ export default function Homepage() {
         className="homepage-right-shape"
       ></div>
 
-      <section className="home__left">
+      <section className="home__left" style={{ zIndex: "2" }}>
         <div
           className="home__img_div"
           style={{
