@@ -1,3 +1,84 @@
+import GifCard from "../Components/GifCard";
+
 export default function UICatalog() {
-  return <div>UI Catalog Page</div>;
+  return (
+    <div className="ui-catalog-main">
+      <GifCard
+        key="ui-catalog-card-3"
+        src="/ui/3.mp4"
+        css="ui-catalog-card-3"
+      />
+      <GifCard
+        key="ui-catalog-card-1"
+        src="/ui/1.mp4"
+        css="ui-catalog-card-1"
+      />
+      <GifCard
+        key="ui-catalog-card-2"
+        src="/ui/2.mp4"
+        css="ui-catalog-card-2"
+      />
+
+      <GifCard
+        key="ui-catalog-card-4"
+        src="/ui/4.mp4"
+        css="ui-catalog-card-4"
+      />
+      <GifCard
+        key="ui-catalog-card-5"
+        src="/ui/5.mp4"
+        css="ui-catalog-card-5"
+      />
+      <GifCard
+        key="ui-catalog-card-6"
+        src="/ui/6.mp4"
+        css="ui-catalog-card-6"
+      />
+      <GifCard
+        key="ui-catalog-card-7"
+        src="/ui/7.mp4"
+        css="ui-catalog-card-7"
+      />
+      <GifCard
+        key="ui-catalog-card-8"
+        src="/ui/8.mp4"
+        css="ui-catalog-card-8"
+      />
+      <GifCard
+        key="ui-catalog-card-9"
+        src="/ui/9.mp4"
+        css="ui-catalog-card-9"
+      />
+      <GifCard
+        key="ui-catalog-card-10"
+        src="/ui/10.mp4"
+        css="ui-catalog-card-10"
+      />
+      <GifCard
+        key="ui-catalog-card-11"
+        src="/ui/11.mp4"
+        css="ui-catalog-card-11"
+      />
+      <GifCard
+        key="ui-catalog-card-12"
+        src="/ui/12.mp4"
+        css="ui-catalog-card-12"
+      />
+      <GifCard
+        key="ui-catalog-card-13"
+        src="/ui/13.mp4"
+        css="ui-catalog-card-13"
+      />
+      <GifCard
+        key="ui-catalog-card-14"
+        src="/ui/14.mp4"
+        css="ui-catalog-card-14"
+      />
+      <GifCard
+        key="ui-catalog-card-15"
+        src="/ui/15.mp4"
+        css="ui-catalog-card-15"
+      />
+    </div>
+  );
 }

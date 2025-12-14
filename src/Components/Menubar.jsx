@@ -75,7 +75,7 @@ export default function Menubar() {
         EXHIBITION
       </Link>
       <Link ref={uiCatalogBtnRef} className={`menu-button`} to="/ui-catalog">
-        UI CATALOG
+        UI CATALOGUE
       </Link>
       <Link
         ref={menuContactBtnRef}
