@@ -74,7 +74,12 @@ export default function Menubar() {
       >
         EXHIBITION
       </Link>
-      <Link ref={uiCatalogBtnRef} className={`menu-button`} to="/ui-catalog">
+      <Link
+        ref={uiCatalogBtnRef}
+        className={`menu-button animated-text`}
+        style={{ fontWeight: "nurmal important!" }}
+        to="/ui-catalog"
+      >
         UI CATALOGUE
       </Link>
       <Link

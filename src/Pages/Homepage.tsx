@@ -139,8 +139,8 @@ export default function Homepage() {
 
     if (!projectsCurrentPosition || !resumeCurrentPosition) return;
 
-    setProjectsPosition(projectsCurrentPosition - 10);
-    setResumePosition(resumeCurrentPosition - 10);
+    setProjectsPosition(projectsCurrentPosition - 30);
+    setResumePosition(resumeCurrentPosition - 30);
     setWindowWidth(window.innerWidth);
   };
 
@@ -208,8 +208,9 @@ export default function Homepage() {
         <div
           className="home__img_div"
           style={{
-            // backgroundImage: `url(${profilImg_tiny})`,
+            backgroundImage: `url(${profilImg_tiny})`,
             backgroundSize: "cover",
+            borderRadius: "50%",
           }}
         >
           {isProfilImgLoading ? <LoadingHexagonal /> : ""}

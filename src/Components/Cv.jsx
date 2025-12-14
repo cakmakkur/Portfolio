@@ -9,48 +9,7 @@ export default function Cv() {
     return (
       <div id="resume_start" className="cv__div">
         <h1 id="cv_start">resume</h1>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Education</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2008-2012
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Highschool of Natural Sciences, Yalova-Termal <br />{" "}
-              (Yalova-Termal Fen Lisesi)
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2017-2023
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Psychology <br /> University of Vienna <br /> (not graduated)
-            </section>
-          </section>
-        </div>
+
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${
@@ -59,87 +18,75 @@ export default function Cv() {
           >
             <h3>Work Experience</h3>
           </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2015
+              06/2025 – 02/2026
             </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Waiter <br /> proStaff Catering
+              Software Developer – Intern <br />
+              Docolution GmbH, Vienna, Austria
+              <ul className="cv-work">
+                <li>
+                  Developed business management applications using Java, Spring
+                  Boot, TypeScript, Angular, SQL, and Liquibase
+                </li>
+                <li>
+                  Maintained Document Analyzer software (Aly): bug fixes,
+                  feature enhancements, and production release support
+                </li>
+                <li>
+                  Implemented CI/CD pipelines, automated testing, and Bash/Batch
+                  scripting for deployment automation and task optimization
+                </li>
+                <li>
+                  Wrote technical documentation and contributed to code reviews
+                  in an agile team environment
+                </li>
+                <li>
+                  Took ownership of full-stack solutions from database design to
+                  UI implementation, delivering measurable business value
+                </li>
+              </ul>
             </section>
           </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2015 - 2017
+              2021 – 2024
             </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Barista <br /> Starbucks Coffee
+              Service Personal <br />
+              Kolar Beisl, Vienna, Austria
+              <ul className="cv-work">
+                <li>
+                  Provided attentive guest service and menu consultation in a
+                  fast-paced international restaurant
+                </li>
+                <li>
+                  Coordinated with team members to ensure efficient operations
+                  and maintain a professional atmosphere
+                </li>
+              </ul>
             </section>
           </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2017
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Biologische Landwirtschaft <br /> Am Seebacher Hof, Bad
-              Mitterndorf
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2017 - 2018
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Barista <br /> McDonald&apos;s
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2018 - 2020
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Retail <br /> JuiceFactory
-            </section>
-          </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
@@ -153,24 +100,13 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Child Care <br /> Sternenwerkstatt, Divina Art
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2021-2024
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Waiter <br /> Kolar Beisl
+              Child Care Worker <br />
+              Divina Art, Vienna, Austria
+              <ul className="cv-work">
+                <li>Supervised children in a safe, engaging environment</li>
+                <li>Conducted age-appropriate educational activities</li>
+                <li>Supported social, emotional, and cognitive development</li>
+              </ul>
             </section>
           </section>
         </div>
@@ -180,7 +116,78 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Language Skills</h3>
+            <h3>Education</h3>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              03/2025 – 03/2026
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Junior Software Developer <br />
+              FH Technikum, Vienna, Austria
+              <ul className="cv-work">
+                <li>Full-Stack Web and Software Development</li>
+                <li>Data Management</li>
+                <li>Networking, Infrastructure & Linux</li>
+                <li>Agile Development & Software Lifecycle Management</li>
+                <li>Software Architecture and Design</li>
+                <li>Agile Software Testing</li>
+              </ul>
+            </section>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              2018 – 2022
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              University of Vienna, Vienna, Austria <br />
+              BSc Psychology (not completed)
+            </section>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              2008 – 2012
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Yalova Termal High School for Natural Sciences
+            </section>
+          </section>
+        </div>
+
+        <div className="cv__chapter__div">
+          <section
+            className={`cv__sub__top ${
+              theme.type === "light" ? "cv__sub__top--light" : ""
+            }`}
+          >
+            <h3>Language</h3>
           </section>
           <section className="cv__sub__bottom">
             <section
@@ -195,7 +202,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 written and spoken <br /> Latest Certificate: ÖSD-B2, 2015{" "}
+              C1 - Advanced proficiency, comfortable in business settings
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -211,7 +218,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 written and spoken
+              C2 - Fluent in all professional and technical contexts
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -237,7 +244,7 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Programming Languages & Technologies</h3>
+            <h3>Languages & Technologies</h3>
           </section>
           <section className="cv__sub__bottom">
             <section
@@ -250,8 +257,19 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
-              GitHub, npm, Tailwind, MongoDB, SQL
+              <ul className="cv-work">
+                <li>Java, Spring Boot, Hibernate</li>
+                <li>JS/TS, Angular, React, npm</li>
+                <li>
+                  HTML, CSS, SASS, Bootstrap, PostgreSQL, MySQL, MongoDB,
+                  Liquibase
+                </li>
+                <li>Git, GitLab, CI/CD Pipelines</li>
+                <li>Bash/Batch Scripting</li>
+                <li>Maven, Docker, AWS</li>
+                <li>Linux, Windows, macOS</li>
+                <li>Agile/Scrum, Code Review</li>
+              </ul>
             </section>
           </section>
         </div>
@@ -261,57 +279,28 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Interests & Projects</h3>
+            <h3>Personal</h3>
           </section>
+          <section className="cv__sub__bottom"></section>
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            >
-              ⏺
-            </section>
+            ></section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Pianist in the jazz band &apos;Vier vor Zwölf&apos;
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ⏺
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Web Development
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ⏺
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Painting <br />
-              <span style={{ fontSize: "0.8rem", textDecoration: "underline" }}>
-                Online Exposition: ausstellung.cakmakkursat.com
-              </span>
+              I&apos;m a dedicated piano player and passionate about music and
+              visual arts. I occasionally play in a hobby jazz band. I also like
+              visual arts and paint traditionally and digitally.
+              <br />
+              Creativity fuels both my technical work and personal pursuits.{" "}
+              <br />
+              As a hobby project, I am working on an artists&apos; platform to
+              share artwork and connect with fellow art enthusiasts.
             </section>
           </section>
         </div>
@@ -321,136 +310,87 @@ export default function Cv() {
     return (
       <div id="resume_start" className="cv__div">
         <h1 id="cv_start">lebenslauf</h1>
+
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Ausbildung</h3>
+            <h3>Berufserfahrung</h3>
           </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2008-2012
+              06/2025 – 02/2026
             </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Gymnasium, Yalova-Termal <br /> (Yalova-Termal Fen Lisesi)
+              Software Developer – Praktikant <br />
+              Docolution GmbH, Wien, Österreich
+              <ul className="cv-work">
+                <li>
+                  Entwicklung von Business-Management-Anwendungen mit Java,
+                  Spring Boot, TypeScript, Angular, SQL und Liquibase
+                </li>
+                <li>
+                  Wartung der Dokumenten-Analyse-Software (Aly):
+                  Fehlerbehebungen, Feature-Erweiterungen und Unterstützung bei
+                  Produktiv-Releases
+                </li>
+                <li>
+                  Implementierung von CI/CD-Pipelines, automatisierten Tests
+                  sowie Bash-/Batch-Skripten zur Deployment-Automatisierung und
+                  Aufgabenoptimierung
+                </li>
+                <li>
+                  Erstellung technischer Dokumentation und Mitwirkung bei
+                  Code-Reviews in einem agilen Teamumfeld
+                </li>
+                <li>
+                  Eigenverantwortliche Umsetzung von Full-Stack-Lösungen von der
+                  Datenbankgestaltung bis zur UI-Implementierung mit messbarem
+                  geschäftlichem Mehrwert
+                </li>
+              </ul>
             </section>
           </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2017-2023
+              2021 – 2024
             </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Psychologie <br /> Universität Wien <br /> (nicht abgeschlossen)
+              Servicepersonal <br />
+              Kolar Beisl, Wien, Österreich
+              <ul className="cv-work">
+                <li>
+                  Aufmerksame Gästebetreuung und Menüberatung in einem
+                  schnelllebigen, internationalen Restaurantbetrieb
+                </li>
+                <li>
+                  Enge Zusammenarbeit im Team zur Sicherstellung effizienter
+                  Abläufe und eines professionellen Auftretens
+                </li>
+              </ul>
             </section>
           </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Berufliche Erfahrungen</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2015
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Kellner <br /> proStaff Catering
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2015 - 2017
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Barista <br /> Starbucks Coffee
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2017
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Biologische Landwirtschaft <br /> Am Seebacher Hof, Bad
-              Mitterndorf
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2017 - 2018
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Barista <br /> McDonald&apos;s
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2018 - 2020
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Handel <br /> JuiceFactory
-            </section>
-          </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
@@ -464,7 +404,52 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Kinderbetreuung <br /> Sternenwerkstatt, Divina Art
+              Kinderbetreuer <br />
+              Divina Art, Wien, Österreich
+              <ul className="cv-work">
+                <li>
+                  Betreuung von Kindern in einem sicheren und anregenden Umfeld
+                </li>
+                <li>Durchführung altersgerechter pädagogischer Aktivitäten</li>
+                <li>
+                  Förderung der sozialen, emotionalen und kognitiven Entwicklung
+                </li>
+              </ul>
+            </section>
+          </section>
+        </div>
+        <div className="cv__chapter__div">
+          <section
+            className={`cv__sub__top ${
+              theme.type === "light" ? "cv__sub__top--light" : ""
+            }`}
+          >
+            <h3>Ausbildung</h3>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              03/2025 – 03/2026
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Junior Software Developer <br />
+              FH Technikum, Wien, Österreich
+              <ul className="cv-work">
+                <li>Full-Stack Web- und Softwareentwicklung</li>
+                <li>Datenmanagement</li>
+                <li>Netzwerke, Infrastruktur und Linux</li>
+                <li>Agile Entwicklung & Software-Lifecycle-Management</li>
+                <li>Softwarearchitektur und -design</li>
+                <li>Agiles Software-Testing</li>
+              </ul>
             </section>
           </section>
 
@@ -474,17 +459,36 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
             >
-              2021-2024
+              2018 – 2022
             </section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Kellner <br /> Kolar Beisl
+              Universität Wien, Wien, Österreich <br />
+              Bachelorstudium Psychologie (nicht abgeschlossen)
+            </section>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section
+              className={`cv__sub__bottom__left ${
+                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+              }`}
+            >
+              2008 – 2012
+            </section>
+            <section
+              className={`cv__sub__bottom__right ${
+                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+              }`}
+            >
+              Yalova Termal Gymnasium für Naturwissenschaften
             </section>
           </section>
         </div>
+
         <div className="cv__chapter__div">
           <section
             className={`cv__sub__top ${
@@ -506,7 +510,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 in Wort und Schrift <br /> Aktuellstes Zertifikat: ÖSD-B2, 2015
+              C1 – Fortgeschrittene Sprachkenntnisse, sicher im beruflichen und
+              geschäftlichen Umfeld
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -522,7 +527,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 in Wort und Schrift
+              C2 – Verhandlungssicher in allen beruflichen und technischen
+              Kontexten
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -561,8 +567,19 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              HTML, CSS, SASS, React, JavaScript, TypeScript, Node.js, Next.js,
-              GitHub, npm, Tailwind, MongoDB, SQL
+              <ul className="ui-work">
+                <li>Java, Spring Boot, Hibernate</li>
+                <li>JS/TS, Angular, React, npm</li>
+                <li>
+                  HTML, CSS, SASS, Bootstrap, PostgreSQL, MySQL, MongoDB,
+                  Liquibase
+                </li>
+                <li>Git, GitLab, CI/CD-Pipelines</li>
+                <li>Bash/Batch-Skripting</li>
+                <li>Maven, Docker, AWS</li>
+                <li>Linux, Windows, macOS</li>
+                <li>Agile/Scrum, Code Review</li>
+              </ul>
             </section>
           </section>
         </div>
@@ -572,57 +589,31 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Interessen & Projekte</h3>
+            <h3>Persönliches</h3>
           </section>
+
           <section className="cv__sub__bottom">
             <section
               className={`cv__sub__bottom__left ${
                 theme.type === "light" ? "cv__sub__bottom__left--light" : ""
               }`}
-            >
-              ⏺
-            </section>
+            ></section>
             <section
               className={`cv__sub__bottom__right ${
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Pianist in der Jazz-band &apos;Vier vor Zwölf&apos;
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ⏺
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Webentwicklung
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ⏺
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Malerei <br />
-              <span style={{ fontSize: "0.8rem", textDecoration: "underline" }}>
-                Online-Ausstellung: ausstellung.cakmakkursat.com
-              </span>
+              Ich bin ein engagierter Pianist und leidenschaftlich an Musik und
+              visueller Kunst interessiert. Gelegentlich spiele ich in einer
+              Hobby-Jazzband. Außerdem beschäftige ich mich mit bildender Kunst
+              und male sowohl traditionell als auch digital.
+              <br />
+              Kreativität prägt sowohl meine technische Arbeit als auch meine
+              persönlichen Interessen.
+              <br />
+              Als Hobbyprojekt arbeite ich an einer Künstler*innen-Plattform, um
+              Kunstwerke zu teilen und mich mit anderen Kunstinteressierten zu
+              vernetzen.
             </section>
           </section>
         </div>

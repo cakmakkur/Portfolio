@@ -2,13 +2,13 @@
 
 .home__main {
   //menu bar: 40px, margin: 10px, root padding: 2.5vw
-  height: calc(100vh - 50px - 2.5vw);
+  height: calc(100vh - 5vh - 44px);
   width: 100%;
   display: flex;
   padding: 0px 0px 0vh 3vw;
+  overflow: hidden;
   column-gap: 4vw;
   justify-content: center;
-  overflow: hidden;
   color: var(--text);
   //starting animation:
   opacity: 0;
@@ -30,7 +30,7 @@
 }
 
 .home__img_div {
-  width: 420px;
+  width: 400px;
   height: 420px;
 }
 
@@ -219,4 +219,9 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
+}
+
+.about-hello {
+  font-size: 1.7rem;
+  color: var(--primary);
 }

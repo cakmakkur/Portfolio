@@ -6,10 +6,12 @@ export default function About() {
   if (language === "EN") {
     return (
       <p className="about__text">
-        I am a driven and curious full-stack developer in training with a
-        passion for creating software that works flawlessly from the database to
-        the user interface. I dig deep into how systems work behind the scenes
-        and constantly push myself to learn, improve, and deliver real value.
+        <span className="about-hello">Hello</span>
+        <br />
+        I am a driven and curious web and software developer with a passion for
+        creating software that works flawlessly from the database to the user
+        interface. I dig deep into how systems work behind the scenes and
+        constantly push myself to learn, improve, and deliver real value.
         <br /> <br />
         Beginning my developer journey independently, I&apos;ve created
         web-based games, landing pages, and e-commerce sites, refining my skills
@@ -26,11 +28,13 @@ export default function About() {
   } else {
     return (
       <p className="about__text">
-        Ich bin ein motivierter und neugieriger Full-Stack-Entwickler in
-        Ausbildung mit einer Leidenschaft dafür, Software zu entwickeln, die von
-        der Datenbank bis zur Benutzeroberfläche einwandfrei funktioniert. Ich
-        gehe den Systemen hinter den Kulissen auf den Grund und bemühe mich
-        ständig, zu lernen, mich zu verbessern und echten Mehrwert zu liefern.
+        <span className="about-hello">Hallo</span>
+        <br />
+        Ich bin ein motivierter und neugieriger Full-Stack-Entwickler mit einer
+        Leidenschaft dafür, Software zu entwickeln, die von der Datenbank bis
+        zur Benutzeroberfläche einwandfrei funktioniert. Ich gehe den Systemen
+        hinter den Kulissen auf den Grund und bemühe mich ständig, zu lernen,
+        mich zu verbessern und echten Mehrwert zu liefern.
         <br /> <br />
         Meine Entwicklerreise begann ich eigenständig und habe dabei webbasierte
         Spiele, Landingpages und E-Commerce-Websites erstellt und meine

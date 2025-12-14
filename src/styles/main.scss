@@ -31,7 +31,6 @@
     var(--background-grad2)
   );
   width: 100%;
-  padding: 2.5vw;
   color: var(--text-color);
   border: none;
   border-color: var(--primary);
@@ -41,8 +40,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  //CAREFUL:
-  // overflow-x: hidden;
+  padding: 2.5vw 2.5vw 0px 2.5vw;
 }
 
 img,

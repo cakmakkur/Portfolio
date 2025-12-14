@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
-import checkLogo from "../Assets/checkLogo-green.svg";
 import github__logo from "../Assets/github-hp.png";
 import linked__in__logo from "../Assets/linkedin.svg";
 import PhoneIcon from "../Assets/svg_repo/PhoneIcon";
@@ -82,7 +81,7 @@ export default function ContactPage() {
 
   return (
     <div className="contact__page__main">
-      {!messageSent ? (
+      {/* {!messageSent ? (
         <form className="contact__form__div" onSubmit={handleSubmit}>
           <h1>{language === "EN" ? "GET IN TOUCH" : "KONTAKTIEREN"}</h1>
           <label className="contact__label">
@@ -197,14 +196,14 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <div className="contact__info__div">
         <h2>Kürsat Cakmak</h2>
         <h4 style={{ display: "flex", alignItems: "center" }}>
           <PhoneIcon /> 0681 10590944
         </h4>
         <h4 style={{ display: "flex", alignItems: "center" }}>
-          <EmailIcon /> info@cakmakkursat.com
+          <EmailIcon /> cakmakkur@hotmail.com
         </h4>
         <div className="ext__links__div ext__links__div--contact">
           <a href="https://github.com/cakmakkur">
