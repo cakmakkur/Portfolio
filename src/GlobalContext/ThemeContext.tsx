@@ -55,11 +55,11 @@ const ThemeContext = createContext<ThemeContextType>(defaultThemeValue);
 export const useThemeContext = () => useContext(ThemeContext);
 
 export const ThemeContextProvider = ({ children }: ComponentProps) => {
-  const [theme, setTheme] = useState<ThemeType>(DarkTheme);
+  const [theme, setTheme] = useState<ThemeType>(LightTheme);
 
   useEffect(() => {
     const storedThemeType = localStorage.getItem("theme");
-    let initialTheme: ThemeType = DarkTheme;
+    let initialTheme: ThemeType = LightTheme;
     if (storedThemeType) {
       initialTheme =
         JSON.parse(storedThemeType) === "dark" ? DarkTheme : LightTheme;
