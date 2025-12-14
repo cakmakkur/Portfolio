@@ -146,7 +146,14 @@ export default function UICatalog() {
       </div>
 
       <div ref={addToRefs} className="card-wrapper">
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <img src="/ui/loadingGif.gif" className="ui-catalog-card-24" alt="" />
           <span
             style={{
