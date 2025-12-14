@@ -32,9 +32,9 @@ export default function BuyBuyAdmin() {
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
 
-  const VideoPlayer = lazy(
-    () => import("../Components/VideoPlayers/BuyBuyAdminVideo")
-  );
+  // const VideoPlayer = lazy(
+  //   () => import("../Components/VideoPlayers/BuyBuyAdminVideo")
+  // );
 
   const buybuyAdminImages: ImageArrayType = [img1, img2, img3, img4];
 
@@ -123,7 +123,7 @@ export default function BuyBuyAdmin() {
                 </a>
               )}
             </div>
-            <div
+            {/* <div
               ref={youtubeBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("youtube");
@@ -149,7 +149,7 @@ export default function BuyBuyAdmin() {
                   />
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="single__product__right">
@@ -257,7 +257,7 @@ export default function BuyBuyAdmin() {
               alt=""
             />
           </div>
-          <div className="view__product__btn__div">
+          {/* <div className="view__product__btn__div">
             <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
@@ -275,7 +275,7 @@ export default function BuyBuyAdmin() {
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="product__links__div"></div>
         </div>
       </div>
@@ -297,7 +297,7 @@ export default function BuyBuyAdmin() {
         </div>
       )}
       <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {toggleVideo ? (
+        {/* {toggleVideo ? (
           <div
             onClick={(e) => e.stopPropagation()}
             className="video__modal__div"
@@ -308,7 +308,7 @@ export default function BuyBuyAdmin() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </Suspense>
     </div>
   );

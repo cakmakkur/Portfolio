@@ -37,9 +37,9 @@ export default function BuyBuyHomepage() {
   const buybuyImages: ImageArrayType = [img1, img2, img3, img4];
   const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
 
-  const VideoPlayer = lazy(
-    () => import("../Components/VideoPlayers/MondatelierVideo")
-  );
+  // const VideoPlayer = lazy(
+  //   () => import("../Components/VideoPlayers/MondatelierVideo")
+  // );
 
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
@@ -201,7 +201,7 @@ export default function BuyBuyHomepage() {
               alt=""
             />
           </div>
-          <div className="view__product__btn__div">
+          {/* <div className="view__product__btn__div">
             <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
@@ -219,7 +219,7 @@ export default function BuyBuyHomepage() {
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="product__links__div"></div>
         </div>
       </div>
@@ -241,7 +241,7 @@ export default function BuyBuyHomepage() {
         </div>
       )}
       <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {toggleVideo ? (
+        {/* {toggleVideo ? (
           <div
             onClick={(e) => e.stopPropagation()}
             className="video__modal__div"
@@ -252,7 +252,7 @@ export default function BuyBuyHomepage() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </Suspense>
     </div>
   );

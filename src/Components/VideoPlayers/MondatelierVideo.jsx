@@ -1,10 +1,10 @@
-import projectVideo from "../../Assets/projectVideos/Logo_v3.mp4";
+// import projectVideo from "../../Assets/projectVideos/Logo_v3.mp4";
 
-export default function MondatelierVideo() {
-  return (
-    <video controls>
-      <source src={projectVideo} type="video/mp4" />
-      Your browser does not support the video.
-    </video>
-  );
-}
+// export default function MondatelierVideo() {
+//   return (
+//     <video controls>
+//       <source src={projectVideo} type="video/mp4" />
+//       Your browser does not support the video.
+//     </video>
+//   );
+// }

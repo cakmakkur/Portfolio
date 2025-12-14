@@ -31,9 +31,9 @@ export default function Schnapsen() {
 
   const schnapsenImages: ImageArrayType = [img1, img2, img3, img4];
 
-  const VideoPlayer = lazy(
-    () => import("../Components/VideoPlayers/SchnapsenVideo")
-  );
+  // const VideoPlayer = lazy(
+  //   () => import("../Components/VideoPlayers/SchnapsenVideo")
+  // );
 
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
@@ -217,7 +217,7 @@ export default function Schnapsen() {
               alt=""
             />
           </div>
-          <div className="view__product__btn__div">
+          {/* <div className="view__product__btn__div">
             <div
               ref={viewProductBtnRef}
               onMouseEnter={() => {
@@ -235,7 +235,7 @@ export default function Schnapsen() {
                 {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="product__links__div"></div>
         </div>
       </div>
@@ -257,7 +257,7 @@ export default function Schnapsen() {
         </div>
       )}
       <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {toggleVideo ? (
+        {/* {toggleVideo ? (
           <div
             onClick={(e) => e.stopPropagation()}
             className="video__modal__div"
@@ -268,7 +268,7 @@ export default function Schnapsen() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </Suspense>
     </div>
   );
