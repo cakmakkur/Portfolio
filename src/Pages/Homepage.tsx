@@ -198,101 +198,120 @@ export default function Homepage() {
   }, [theme]);
 
   return (
-    <div ref={mainPageRef} className="home__main">
-      <div
-        style={{ backgroundColor: theme.backgroundHighlight }}
-        className="homepage-right-shape"
-      ></div>
-
-      <section className="home__left" style={{ zIndex: "2" }}>
+    <>
+      <div ref={mainPageRef} className="home__main">
         <div
-          className="home__img_div"
-          style={{
-            backgroundImage: `url(${profilImg_tiny})`,
-            backgroundSize: "cover",
-            borderRadius: "50%",
-          }}
-        >
-          {isProfilImgLoading ? <LoadingHexagonal /> : ""}
-          <img
-            className="profil__img"
-            ref={bildRef}
-            width={250}
-            src={lebenslauf_bild}
-            alt="profil picture"
-          />
-        </div>
-        <h1>KÜRSAT CAKMAK</h1>
-        <div>
-          {language === "EN" ? (
-            <h4>SOFTWARE DEVELOPER</h4>
-          ) : (
-            <h4>SOFTWAREENTWICKLER</h4>
-          )}
-          <div className="ext__links__div">
-            <a href="https://github.com/cakmakkur" target="_blank">
-              <img height={30} src={github__logo} alt="" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kursat-cakmak/"
-              target="_blank"
-            >
-              <img height={30} src={linked__in__logo} alt="" />
-            </a>
-          </div>
-        </div>
-        {windowWidth > 1070 ? <HomeChapterNav /> : ""}
-      </section>
-      {windowWidth <= 1070 ? <HomeChapterNav /> : ""}
-      <section ref={sectionRightRef} className="home__right">
-        <div ref={scrollRef} className="home__right__scrollable">
-          <About />
-          <div
-            id="projects_start"
-            ref={projectsContainerRef}
-            className="projects__main__div"
-          >
-            {language === "EN" ? (
-              <h1 ref={headerRef1}>projects</h1>
-            ) : (
-              <h1 ref={headerRef1}>projekte</h1>
-            )}
-            {projects.map((project, i) => (
-              <ProjectThumbnail
-                key={i}
-                title={project.title}
-                route={project.route}
-                img={project.img}
-                technologies={project.technologies}
-                text={language === "EN" ? project.text[0] : project.text[1]}
-              />
-            ))}
-          </div>
-          <Cv />
+          style={{ backgroundColor: theme.backgroundHighlight }}
+          className="homepage-right-shape"
+        ></div>
 
-          {language === "EN" ? (
-            <a
-              className="resume__dl__btn"
-              download="Resume_Kursat_Cakmak.pdf"
-              href="/resume_kursat_cakmak.pdf"
+        <section className="home__left" style={{ zIndex: "2" }}>
+          <div
+            className="home__img_div"
+            style={{
+              backgroundImage: `url(${profilImg_tiny})`,
+              backgroundSize: "cover",
+              borderRadius: "50%",
+            }}
+          >
+            {isProfilImgLoading ? <LoadingHexagonal /> : ""}
+            <img
+              className="profil__img"
+              ref={bildRef}
+              width={250}
+              src={lebenslauf_bild}
+              alt="profil picture"
+            />
+          </div>
+          <h1>KÜRSAT CAKMAK</h1>
+          <div>
+            {language === "EN" ? (
+              <h4>SOFTWARE DEVELOPER</h4>
+            ) : (
+              <h4>SOFTWAREENTWICKLER</h4>
+            )}
+            <div className="ext__links__div">
+              <a href="https://github.com/cakmakkur" target="_blank">
+                <img height={30} src={github__logo} alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kursat-cakmak/"
+                target="_blank"
+              >
+                <img height={30} src={linked__in__logo} alt="" />
+              </a>
+            </div>
+          </div>
+          {windowWidth > 1070 ? <HomeChapterNav /> : ""}
+        </section>
+        {windowWidth <= 1070 ? <HomeChapterNav /> : ""}
+        <section ref={sectionRightRef} className="home__right">
+          <div ref={scrollRef} className="home__right__scrollable">
+            <About />
+            <div
+              id="projects_start"
+              ref={projectsContainerRef}
+              className="projects__main__div"
             >
-              DOWNLOAD RESUMÈ
-              <br />
-              <span>as PDF File</span>
-            </a>
-          ) : (
-            <a
-              className="resume__dl__btn"
-              download="Lebenslauf_Kursat_Cakmak.pdf"
-              href="/lebenslauf_kursat_cakmak.pdf"
-            >
-              LEBENSLAUF HERUNTERLADEN
-              <br />
-              <span>als PDF-Datei</span>
-            </a>
-          )}
+              {language === "EN" ? (
+                <h1 ref={headerRef1}>projects</h1>
+              ) : (
+                <h1 ref={headerRef1}>projekte</h1>
+              )}
+              {projects.map((project, i) => (
+                <ProjectThumbnail
+                  key={i}
+                  title={project.title}
+                  route={project.route}
+                  img={project.img}
+                  technologies={project.technologies}
+                  text={language === "EN" ? project.text[0] : project.text[1]}
+                />
+              ))}
+            </div>
+            <Cv />
+
+            {language === "EN" ? (
+              <a
+                className="resume__dl__btn"
+                download="Resume_Kursat_Cakmak.pdf"
+                href="/resume_kursat_cakmak.pdf"
+              >
+                DOWNLOAD RESUMÈ
+                <br />
+                <span>as PDF File</span>
+              </a>
+            ) : (
+              <a
+                className="resume__dl__btn"
+                download="Lebenslauf_Kursat_Cakmak.pdf"
+                href="/lebenslauf_kursat_cakmak.pdf"
+              >
+                LEBENSLAUF HERUNTERLADEN
+                <br />
+                <span>als PDF-Datei</span>
+              </a>
+            )}
+          </div>
+        </section>
+      </div>
+      {/* {language === "EN" ? (
+        <div className="homepage-footer">
+          <span>
+            {" "}
+            Project Year: <span>2024</span>{" "}
+          </span>{" "}
+          &copy; Kürsat Cakmak
         </div>
-      </section>
-    </div>
+      ) : (
+        <div className="homepage-footer">
+          <span>
+            {" "}
+            Projektjahr: <span>2024</span>{" "}
+          </span>{" "}
+          &copy; Kürsat Cakmak
+        </div>
+      )} */}
+    </>
   );
 }

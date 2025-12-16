@@ -33,7 +33,14 @@ export default function Cv() {
               }`}
             >
               Software Developer – Intern <br />
-              Docolution GmbH, Vienna, Austria
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.docolution.com"
+                target="_blank"
+              >
+                Docolution GmbH
+              </a>{" "}
+              Vienna, Austria
               <ul className="cv-work">
                 <li>
                   Developed business management applications using Java, Spring
@@ -73,7 +80,14 @@ export default function Cv() {
               }`}
             >
               Service Personal <br />
-              Kolar Beisl, Vienna, Austria
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.docolution.com"
+                target="_blank"
+              >
+                Kolar Beisl,
+              </a>{" "}
+              Vienna, Austria
               <ul className="cv-work">
                 <li>
                   Provided attentive guest service and menu consultation in a
@@ -334,7 +348,14 @@ export default function Cv() {
               }`}
             >
               Software Developer – Praktikant <br />
-              Docolution GmbH, Wien, Österreich
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.docolution.com"
+                target="_blank"
+              >
+                Docolution GmbH,
+              </a>{" "}
+              Wien, Österreich
               <ul className="cv-work">
                 <li>
                   Entwicklung von Business-Management-Anwendungen mit Java,
@@ -377,7 +398,14 @@ export default function Cv() {
               }`}
             >
               Servicepersonal <br />
-              Kolar Beisl, Wien, Österreich
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.docolution.com"
+                target="_blank"
+              >
+                Kolar Beisl,
+              </a>{" "}
+              Wien, Österreich
               <ul className="cv-work">
                 <li>
                   Aufmerksame Gästebetreuung und Menüberatung in einem
