@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Homepage from "./Pages/Homepage";
 import Menubar from "./Components/Menubar";
 import ContactPage from "./Pages/ContactPage";
@@ -16,9 +16,8 @@ const BandHomepage = lazy(() => import("./Projects/BandHomepage"));
 
 export default function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Menubar />
-
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -38,6 +37,6 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>
-    </div>
+    </BrowserRouter>
   );
 }
