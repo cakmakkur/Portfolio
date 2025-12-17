@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Menubar from "./Components/Menubar";
 import Homepage from "./Pages/Homepage";
+import Menubar from "./Components/Menubar";
 import ContactPage from "./Pages/ContactPage";
 import { lazy, Suspense } from "react";
 import Loading from "./Components/Loading";

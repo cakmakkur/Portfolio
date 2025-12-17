@@ -1,4 +1,8 @@
-import { useThemeContext } from "../GlobalContext/ThemeContext";
+import {
+  DarkTheme,
+  LightTheme,
+  useThemeContext,
+} from "../GlobalContext/ThemeContext";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 export default function Cv() {
@@ -32,13 +36,23 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Software Developer – Intern <br />
+              <span className="cv-accent">Software Developer – Intern</span>
+              <br />
               <a
                 style={{ textDecoration: "underline" }}
                 href="https://www.docolution.com"
                 target="_blank"
               >
-                Docolution GmbH
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Docolution GmbH
+                </span>
               </a>{" "}
               Vienna, Austria
               <ul className="cv-work">
@@ -79,13 +93,23 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Service Personal <br />
+              <span className="cv-accent">Service Personal</span>
+              <br />
               <a
                 style={{ textDecoration: "underline" }}
-                href="https://www.docolution.com"
+                href="https://www.kolar-beisl.at/"
                 target="_blank"
               >
-                Kolar Beisl,
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Kolar Beisl
+                </span>
               </a>{" "}
               Vienna, Austria
               <ul className="cv-work">
@@ -114,8 +138,25 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Child Care Worker <br />
-              Divina Art, Vienna, Austria
+              <span className="cv-accent">Child Care Worker</span>
+              <br />
+              <a
+                href="https://divinaart.at/"
+                style={{ textDecoration: "underline" }}
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Divina Art
+                </span>
+              </a>{" "}
+              Vienna, Austria
               <ul className="cv-work">
                 <li>Supervised children in a safe, engaging environment</li>
                 <li>Conducted age-appropriate educational activities</li>
@@ -146,7 +187,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Junior Software Developer <br />
+              <span className="cv-accent">Junior Software Developer</span>
+              <br />
               FH Technikum, Vienna, Austria
               <ul className="cv-work">
                 <li>Full-Stack Web and Software Development</li>
@@ -173,7 +215,7 @@ export default function Cv() {
               }`}
             >
               University of Vienna, Vienna, Austria <br />
-              BSc Psychology (not completed)
+              <span className="cv-accent">BSc Psychology</span> (not completed)
             </section>
           </section>
 
@@ -190,7 +232,9 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Yalova Termal High School for Natural Sciences
+              <span className="cv-accent">
+                Yalova Termal High School for Natural Sciences
+              </span>{" "}
             </section>
           </section>
         </div>
@@ -216,7 +260,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 - Advanced proficiency, comfortable in business settings
+              <span className="cv-accent">C1</span> - Advanced proficiency,
+              comfortable in business settings
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -232,7 +277,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C2 - Fluent in all professional and technical contexts
+              <span className="cv-accent">C2</span> - Fluent in all professional
+              and technical contexts
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -248,7 +294,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Native Language
+              <span className="cv-accent">Native Language</span>{" "}
             </section>
           </section>
         </div>
@@ -347,13 +393,23 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Software Developer – Praktikant <br />
+              <span className="cv-accent">Software Developer – Praktikant</span>{" "}
+              <br />
               <a
                 style={{ textDecoration: "underline" }}
                 href="https://www.docolution.com"
                 target="_blank"
               >
-                Docolution GmbH,
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Docolution GmbH
+                </span>
               </a>{" "}
               Wien, Österreich
               <ul className="cv-work">
@@ -397,13 +453,23 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Servicepersonal <br />
+              <span className="cv-accent">Servicepersonal</span>
+              <br />
               <a
                 style={{ textDecoration: "underline" }}
-                href="https://www.docolution.com"
+                href="https://www.kolar-beisl.at/"
                 target="_blank"
               >
-                Kolar Beisl,
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Kolar Beisl
+                </span>
               </a>{" "}
               Wien, Österreich
               <ul className="cv-work">
@@ -432,8 +498,25 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Kinderbetreuer <br />
-              Divina Art, Wien, Österreich
+              <span className="cv-accent">Kinderbetreuer</span>
+              <br />
+              <a
+                href="https://divinaart.at/"
+                style={{ textDecoration: "underline" }}
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Divina Art
+                </span>
+              </a>{" "}
+              Wien, Österreich
               <ul className="cv-work">
                 <li>
                   Betreuung von Kindern in einem sicheren und anregenden Umfeld
@@ -468,7 +551,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Junior Software Developer <br />
+              <span className="cv-accent">Junior Softwareentwickler</span>
+              <br />
               FH Technikum, Wien, Österreich
               <ul className="cv-work">
                 <li>Full-Stack Web- und Softwareentwicklung</li>
@@ -495,7 +579,10 @@ export default function Cv() {
               }`}
             >
               Universität Wien, Wien, Österreich <br />
-              Bachelorstudium Psychologie (nicht abgeschlossen)
+              <span className="cv-accent">
+                Bachelorstudium Psychologie
+              </span>{" "}
+              (nicht abgeschlossen)
             </section>
           </section>
 
@@ -512,7 +599,9 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Yalova Termal Gymnasium für Naturwissenschaften
+              <span className="cv-accent">
+                Yalova Termal Gymnasium für Naturwissenschaften
+              </span>{" "}
             </section>
           </section>
         </div>
@@ -538,8 +627,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C1 – Fortgeschrittene Sprachkenntnisse, sicher im beruflichen und
-              geschäftlichen Umfeld
+              <span className="cv-accent">C1</span> – Fortgeschrittene
+              Sprachkenntnisse, sicher im beruflichen und geschäftlichen Umfeld
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -555,8 +644,8 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              C2 – Verhandlungssicher in allen beruflichen und technischen
-              Kontexten
+              <span className="cv-accent">C2</span> – Verhandlungssicher in
+              allen beruflichen und technischen Kontexten
             </section>
           </section>
           <section className="cv__sub__bottom">
@@ -572,7 +661,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Muttersprache
+              <span className="cv-accent">Muttersprache</span>{" "}
             </section>
           </section>
         </div>

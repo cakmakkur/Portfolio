@@ -24,7 +24,7 @@ export default function LanguageToggleButton() {
     const timeoutId = setTimeout(() => {
       if (!buttonDivRef.current) return;
       buttonDivRef.current.style.transform = "translateY(0px)";
-    }, 2800);
+    }, 1800);
     return () => {
       clearTimeout(timeoutId);
     };

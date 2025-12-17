@@ -71,7 +71,7 @@
 }
 
 .profil__img--active {
-  animation: profilImgOpacityTransition 0.5s ease-in-out forwards;
+  animation: profilImgOpacityTransition 0.3s ease-in-out forwards;
 }
 
 @keyframes profilImgOpacityTransition {
@@ -266,6 +266,11 @@
 }
 .homepage-footer span span {
   padding-left: 15px;
+}
+
+.cv-accent {
+  font-weight: 500;
+  font-size: 1.04rem;
 }
 
 [data-theme=dark] {
@@ -1354,6 +1359,11 @@
   }
 }
 
+.menu__switch__div-button {
+  border: none;
+  background: transparent;
+}
+
 .th__swich__div {
   transition: 0.2s ease-out;
   transform: translateY(-100px);
@@ -1886,6 +1896,21 @@
   background-color: var(--highlight-fx);
 }
 
+.ui-title-anm {
+  animation: bg-scale-anm 10s ease-in-out infinite;
+}
+
+@keyframes bg-scale-anm {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
 *,
 *::before,
 *::after {

@@ -23,7 +23,7 @@ export default function ThemeToggleButton() {
     const timeoutId = setTimeout(() => {
       if (!buttonDivRef.current) return;
       buttonDivRef.current.style.transform = "translateY(0px)";
-    }, 3100);
+    }, 2000);
     return () => {
       clearTimeout(timeoutId);
     };

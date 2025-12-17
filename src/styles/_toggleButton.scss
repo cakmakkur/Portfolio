@@ -1,4 +1,5 @@
 @import "variables";
+
 .menu__switch__div {
   position: relative;
   display: inline-block;
@@ -10,6 +11,11 @@
   @include MOBILE {
     margin-top: 35px;
   }
+}
+
+.menu__switch__div-button {
+  border: none;
+  background: transparent;
 }
 
 .th__swich__div {

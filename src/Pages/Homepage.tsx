@@ -49,7 +49,7 @@ export default function Homepage() {
         sessionStorage.setItem("pageMountedBefore", "true");
         if (!mainPageRef.current) return;
         mainPageRef.current.style.opacity = "1";
-      }, 3200);
+      }, 2200);
       return () => {
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);

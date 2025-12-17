@@ -14,15 +14,15 @@ export default function About() {
         constantly push myself to learn, improve, and deliver real value.
         <br /> <br />
         Beginning my developer journey independently, I&apos;ve created
-        web-based games, landing pages, and e-commerce sites, refining my skills
+        web-based games, landing pages and e-commerce sites, refining my skills
         in full-stack technologies. Currently gaining hands-on experience at a
         tech company as part of my software development apprenticeship: I work
         with modern full-stack technologies and scripting tools in a strong
-        engineering culture. I adapt fast, embrace challenges, and enjoy turning
+        engineering culture. I adapt fast, embrace challenges and enjoy turning
         ideas into working solutions. <br /> <br /> Beyond technology, I am a
-        dedicated piano player and art enthusiast, with a love for philosophy,
-        politics, and languages. My creativity, discipline, and determination
-        drive me to push boundaries and keep growing.
+        dedicated piano player and an art enthusiast, with a love for
+        philosophy, politics, and languages. My creativity, discipline, and
+        determination drive me to push boundaries and keep growing.
       </p>
     );
   } else {

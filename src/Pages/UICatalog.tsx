@@ -48,6 +48,7 @@ export default function UICatalog() {
       {language === "EN" ? (
         <div className="ui-catalogue-title">
           <div
+            className="ui-title-anm"
             style={{
               zIndex: "10",
               opacity: "0.09",
@@ -76,6 +77,7 @@ export default function UICatalog() {
       ) : (
         <div className="ui-catalogue-title">
           <div
+            className="ui-title-anm"
             style={{
               zIndex: "10",
               opacity: "0.09",
