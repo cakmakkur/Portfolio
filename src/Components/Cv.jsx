@@ -337,7 +337,7 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Languages & Technologies</h3>
+            <h3>Technical Skills</h3>
           </section>
           <section className="cv__sub__bottom">
             <section
@@ -353,10 +353,10 @@ export default function Cv() {
               <ul className="cv-work">
                 <li>Java, Spring Boot, Hibernate</li>
                 <li>JS/TS, Angular, React, npm</li>
-                <li>
-                  HTML, CSS, SASS, Bootstrap, PostgreSQL, MySQL, MongoDB,
-                  Liquibase
-                </li>
+                <li>HTML, CSS, SASS, Bootstrap</li>
+                <li>PostgreSQL, MySQL, MongoDB, Liquibase</li>
+                <li>JUnit, Jasmine, Vitest</li>
+                <li>Python</li>
                 <li>Git, GitLab, CI/CD Pipelines</li>
                 <li>Bash/Batch Scripting</li>
                 <li>Maven, Docker, AWS</li>
@@ -734,7 +734,7 @@ export default function Cv() {
               theme.type === "light" ? "cv__sub__top--light" : ""
             }`}
           >
-            <h3>Programmiersprachen & Technologien</h3>
+            <h3>Technische Kenntnisse</h3>
           </section>
           <section className="cv__sub__bottom">
             <section
@@ -750,10 +750,10 @@ export default function Cv() {
               <ul className="cv-work">
                 <li>Java, Spring Boot, Hibernate</li>
                 <li>JS/TS, Angular, React, npm</li>
-                <li>
-                  HTML, CSS, SASS, Bootstrap, PostgreSQL, MySQL, MongoDB,
-                  Liquibase
-                </li>
+                <li>HTML, CSS, SASS, Bootstrap</li>
+                <li>PostgreSQL, MySQL, MongoDB, Liquibase</li>
+                <li>JUnit, Jasmine, Vitest</li>
+                <li>Python</li>
                 <li>Git, GitLab, CI/CD-Pipelines</li>
                 <li>Bash/Batch-Skripting</li>
                 <li>Maven, Docker, AWS</li>
