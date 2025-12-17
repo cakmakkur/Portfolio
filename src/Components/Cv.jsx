@@ -189,7 +189,23 @@ export default function Cv() {
             >
               <span className="cv-accent">Junior Software Developer</span>
               <br />
-              FH Technikum, Vienna, Austria
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.technikum-wien.at/"
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  FH Technikum,
+                </span>
+              </a>{" "}
+              Vienna, Austria
               <ul className="cv-work">
                 <li>Full-Stack Web and Software Development</li>
                 <li>Data Management</li>
@@ -214,8 +230,25 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              University of Vienna, Vienna, Austria <br />
-              <span className="cv-accent">BSc Psychology</span> (not completed)
+              <span className="cv-accent">BSc Psychology</span> (not completed){" "}
+              <br />{" "}
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.univie.ac.at/en/"
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  University of Vienna,
+                </span>
+              </a>{" "}
+              Vienna, Austria
             </section>
           </section>
 
@@ -553,7 +586,23 @@ export default function Cv() {
             >
               <span className="cv-accent">Junior Softwareentwickler</span>
               <br />
-              FH Technikum, Wien, Österreich
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.technikum-wien.at/"
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  FH Technikum,
+                </span>
+              </a>{" "}
+              Wien, Österreich
               <ul className="cv-work">
                 <li>Full-Stack Web- und Softwareentwicklung</li>
                 <li>Datenmanagement</li>
@@ -578,11 +627,25 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              Universität Wien, Wien, Österreich <br />
-              <span className="cv-accent">
-                Bachelorstudium Psychologie
-              </span>{" "}
-              (nicht abgeschlossen)
+              <span className="cv-accent">Bachelorstudium Psychologie</span>{" "}
+              (nicht abgeschlossen) <br />{" "}
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.univie.ac.at/en/"
+                target="_blank"
+              >
+                <span
+                  style={
+                    theme.type === "light"
+                      ? { color: LightTheme.secondary }
+                      : { color: LightTheme.secondary }
+                  }
+                >
+                  {" "}
+                  Universität Wien,
+                </span>
+              </a>{" "}
+              Wien, Österreich
             </section>
           </section>
 
@@ -684,7 +747,7 @@ export default function Cv() {
                 theme.type === "light" ? "cv__sub__bottom__right--light" : ""
               }`}
             >
-              <ul className="ui-work">
+              <ul className="cv-work">
                 <li>Java, Spring Boot, Hibernate</li>
                 <li>JS/TS, Angular, React, npm</li>
                 <li>
