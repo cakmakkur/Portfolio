@@ -27,7 +27,7 @@ export default function Menubar() {
   const toggleBgMusic = () => {
     if (!audioRef.current) return;
 
-    audioRef.current.volume = 0.3;
+    audioRef.current.volume = 0.5;
     audioRef.current.loop = true;
     if (soundOn) {
       console.log("pause");
@@ -180,11 +180,11 @@ export default function Menubar() {
         </Link>
         <LanguageToggleButton />
         <ThemeToggleButton />
-        <SoundToggleButton
+        {/* <SoundToggleButton
           soundOn={soundOn}
           setSoundOn={setSoundOn}
           toggleBgMusic={toggleBgMusic}
-        />
+        /> */}
       </nav>
       <audio ref={audioRef} src="/ringtone.mp3" preload="metadata" />
     </>

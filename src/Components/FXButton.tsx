@@ -118,11 +118,11 @@ export default function FxButton({
         }
 
         .fx-btn:hover::before {
-          transform: translate(50%, 50%) rotate(45deg);
+          transform: translate(50%, 50%) ;
         }
 
         .fx-btn:hover::after {
-          transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) ;
         }
       `}</style>
     </div>
