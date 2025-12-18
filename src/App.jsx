@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 import Loading from "./Components/Loading";
 import UICatalog from "./Pages/UICatalog";
 import Exhibition from "./Pages/Exhibition";
+import Paintings from "./Pages/Paintings";
 
 const BuyBuyHomepage = lazy(() => import("./Projects/BuyBuyHomepage"));
 const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/ui-catalog" element={<UICatalog />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/bg" element={<Paintings />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

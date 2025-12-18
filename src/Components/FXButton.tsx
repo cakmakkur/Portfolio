@@ -95,7 +95,7 @@ export default function FxButton({
           left: -170%;
           background: linear-gradient(
             to bottom right,
-            var(--fx-highlight) 60%,
+            var(--fx-primary) 20%,
             var(--fx-highlight-fx)
           );
           transform: rotate(45deg);
@@ -106,7 +106,7 @@ export default function FxButton({
           right: -170%;
           background: linear-gradient(
             to top left,
-            var(--fx-highlight) 60%,
+            var(--fx-primary) 60%,
             var(--fx-highlight-fx)
           );
           transform: rotate(45deg);

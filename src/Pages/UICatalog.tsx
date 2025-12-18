@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
 import GifCard from "../Components/GifCard";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
-import { useThemeContext } from "../GlobalContext/ThemeContext";
 
 export default function UICatalog() {
   const { language } = useLanguageContext();
-  const cardsRef = useRef([]);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +36,7 @@ export default function UICatalog() {
     };
   }, []);
 
-  const addToRefs = (el) => {
+  const addToRefs = (el: HTMLDivElement) => {
     if (el && !cardsRef.current.includes(el)) {
       cardsRef.current.push(el);
     }

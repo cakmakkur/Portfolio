@@ -1,7 +1,6 @@
 import laptop_top from "../Assets/laptop_top.png";
 import laptop_bottom from "../Assets/laptop_bottom.png";
 import githubIcon from "../Assets/github.svg";
-import playIcon from "../Assets/play.svg";
 import smartphone from "../Assets/smartphone.png";
 import check__green from "../Assets/checkLogo-green.svg";
 
@@ -20,23 +19,17 @@ import TypewriterTitle from "../Animations/TypewriterTitle";
 import CarouselAnm from "../Animations/CarouselAnm";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm";
 
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 type ImageArrayType = string[];
 
 export default function BandHomepage() {
   const { language } = useLanguageContext();
-  const [toggleVideo, setToggleVideo] = useState(false);
   const [isHovering, setIsHovering] = useState("");
   const githubBtnRef = useRef<HTMLDivElement>(null);
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
-
-  // const VideoPlayer = lazy(
-  //   () => import("../Components/VideoPlayers/BandVideo")
-  // );
 
   const bandImages: ImageArrayType = [img1, img2, img3, img4];
   const bandMobileImages: ImageArrayType = [img5, img5, img5, img5];
@@ -58,23 +51,6 @@ export default function BandHomepage() {
       viewProductBtnRef.current?.classList.add("button__wrapper--active");
     }
   }, [isHovering]);
-
-  //video modal animation:
-  const handleVideoButton = (arg: boolean) => {
-    if (arg === true) {
-      setToggleVideo(arg);
-      setTimeout(() => {
-        if (!videoRef.current) return;
-        videoRef.current.style.transform = "scale(1)";
-      }, 200);
-    } else {
-      if (!videoRef.current) return;
-      videoRef.current.style.transform = "scale(0)";
-      setTimeout(() => {
-        setToggleVideo(arg);
-      }, 200);
-    }
-  };
 
   return (
     <div className="single__project__main">
@@ -197,11 +173,6 @@ export default function BandHomepage() {
                 <li>and many more...</li>
               </ul>
               <br /> <br />
-              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → This project is still in development. However you can view
-                some completed features in the video to have a feeling of its
-                style and functionality.
-              </span>
             </article>
           ) : (
             <article className="product__description">
@@ -228,12 +199,6 @@ export default function BandHomepage() {
                 <li>und vieles mehr...</li>
               </ul>
               <br /> <br />
-              <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → Dieses Projekt befindet sich noch in der Entwicklung. Sie
-                können jedoch einige fertiggestellte Funktionen im Video
-                ansehen, um einen Eindruck von Stil und Funktionalität zu
-                erhalten.
-              </span>
             </article>
           )}
           <div className="used__tech__div">
@@ -296,20 +261,6 @@ export default function BandHomepage() {
           &copy; Kürsat Cakmak
         </div>
       )}
-      <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {/* {toggleVideo ? (
-          <div
-            ref={videoRef}
-            onClick={(e) => e.stopPropagation()}
-            className="video__modal__div"
-          >
-            <button onClick={() => handleVideoButton(false)}>X</button>
-            <VideoPlayer />
-          </div>
-        ) : (
-          ""
-        )} */}
-      </Suspense>
     </div>
   );
 }

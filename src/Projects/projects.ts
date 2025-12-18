@@ -1,5 +1,4 @@
 import buybuyImg from "../Assets/project_thumbnails/buybuy.png";
-import buybuyAdminImg from "../Assets/project_thumbnails/buybuy-admin.png";
 import schnapsenImg from "../Assets/project_thumbnails/schnapsen.png";
 import mondatelierImg from "../Assets/project_thumbnails/mondatelier.png";
 import portfolioImg from "../Assets/project_thumbnails/portfolio.png";
@@ -70,18 +69,8 @@ export const projects = [
     img: buybuyImg,
     technologies: ["react", "ts", "node", "express", "vitest", "sass"],
     text: [
-      "Buy-Buy E-Commerce is the fronend of my demo project: a RESTful MERN e-commerce web application.",
-      "Buy-Buy E-Commerce ist das Frontend meines Demo-Projekts: einer RESTful MERN E-Commerce-Webanwendung.",
-    ],
-  },
-  {
-    title: "Buy-Buy Administrator",
-    route: "/projects/buybuy-admin",
-    img: buybuyAdminImg,
-    technologies: ["react", "node", "sass", "js", "express", "mongo"],
-    text: [
-      "Buy-Buy-Admin is the administrative interface for performing CRUD tasks on the Buy-Buy project.",
-      "Buy-Buy-Admin ist die Administrationsoberfläche für die Durchführung von CRUD-Aufgaben im Buy-Buy-Projekt.",
+      "Buy-Buy E-Commerce is a MERN e-commerce web application.",
+      "Buy-Buy E-Commerce ist eine MERN E-Commerce-Webanwendung.",
     ],
   },
   {

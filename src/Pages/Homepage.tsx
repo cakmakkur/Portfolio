@@ -13,7 +13,6 @@ import About from "../Components/About";
 
 import lebenslauf_bild from "../Assets/lebenslauf_bild.png";
 import profilImg_tiny from "../Assets/lebenslauf_bild_tiny.png";
-// import placeholder_logo from "../Assets/icons/react.png"
 import github__logo from "../Assets/github-hp.png";
 import linked__in__logo from "../Assets/linkedin.svg";
 
@@ -37,7 +36,7 @@ export default function Homepage() {
 
   // Starting fade-in animation
   const mainPageRef = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<number | null>(null);
   const [initialLoad, setInitialLoad] = useState<boolean>(false);
   useEffect(() => {
     const mountedBefore = sessionStorage.getItem("pageMountedBefore");
@@ -206,29 +205,31 @@ export default function Homepage() {
         ></div>
 
         <section className="home__left" style={{ zIndex: "2" }}>
-          <div
-            className="home__img_div"
-            style={{
-              backgroundImage: `url(${profilImg_tiny})`,
-              backgroundSize: "cover",
-              borderRadius: "50%",
-            }}
-          >
-            {isProfilImgLoading ? <LoadingHexagonal /> : ""}
-            <img
-              className="profil__img"
-              ref={bildRef}
-              width={250}
-              src={lebenslauf_bild}
-              alt="profil picture"
-            />
+          <div className="home-image-container">
+            <div
+              className="home__img_div"
+              style={{
+                backgroundImage: `url(${profilImg_tiny})`,
+                backgroundSize: "cover",
+                borderRadius: "50%",
+              }}
+            >
+              {isProfilImgLoading ? <LoadingHexagonal /> : ""}
+              <img
+                className="profil__img"
+                ref={bildRef}
+                width={250}
+                src={lebenslauf_bild}
+                alt="profil picture"
+              />
+            </div>
           </div>
           <h1>KÜRSAT CAKMAK</h1>
           <div>
             {language === "EN" ? (
-              <h4>SOFTWARE DEVELOPER</h4>
+              <h4>WEB AND SOFTWARE DEVELOPER</h4>
             ) : (
-              <h4>SOFTWAREENTWICKLER</h4>
+              <h4>WEB- UND SOFTWAREENTWICKLER</h4>
             )}
             <div className="ext__links__div">
               <a href="https://github.com/cakmakkur" target="_blank">

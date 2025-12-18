@@ -180,11 +180,11 @@ export default function Menubar() {
         </Link>
         <LanguageToggleButton />
         <ThemeToggleButton />
-        {/* <SoundToggleButton
+        <SoundToggleButton
           soundOn={soundOn}
           setSoundOn={setSoundOn}
           toggleBgMusic={toggleBgMusic}
-        /> */}
+        />
       </nav>
       <audio ref={audioRef} src="/ringtone.mp3" preload="metadata" />
     </>

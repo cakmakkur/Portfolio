@@ -14,6 +14,7 @@ interface ThemeType {
   menuBtnBgHl: string;
   menuBtnTxHl: string;
   highlightFx: string;
+  highlightFxR: string;
 }
 export const DarkTheme: ThemeType = {
   type: "dark",
@@ -26,6 +27,7 @@ export const DarkTheme: ThemeType = {
   menuBtnBgHl: "rgb(79, 111, 123)",
   menuBtnTxHl: "rgb(209, 241, 252)",
   highlightFx: "rgb(158, 226, 168)",
+  highlightFxR: "rgb(200, 94, 80)",
 };
 export const LightTheme: ThemeType = {
   type: "light",
@@ -38,6 +40,7 @@ export const LightTheme: ThemeType = {
   menuBtnBgHl: "rgb(225, 228, 215)",
   menuBtnTxHl: "rgb(208, 159, 74)",
   highlightFx: "rgb(200, 94, 80)",
+  highlightFxR: "rgb(158, 226, 168)",
 };
 interface ThemeContextType {
   theme: ThemeType;

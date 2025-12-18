@@ -29,19 +29,28 @@
   }
 }
 
+.home-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 55px 0px 20px;
+}
+
 .home__img_div {
-  width: 400px;
-  height: 420px;
+  width: 330px;
+  height: 350px;
 }
 
 .profil__img {
   opacity: 0;
-  width: 400px;
-  height: 420px;
+  width: 330px;
+  height: 350px;
   display: flex;
   justify-content: center;
   border-radius: 50%;
   border: 25px solid white;
+  transform: scale(1.14);
+
   // @include adjustImage-small {
   //   width: 250px;
   //   height: 250px;

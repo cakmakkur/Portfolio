@@ -1,7 +1,6 @@
 import laptop_top from "../Assets/laptop_top.png";
 import laptop_bottom from "../Assets/laptop_bottom.png";
 import githubIcon from "../Assets/github.svg";
-import playIcon from "../Assets/play.svg";
 
 import sass_logo from "../Assets/icons/sass.png";
 import js_logo from "../Assets/icons/js.png";
@@ -18,23 +17,17 @@ import img4 from "../Assets/carousel__images/buybuy-admin/bb_admin_4.png";
 import TypewriterTitle from "../Animations/TypewriterTitle";
 import CarouselAnm from "../Animations/CarouselAnm";
 
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 type ImageArrayType = string[];
 
 export default function BuyBuyAdmin() {
   const { language } = useLanguageContext();
-  const [toggleVideo, setToggleVideo] = useState(false);
   const [isHovering, setIsHovering] = useState("");
   const githubBtnRef = useRef<HTMLDivElement>(null);
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
-
-  // const VideoPlayer = lazy(
-  //   () => import("../Components/VideoPlayers/BuyBuyAdminVideo")
-  // );
 
   const buybuyAdminImages: ImageArrayType = [img1, img2, img3, img4];
 
@@ -55,23 +48,6 @@ export default function BuyBuyAdmin() {
       viewProductBtnRef.current?.classList.add("button__wrapper--active");
     }
   }, [isHovering]);
-
-  //video modal animation:
-  const handleVideoButton = (arg: boolean) => {
-    if (arg === true) {
-      setToggleVideo(arg);
-      setTimeout(() => {
-        if (!videoRef.current) return;
-        videoRef.current.style.transform = "scale(1)";
-      }, 200);
-    } else {
-      if (!videoRef.current) return;
-      videoRef.current.style.transform = "scale(0)";
-      setTimeout(() => {
-        setToggleVideo(arg);
-      }, 200);
-    }
-  };
 
   return (
     <div className="single__project__main">
@@ -129,33 +105,6 @@ export default function BuyBuyAdmin() {
                 </a>
               )}
             </div>
-            {/* <div
-              ref={youtubeBtnRef}
-              onMouseEnter={() => {
-                toggleFxBtn("youtube");
-              }}
-              onMouseLeave={() => {
-                toggleFxBtn("");
-              }}
-              className="button__wrapper"
-            >
-              {language === "EN" ? (
-                <button onClick={() => handleVideoButton(true)}>
-                  Watch<span>Demo</span>
-                  <img width={40} src={playIcon} alt="" />
-                </button>
-              ) : (
-                <button onClick={() => handleVideoButton(true)}>
-                  <span>Beispielvideo</span>ansehen
-                  <img
-                    width={40}
-                    style={{ marginLeft: "20px" }}
-                    src={playIcon}
-                    alt=""
-                  />
-                </button>
-              )}
-            </div> */}
           </div>
         </div>
         <div className="single__product__right">
@@ -164,7 +113,7 @@ export default function BuyBuyAdmin() {
               <span className="product__description--accent--pr">
                 Buy-Buy Admin
               </span>{" "}
-              is the administrator\'s portal of Buy-Buy, a comprehensive
+              is the administrator\&apos;s portal of Buy-Buy, a comprehensive
               full-stack portfolio project that also includes a homepage and a
               server. <br /> <br />{" "}
               <span className="product__description--underline">
@@ -179,7 +128,7 @@ export default function BuyBuyAdmin() {
                 The Express.js
               </span>{" "}
               server that runs on Amazon EC2 powers both the homepage and the
-              admin's portal. It is connected to a database on{" "}
+              admin&apos;s portal. It is connected to a database on{" "}
               <span className="product__description--accent">MongoDB</span> that
               stores products, reviews and users info, handles their data
               securely and efficiently. The source code of the server can be
@@ -302,20 +251,6 @@ export default function BuyBuyAdmin() {
           &copy; Kürsat Cakmak
         </div>
       )}
-      <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {/* {toggleVideo ? (
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="video__modal__div"
-            ref={videoRef}
-          >
-            <button onClick={() => handleVideoButton(false)}>X</button>
-            <VideoPlayer />
-          </div>
-        ) : (
-          ""
-        )} */}
-      </Suspense>
     </div>
   );
 }

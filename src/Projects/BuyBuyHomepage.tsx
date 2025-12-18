@@ -2,7 +2,6 @@ import laptop_top from "../Assets/laptop_top.png";
 import laptop_bottom from "../Assets/laptop_bottom.png";
 import smartphone from "../Assets/smartphone.png";
 import githubIcon from "../Assets/github.svg";
-import playIcon from "../Assets/play.svg";
 import check__yellow from "../Assets/checkLogo copy-yellow.svg";
 import check__green from "../Assets/checkLogo-green.svg";
 
@@ -26,7 +25,7 @@ import TypewriterTitle from "../Animations/TypewriterTitle";
 import CarouselAnm from "../Animations/CarouselAnm";
 import MobileCarouselAnm from "../Animations/MobileCarouselAnm";
 
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
@@ -36,15 +35,9 @@ export default function BuyBuyHomepage() {
   const { language } = useLanguageContext();
 
   const [isHovering, setIsHovering] = useState("");
-  const [toggleVideo, setToggleVideo] = useState(false);
   const githubBtnRef = useRef<HTMLDivElement>(null);
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
-
-  // const VideoPlayer = lazy(
-  //   () => import("../Components/VideoPlayers/BuyBuyMainVideo")
-  // );
 
   const buybuyImages: ImageArrayType = [img1, img2, img3, img4];
   const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
@@ -66,23 +59,6 @@ export default function BuyBuyHomepage() {
       viewProductBtnRef.current?.classList.add("button__wrapper--active");
     }
   }, [isHovering]);
-
-  //video modal animation:
-  const handleVideoButton = (arg: boolean) => {
-    if (arg === true) {
-      setToggleVideo(arg);
-      setTimeout(() => {
-        if (!videoRef.current) return;
-        videoRef.current.style.transform = "scale(1)";
-      }, 200);
-    } else {
-      if (!videoRef.current) return;
-      videoRef.current.style.transform = "scale(0)";
-      setTimeout(() => {
-        setToggleVideo(arg);
-      }, 200);
-    }
-  };
 
   return (
     <div className="single__project__main">
@@ -155,33 +131,6 @@ export default function BuyBuyHomepage() {
                 </a>
               )}
             </div>
-            <div
-              ref={youtubeBtnRef}
-              onMouseEnter={() => {
-                toggleFxBtn("youtube");
-              }}
-              onMouseLeave={() => {
-                toggleFxBtn("");
-              }}
-              className="button__wrapper"
-            >
-              {language === "EN" ? (
-                <button onClick={() => handleVideoButton(true)}>
-                  Watch<span>Demo</span>
-                  <img width={40} src={playIcon} alt="" />
-                </button>
-              ) : (
-                <button onClick={() => handleVideoButton(true)}>
-                  <span>Beispielvideo</span>ansehen
-                  <img
-                    width={40}
-                    style={{ marginLeft: "20px" }}
-                    src={playIcon}
-                    alt=""
-                  />
-                </button>
-              )}
-            </div>
           </div>
         </div>
         <div className="single__product__right">
@@ -212,19 +161,21 @@ export default function BuyBuyHomepage() {
                 Express.js back-end
               </a>{" "}
               and an{" "}
-              <Link to="/projects/buybuy-admin">administrator's portal</Link>.{" "}
-              <br /> <br />
+              <Link to="/projects/buybuy-admin">
+                administrator&apos;s portal
+              </Link>
+              . <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
-                → While testing the website, don't provide any authentic data
-                like personal info.
+                → While testing the website, don&apos;t provide any authentic
+                data like personal info.
               </span>{" "}
               <br /> <br />
               <span style={{ fontSize: "0.8rem", fontWeight: "600" }}>
                 → Due to the small-scale nature of this project, server
                 interruptions may take place. Please contact me in such case.
               </span>
-              <br /> <br /> This site doesn't use any tracking cookies. They are
-              only used for essential functionality.
+              <br /> <br /> This site doesn&apos;t use any tracking cookies.
+              They are only used for essential functionality.
               <br /> <br /> All the used assets like images and icons used are
               either created by me or sourced from novelty-free 3rd-party
               providers. Please consider asking for{" "}
@@ -354,20 +305,6 @@ export default function BuyBuyHomepage() {
           &copy; Kürsat Cakmak
         </div>
       )}
-      <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {/* {toggleVideo ? (
-          <div
-            ref={videoRef}
-            onClick={(e) => e.stopPropagation()}
-            className="video__modal__div"
-          >
-            <button onClick={() => handleVideoButton(false)}>X</button>
-            <VideoPlayer />
-          </div>
-        ) : (
-          ""
-        )} */}
-      </Suspense>
     </div>
   );
 }
