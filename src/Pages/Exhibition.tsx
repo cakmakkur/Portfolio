@@ -30,12 +30,7 @@ export default function Exhibition() {
             <br /> MUSIC
           </div>
         </FxButton>
-        <FxButton
-          width="35vw"
-          height="35vw"
-          href=""
-          onClick={() => alert("Coming up soon!")}
-        >
+        <FxButton width="35vw" height="35vw" to="/paintings">
           <div
             className={`exhibition-init-btn go-to-paintings-btn ${
               theme.type === "dark"
@@ -50,7 +45,7 @@ export default function Exhibition() {
                   : "/painting-light.svg"
               }
               alt=""
-            />{" "}
+            />
             <br /> PAINTINGS
           </div>
         </FxButton>

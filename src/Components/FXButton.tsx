@@ -1,10 +1,12 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { useThemeContext } from "../GlobalContext/ThemeContext";
 
 interface FxButtonProps {
   width: number | string;
   height: number | string;
   href?: string;
+  to?: string;
   onClick?: () => void;
   children?: ReactNode;
 }
@@ -13,6 +15,7 @@ export default function FxButton({
   width,
   height,
   href,
+  to,
   onClick,
   children,
 }: FxButtonProps) {
@@ -32,7 +35,11 @@ export default function FxButton({
 
   return (
     <div className="fx-btn" style={style}>
-      {href ? (
+      {to ? (
+        <Link to={to} onClick={onClick}>
+          {Inner}
+        </Link>
+      ) : href ? (
         <a href={href} target="_blank" rel="noopener noreferrer">
           {Inner}
         </a>

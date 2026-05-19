@@ -12,7 +12,7 @@ const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
 const BugnBass = lazy(() => import("./Projects/BugnBass"));
 const PrimalDomainsSimulator = lazy(
-  () => import("./Projects/PrimalDomainsSimulator")
+  () => import("./Projects/PrimalDomainsSimulator"),
 );
 const PortfolioProject = lazy(() => import("./Projects/PortfolioProject"));
 const BandHomepage = lazy(() => import("./Projects/BandHomepage"));
@@ -38,7 +38,7 @@ export default function App() {
           <Route path="/ui-catalog" element={<UICatalog />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/bg" element={<Paintings />} />
+          <Route path="/paintings" element={<Paintings />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
