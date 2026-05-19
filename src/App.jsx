@@ -12,6 +12,7 @@ const BuyBuyHomepage = lazy(() => import("./Projects/BuyBuyHomepage"));
 const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
 const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
+const BugnBass = lazy(() => import("./Projects/BugnBass"));
 const PortfolioProject = lazy(() => import("./Projects/PortfolioProject"));
 const BandHomepage = lazy(() => import("./Projects/BandHomepage"));
 
@@ -28,6 +29,7 @@ export default function App() {
             element={<BuyBuyHomepage />}
           />
           <Route path="/projects/schnapsen" element={<Schnapsen />} />
+          <Route path="/projects/bugnbass" element={<BugnBass />} />
           <Route path="/projects/buybuy-admin" element={<BuyBuyAdmin />} />
           <Route path="/projects/mondatelier" element={<Mondatelier />} />
           <Route path="/projects/portfolio" element={<PortfolioProject />} />

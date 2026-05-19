@@ -37,10 +37,6 @@ export default function BuyBuyHomepage() {
   const buybuyImages: ImageArrayType = [img1, img2, img3, img4];
   const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
 
-  // const VideoPlayer = lazy(
-  //   () => import("../Components/VideoPlayers/MondatelierVideo")
-  // );
-
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
   }
@@ -125,7 +121,7 @@ export default function BuyBuyHomepage() {
           {language === "EN" ? (
             <article className="product__description">
               <span className="product__description--accent--pr">
-                Mondatelier
+                Mondatelier / Lunr
               </span>{" "}
               is an online platform designed for artists to showcase and manage
               their creative work. Users can create personalized portfolios,
