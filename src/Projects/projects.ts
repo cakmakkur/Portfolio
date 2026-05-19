@@ -2,7 +2,8 @@ import schnapsenImg from "../Assets/project_thumbnails/schnapsen.png";
 import mondatelierImg from "../Assets/project_thumbnails/mondatelier.png";
 import portfolioImg from "../Assets/project_thumbnails/portfolio.png";
 import bandImg from "../Assets/project_thumbnails/band.png";
-import bugnbassImg from "../Assets/carousel__images/bugnbass/bugnbass_1.png";
+import bugnbassImg from "../Assets/project_thumbnails/bugnbass.png";
+import primalDomainsImg from "../Assets/project_thumbnails/pd.png";
 
 import tsIcon from "../Assets/icons/ts.png";
 import sassIcon from "../Assets/icons/sass.png";
@@ -19,6 +20,7 @@ import mavenIcon from "../Assets/maven.png";
 import postgres from "../Assets/postgres.svg";
 import springboot from "../Assets/spring-boot.webp";
 import junitIcon from "../Assets/icons/junit.png";
+import csharpIcon from "../Assets/icons/c-sharp.png";
 import three from "../Assets/three.webp";
 
 export const icons: IconType = {
@@ -37,6 +39,7 @@ export const icons: IconType = {
   postgres: postgres,
   springboot: springboot,
   junit: junitIcon,
+  csharp: csharpIcon,
   three: three,
 };
 
@@ -71,6 +74,16 @@ export const projects = [
     text: [
       "Mondatelier/Lunr is artists' platfrom, where users create a portfolio, share and market their work, browse and create events, connect with other artists, watch live streams and much more. This project is currently in development.",
       "Mondatelier/Lunr ist eine Plattform für Künstlerinnen, auf der Nutzerinnen ein Portfolio erstellen, ihre Arbeiten teilen und vermarkten, Veranstaltungen durchsuchen und erstellen, sich mit anderen Künstler*innen vernetzen, Live-Streams ansehen und vieles mehr. Dieses Projekt befindet sich derzeit in der Entwicklung.",
+    ],
+  },
+  {
+    title: "Primal Domains Simulator",
+    route: "/projects/primal-domains-simulator",
+    img: primalDomainsImg,
+    technologies: ["csharp"],
+    text: [
+      "Primal Domains Simulator is a C# simulation project that models domain mechanics and procedural interactions. It focuses on computational logic and algorithmic behavior rather than a traditional user interface.",
+      "Primal Domains Simulator ist ein C#-Simulationsprojekt, das Domänenmechaniken und prozedurale Interaktionen modelliert. Es konzentriert sich auf rechnerische Logik und algorithmisches Verhalten statt auf eine klassische Benutzeroberfläche.",
     ],
   },
   {

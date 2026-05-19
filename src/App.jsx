@@ -11,6 +11,9 @@ import Paintings from "./Pages/Paintings";
 const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
 const BugnBass = lazy(() => import("./Projects/BugnBass"));
+const PrimalDomainsSimulator = lazy(
+  () => import("./Projects/PrimalDomainsSimulator")
+);
 const PortfolioProject = lazy(() => import("./Projects/PortfolioProject"));
 const BandHomepage = lazy(() => import("./Projects/BandHomepage"));
 
@@ -24,6 +27,10 @@ export default function App() {
 
           <Route path="/projects/schnapsen" element={<Schnapsen />} />
           <Route path="/projects/bugnbass" element={<BugnBass />} />
+          <Route
+            path="/projects/primal-domains-simulator"
+            element={<PrimalDomainsSimulator />}
+          />
           <Route path="/projects/mondatelier" element={<Mondatelier />} />
           <Route path="/projects/portfolio" element={<PortfolioProject />} />
           <Route path="/projects/band-homepage" element={<BandHomepage />} />

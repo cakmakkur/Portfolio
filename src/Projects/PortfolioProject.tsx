@@ -33,7 +33,7 @@ export default function PortfolioProject() {
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
 
   const portfolioImages: ImageArrayType = [img1, img2, img3, img4];
-  const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
+  const portfolioMobileImages: ImageArrayType = [img5, img6, img7, img8];
 
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
@@ -68,7 +68,7 @@ export default function PortfolioProject() {
             <img className="laptop__scr" src={laptop_top} alt="" />
             <CarouselAnm images={portfolioImages} />
             <img src={smartphone} alt="" className="smartphone__scr" />
-            <MobileCarouselAnm images={buybuyMobileImages} />
+            <MobileCarouselAnm images={portfolioMobileImages} />
           </div>
           <div className="laptop__bottom">
             <img className="laptop__img3" src={laptop_bottom} alt="" />

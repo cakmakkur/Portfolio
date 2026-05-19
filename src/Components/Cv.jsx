@@ -162,18 +162,22 @@ export default function Cv() {
             <section className={sectionLeftClass}></section>
             <section className={sectionRightClass}>
               <ul className="cv-work">
-                <li>Backend & Core: Java, Spring Boot, Maven, C#, Python</li>
                 <li>
-                  Frontend & UI: Angular, React, TypeScript, npm, SASS,
-                  Bootstrap
+                  <span className="cv-accent">Backend & Core:</span> Java,
+                  Spring Boot, Maven, C#, Python
                 </li>
                 <li>
-                  Data & Testing: SQL, Liquibase, NoSQL, JUnit, Mockito,
-                  Jasmine, Hibernate/JPA
+                  <span className="cv-accent">Frontend & UI:</span> Angular,
+                  React, TypeScript, npm, SASS, Bootstrap
                 </li>
                 <li>
-                  DevOps & Workflow: GitLab CI/CD, Bash/Batch Scripting, Linux,
-                  Docker (Basics), AWS (Basics), Jira, Slack
+                  <span className="cv-accent">Data & Testing:</span> SQL,
+                  Liquibase, NoSQL, JUnit, Mockito, Jasmine, Hibernate/JPA
+                </li>
+                <li>
+                  <span className="cv-accent">DevOps & Workflow:</span> GitLab
+                  CI/CD, Bash/Batch Scripting, Linux, Docker (Basics), AWS
+                  (Basics), Jira, Slack
                 </li>
               </ul>
             </section>
@@ -368,17 +372,22 @@ export default function Cv() {
           <section className={sectionLeftClass}></section>
           <section className={sectionRightClass}>
             <ul className="cv-work">
-              <li>Backend & Core: Java, Spring Boot, Maven, C#, Python</li>
               <li>
-                Frontend & UI: Angular, React, TypeScript, npm, SASS, Bootstrap
+                <span className="cv-accent">Backend & Core:</span> Java, Spring
+                Boot, Maven, C#, Python
               </li>
               <li>
-                Data & Testing: SQL, Liquibase, NoSQL, JUnit, Mockito, Jasmine,
-                Hibernate/JPA
+                <span className="cv-accent">Frontend & UI:</span> Angular,
+                React, TypeScript, npm, SASS, Bootstrap
               </li>
               <li>
-                DevOps & Workflow: GitLab CI/CD, Bash/Batch Scripting, Linux,
-                Docker (Basics), AWS (Basics), Jira, Slack
+                <span className="cv-accent">Data & Testing:</span> SQL,
+                Liquibase, NoSQL, JUnit, Mockito, Jasmine, Hibernate/JPA
+              </li>
+              <li>
+                <span className="cv-accent">DevOps & Workflow:</span> GitLab
+                CI/CD, Bash/Batch Scripting, Linux, Docker (Basics), AWS
+                (Basics), Jira, Slack
               </li>
             </ul>
           </section>
