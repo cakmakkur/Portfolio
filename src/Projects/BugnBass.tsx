@@ -9,6 +9,7 @@ import maven_logo from "../Assets/maven.png";
 import postgres_logo from "../Assets/postgres.svg";
 import springboot_logo from "../Assets/spring-boot.webp";
 import junit_logo from "../Assets/icons/junit.png";
+import check__green from "../Assets/checkLogo-green.svg";
 
 import img1 from "../Assets/carousel__images/bugnbass/bugnbass_1.png";
 import img2 from "../Assets/carousel__images/bugnbass/bugnbass_2.png";
@@ -74,7 +75,14 @@ export default function BugnBass() {
           <div className="laptop__bottom">
             <img className="laptop__img3" src={laptop_bottom} alt="" />
           </div>
-          <div className="laptop__shadow"></div>
+          <div className="laptop__shadow">
+            <div className="feature__checks">
+              <div>
+                <img height={15} src={check__green} alt="green check icon" />{" "}
+                Responsive Design
+              </div>
+            </div>
+          </div>
           <div className="lefthand__links__div">
             <div
               ref={githubBtnRef}
@@ -114,26 +122,38 @@ export default function BugnBass() {
               <span className="product__description--accent--pr">
                 Bug&apos;n Bass
               </span>{" "}
-              is a full-stack music store application built with a Java Spring
-              Boot backend, PostgreSQL database, and React + TypeScript
-              frontend. Users can browse instruments, add items to the cart,
-              place orders, and leave product reviews. <br /> <br /> I
-              contributed core backend REST APIs, database design, and frontend
-              integration for product listing, cart flow, and review handling.
+              is a full-stack e-commerce application designed for browsing,
+              reviewing, and purchasing musical instruments. Users can explore
+              products, manage their shopping cart, place orders, and leave
+              reviews for individual items.
+              <br /> <br />
+              The application combines a Java Spring Boot backend, PostgreSQL
+              database, and React + TypeScript frontend, covering the full
+              development flow from database design and REST API implementation
+              to interactive frontend functionality.
+              <br /> <br />I contributed to the core backend REST APIs, database
+              structure, and frontend integration for product listings, cart
+              workflows, order handling, and product reviews.
             </article>
           ) : (
             <article className="product__description">
               <span className="product__description--accent--pr">
                 Bug&apos;n Bass
               </span>{" "}
-              ist eine Full-Stack-Musikshop-Anwendung mit Java Spring Boot
-              Backend, PostgreSQL-Datenbank und React + TypeScript Frontend.
-              Nutzer*innen können Instrumente durchsuchen, Artikel in den
-              Warenkorb legen, Bestellungen aufgeben und Produktbewertungen
-              hinterlassen.
-              <br /> <br /> Ich habe die zentralen Backend-REST-APIs, das
-              Datenbankdesign und die Frontend-Integration für Produktlisten,
-              Warenkorb und Bewertungsfunktionen umgesetzt.
+              ist eine Full-Stack-E-Commerce-Anwendung zum Durchsuchen, Bewerten
+              und Kaufen von Musikinstrumenten. Nutzer*innen können Produkte
+              entdecken, ihren Warenkorb verwalten, Bestellungen aufgeben und
+              Bewertungen zu einzelnen Artikeln hinterlassen.
+              <br /> <br />
+              Die Anwendung kombiniert ein Java Spring Boot Backend, eine
+              PostgreSQL-Datenbank und ein React + TypeScript Frontend und deckt
+              damit den vollständigen Entwicklungsprozess von Datenbankdesign
+              und REST-API-Implementierung bis hin zu interaktiver
+              Frontend-Funktionalität ab.
+              <br /> <br />
+              Ich habe an den zentralen Backend-REST-APIs, der Datenbankstruktur
+              und der Frontend-Integration für Produktlisten, Warenkorb-Abläufe,
+              Bestellverarbeitung und Produktbewertungen mitgewirkt.
             </article>
           )}
           <div className="used__tech__div">

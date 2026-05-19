@@ -1,4 +1,3 @@
-import buybuyImg from "../Assets/project_thumbnails/buybuy.png";
 import schnapsenImg from "../Assets/project_thumbnails/schnapsen.png";
 import mondatelierImg from "../Assets/project_thumbnails/mondatelier.png";
 import portfolioImg from "../Assets/project_thumbnails/portfolio.png";
@@ -82,16 +81,6 @@ export const projects = [
     text: [
       "Band Homepage+Dashboard is a Next.js app that it currently IN DEVELOPMENT. It will serve as a landing page for a music band and a dashboard for the band members to manage their content.",
       "Band Homepage + Dashboard ist eine Next.js-App, die sich derzeit IN ENTWICKLUNG befindet. Sie wird als Landingpage für eine Musikband dienen und ein Dashboard für die Bandmitglieder bieten, um ihre Inhalte zu verwalten.",
-    ],
-  },
-  {
-    title: "Buy-Buy E-Commerce",
-    route: "/projects/buybuy-homepage",
-    img: buybuyImg,
-    technologies: ["react", "ts", "node", "express", "vitest", "sass"],
-    text: [
-      "Buy-Buy E-Commerce is a MERN e-commerce web application.",
-      "Buy-Buy E-Commerce ist eine MERN E-Commerce-Webanwendung.",
     ],
   },
   {

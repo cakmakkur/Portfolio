@@ -25,14 +25,14 @@ import MobileCarouselAnm from "../Animations/MobileCarouselAnm";
 
 type ImageArrayType = string[];
 
-export default function BuyBuyHomepage() {
+export default function PortfolioProject() {
   const { language } = useLanguageContext();
 
   const [isHovering, setIsHovering] = useState("");
   const githubBtnRef = useRef<HTMLDivElement>(null);
   const youtubeBtnRef = useRef<HTMLDivElement>(null);
 
-  const buybuyImages: ImageArrayType = [img1, img2, img3, img4];
+  const portfolioImages: ImageArrayType = [img1, img2, img3, img4];
   const buybuyMobileImages: ImageArrayType = [img5, img6, img7, img8];
 
   function toggleFxBtn(arg: string) {
@@ -66,7 +66,7 @@ export default function BuyBuyHomepage() {
         <div className="single__product__left">
           <div className="laptop__top">
             <img className="laptop__scr" src={laptop_top} alt="" />
-            <CarouselAnm images={buybuyImages} />
+            <CarouselAnm images={portfolioImages} />
             <img src={smartphone} alt="" className="smartphone__scr" />
             <MobileCarouselAnm images={buybuyMobileImages} />
           </div>

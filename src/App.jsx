@@ -8,8 +8,6 @@ import UICatalog from "./Pages/UICatalog";
 import Exhibition from "./Pages/Exhibition";
 import Paintings from "./Pages/Paintings";
 
-const BuyBuyHomepage = lazy(() => import("./Projects/BuyBuyHomepage"));
-const BuyBuyAdmin = lazy(() => import("./Projects/BuyBuyAdmin"));
 const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
 const BugnBass = lazy(() => import("./Projects/BugnBass"));
@@ -24,13 +22,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
 
-          <Route
-            path="/projects/buybuy-homepage"
-            element={<BuyBuyHomepage />}
-          />
           <Route path="/projects/schnapsen" element={<Schnapsen />} />
           <Route path="/projects/bugnbass" element={<BugnBass />} />
-          <Route path="/projects/buybuy-admin" element={<BuyBuyAdmin />} />
           <Route path="/projects/mondatelier" element={<Mondatelier />} />
           <Route path="/projects/portfolio" element={<PortfolioProject />} />
           <Route path="/projects/band-homepage" element={<BandHomepage />} />
