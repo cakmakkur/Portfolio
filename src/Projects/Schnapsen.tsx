@@ -1,7 +1,6 @@
 import laptop_top from "../Assets/laptop_top.png";
 import laptop_bottom from "../Assets/laptop_bottom.png";
-import githubIcon from "../Assets/github.svg";
-import playIcon from "../Assets/play.svg";
+import playIcon from "../Assets/play_circle.svg";
 
 import js_logo from "../Assets/icons/js.png";
 import sass_logo from "../Assets/icons/sass.png";
@@ -15,60 +14,33 @@ import img4 from "../Assets/carousel__images/schnapsen/s4.png";
 import TypewriterTitle from "../Animations/TypewriterTitle";
 import CarouselAnm from "../Animations/CarouselAnm";
 
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 type ImageArrayType = string[];
 
 export default function Schnapsen() {
   const { language } = useLanguageContext();
-  const [toggleVideo, setToggleVideo] = useState(false);
   const [isHovering, setIsHovering] = useState("");
-  const githubBtnRef = useRef<HTMLDivElement>(null);
   const playBtnRef = useRef<HTMLDivElement>(null);
   const viewProductBtnRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
 
   const schnapsenImages: ImageArrayType = [img1, img2, img3, img4];
-
-  // const VideoPlayer = lazy(
-  //   () => import("../Components/VideoPlayers/SchnapsenVideo")
-  // );
 
   function toggleFxBtn(arg: string) {
     setIsHovering(arg);
   }
 
   useEffect(() => {
-    githubBtnRef.current?.classList.remove("button__wrapper--active");
     playBtnRef.current?.classList.remove("button__wrapper--active");
     viewProductBtnRef.current?.classList.remove("button__wrapper--active");
 
     if (isHovering === "github") {
-      githubBtnRef.current?.classList.add("button__wrapper--active");
-    } else if (isHovering === "play") {
       playBtnRef.current?.classList.add("button__wrapper--active");
     } else if (isHovering === "viewProduct") {
       viewProductBtnRef.current?.classList.add("button__wrapper--active");
     }
   }, [isHovering]);
-
-  //video modal animation:
-  const handleVideoButton = (arg: boolean) => {
-    if (arg === true) {
-      setToggleVideo(arg);
-      setTimeout(() => {
-        if (!videoRef.current) return;
-        videoRef.current.style.transform = "scale(1)";
-      }, 200);
-    } else {
-      if (!videoRef.current) return;
-      videoRef.current.style.transform = "scale(0)";
-      setTimeout(() => {
-        setToggleVideo(arg);
-      }, 200);
-    }
-  };
 
   return (
     <div className="single__project__main">
@@ -94,7 +66,7 @@ export default function Schnapsen() {
           <div className="laptop__shadow"></div>
           <div className="lefthand__links__div">
             <div
-              ref={githubBtnRef}
+              ref={playBtnRef}
               onMouseEnter={() => {
                 toggleFxBtn("github");
               }}
@@ -104,55 +76,27 @@ export default function Schnapsen() {
               className="button__wrapper"
             >
               {language === "EN" ? (
-                <a
-                  href="https://github.com/cakmakkur/schnapsen"
-                  target="_blank"
-                >
-                  Go to<span>Github Repository</span>{" "}
-                  <img width={30} src={githubIcon} alt="" />
-                </a>
-              ) : (
-                <a
-                  href="https://github.com/cakmakkur/schnapsen"
-                  target="_blank"
-                >
-                  Zum<span>Github</span> gehen{" "}
+                <a href="https://schnapsen-game.netlify.app/" target="_blank">
+                  Give it a try
                   <img
                     style={{ marginLeft: "20px" }}
                     width={30}
-                    src={githubIcon}
+                    src={playIcon}
+                    alt=""
+                  />
+                </a>
+              ) : (
+                <a href="https://schnapsen-game.netlify.app/" target="_blank">
+                  Probiere es aus
+                  <img
+                    style={{ marginLeft: "20px" }}
+                    width={30}
+                    src={playIcon}
                     alt=""
                   />
                 </a>
               )}
             </div>
-            {/* <div
-              ref={playBtnRef}
-              onMouseEnter={() => {
-                toggleFxBtn("play");
-              }}
-              onMouseLeave={() => {
-                toggleFxBtn("");
-              }}
-              className="button__wrapper"
-            >
-              {language === "EN" ? (
-                <button onClick={() => handleVideoButton(true)}>
-                  Watch<span>Demo</span>
-                  <img width={40} src={playIcon} alt="" />
-                </button>
-              ) : (
-                <button onClick={() => handleVideoButton(true)}>
-                  <span>Beispielvideo</span>ansehen
-                  <img
-                    width={40}
-                    style={{ marginLeft: "20px" }}
-                    src={playIcon}
-                    alt=""
-                  />
-                </button>
-              )}
-            </div> */}
           </div>
         </div>
         <div className="single__product__right">
@@ -223,25 +167,6 @@ export default function Schnapsen() {
               alt=""
             />
           </div>
-          {/* <div className="view__product__btn__div">
-            <div
-              ref={viewProductBtnRef}
-              onMouseEnter={() => {
-                toggleFxBtn("viewProduct");
-              }}
-              onMouseLeave={() => {
-                toggleFxBtn("");
-              }}
-              className="button__wrapper pr__button__wrapper"
-            >
-              <a
-                href="https://schnapsen.cakmakkursat.com/"
-                className="view__product__btn"
-              >
-                {language === "EN" ? "VIEW PROJECT" : "PROJEKT ANSEHEN"}
-              </a>
-            </div>
-          </div> */}
           <div className="product__links__div"></div>
         </div>
       </div>
@@ -262,20 +187,6 @@ export default function Schnapsen() {
           &copy; Kürsat Cakmak
         </div>
       )}
-      <Suspense fallback={<div className="video__modal__div">Loading...</div>}>
-        {/* {toggleVideo ? (
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="video__modal__div"
-            ref={videoRef}
-          >
-            <button onClick={() => handleVideoButton(false)}>X</button>
-            <VideoPlayer />
-          </div>
-        ) : (
-          ""
-        )} */}
-      </Suspense>
     </div>
   );
 }
