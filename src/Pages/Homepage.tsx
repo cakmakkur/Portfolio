@@ -83,13 +83,13 @@ export default function Homepage() {
         entries.forEach((e) => {
           e.target.classList.toggle(
             "homepage__header--visible",
-            e.isIntersecting
+            e.isIntersecting,
           );
         });
       },
       {
         rootMargin: "200px",
-      }
+      },
     );
     observer.observe(headingElement);
     return () => {
@@ -111,13 +111,13 @@ export default function Homepage() {
         entries.forEach((e) => {
           e.target.classList.toggle(
             "project__link__div--visible",
-            e.isIntersecting
+            e.isIntersecting,
           );
         });
       },
       {
         threshold: 0.5,
-      }
+      },
     );
     Array.from(children).forEach((child) => {
       observer.observe(child);
@@ -166,7 +166,7 @@ export default function Homepage() {
       window.removeEventListener("scroll", updateCurrentScrollPosition);
       scrollRef.current?.removeEventListener(
         "scroll",
-        updateCurrentScrollPosition
+        updateCurrentScrollPosition,
       );
       setCurrentScrollPosition(0);
     };
@@ -227,9 +227,9 @@ export default function Homepage() {
           <h1>KÜRSAT CAKMAK</h1>
           <div>
             {language === "EN" ? (
-              <h4>WEB AND SOFTWARE DEVELOPER</h4>
+              <h4>FULL-STACK SOFTWARE DEVELOPER</h4>
             ) : (
-              <h4>WEB- UND SOFTWAREENTWICKLER</h4>
+              <h4>FULL-STACK SOFTWAREENTWICKLER</h4>
             )}
             <div className="ext__links__div">
               <a href="https://github.com/cakmakkur" target="_blank">

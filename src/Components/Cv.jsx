@@ -1,13 +1,23 @@
-import {
-  DarkTheme,
-  LightTheme,
-  useThemeContext,
-} from "../GlobalContext/ThemeContext";
+import { LightTheme, useThemeContext } from "../GlobalContext/ThemeContext";
 import { useLanguageContext } from "../GlobalContext/LanguageContext";
 
 export default function Cv() {
   const { theme } = useThemeContext();
   const { language } = useLanguageContext();
+
+  const sectionTopClass = `cv__sub__top ${
+    theme.type === "light" ? "cv__sub__top--light" : ""
+  }`;
+
+  const sectionLeftClass = `cv__sub__bottom__left ${
+    theme.type === "light" ? "cv__sub__bottom__left--light" : ""
+  }`;
+
+  const sectionRightClass = `cv__sub__bottom__right ${
+    theme.type === "light" ? "cv__sub__bottom__right--light" : ""
+  }`;
+
+  const linkColor = { color: LightTheme.secondary };
 
   if (language === "EN") {
     return (
@@ -15,789 +25,410 @@ export default function Cv() {
         <h1 id="cv_start">resume</h1>
 
         <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
+          <section className={sectionTopClass}>
             <h3>Work Experience</h3>
           </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              06/2025 – 02/2026
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
+            <section className={sectionLeftClass}>06/2025 – 02/2026</section>
+            <section className={sectionRightClass}>
               <span className="cv-accent">Software Developer – Intern</span>
               <br />
               <a
                 style={{ textDecoration: "underline" }}
                 href="https://www.docolution.com"
                 target="_blank"
+                rel="noreferrer"
               >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Docolution GmbH
-                </span>
+                <span style={linkColor}>Docolution GmbH</span>
               </a>{" "}
               Vienna, Austria
+              <span style={{ display: "block", height: "10px" }}></span>
               <ul className="cv-work">
                 <li>
-                  Developed business management applications using Java, Spring
-                  Boot, TypeScript, Angular, SQL, and Liquibase
+                  Developed full-stack features using Java (Spring Boot) and
+                  Angular for the internal business application People
                 </li>
                 <li>
-                  Maintained Document Analyzer software (Aly): bug fixes,
-                  feature enhancements, and production release support
+                  Maintained and extended document analysis software Aly,
+                  including bug fixes and feature enhancements
                 </li>
                 <li>
-                  Implemented CI/CD pipelines, automated testing, and Bash/Batch
-                  scripting for deployment automation and task optimization
+                  Built and integrated REST APIs and supported frontend-backend
+                  communication
                 </li>
                 <li>
-                  Wrote technical documentation and contributed to code reviews
-                  in an agile team environment
+                  Worked with SQL and Liquibase for database design and schema
+                  management
                 </li>
                 <li>
-                  Took ownership of full-stack solutions from database design to
-                  UI implementation, delivering measurable business value
+                  Contributed to CI/CD pipelines, automated testing, and
+                  deployment processes using Bash/Batch scripting
+                </li>
+                <li>
+                  Participated in debugging, code reviews, and production
+                  release support in an Agile team
                 </li>
               </ul>
             </section>
           </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2021 – 2024
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Service Personal</span>
+            <section className={sectionLeftClass}>2015 – 2025</section>
+            <section className={sectionRightClass}>
+              <span className="cv-accent">
+                Additional Professional Experience
+              </span>
               <br />
-              <a
-                style={{ textDecoration: "underline" }}
-                href="https://www.kolar-beisl.at/"
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Kolar Beisl
-                </span>
-              </a>{" "}
               Vienna, Austria
+              <span style={{ display: "block", height: "10px" }}></span>
               <ul className="cv-work">
                 <li>
-                  Provided attentive guest service and menu consultation in a
-                  fast-paced international restaurant
+                  Customer-facing operational roles across hospitality and
+                  retail in Vienna
                 </li>
                 <li>
-                  Coordinated with team members to ensure efficient operations
-                  and maintain a professional atmosphere
+                  Developed communication, teamwork, and high-pressure
+                  problem-solving skills
                 </li>
-              </ul>
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2023
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Child Care Worker</span>
-              <br />
-              <a
-                href="https://divinaart.at/"
-                style={{ textDecoration: "underline" }}
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Divina Art
-                </span>
-              </a>{" "}
-              Vienna, Austria
-              <ul className="cv-work">
-                <li>Supervised children in a safe, engaging environment</li>
-                <li>Conducted age-appropriate educational activities</li>
-                <li>Supported social, emotional, and cognitive development</li>
               </ul>
             </section>
           </section>
         </div>
+
         <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
+          <section className={sectionTopClass}>
             <h3>Education</h3>
           </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              03/2025 – 03/2026
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
+            <section className={sectionLeftClass}>03/2025 – 03/2026</section>
+            <section className={sectionRightClass}>
               <span className="cv-accent">Junior Software Developer</span>
               <br />
               <a
                 style={{ textDecoration: "underline" }}
                 href="https://www.technikum-wien.at/"
                 target="_blank"
+                rel="noreferrer"
               >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  FH Technikum,
-                </span>
-              </a>{" "}
-              Vienna, Austria
+                <span style={linkColor}>FH Technikum Wien</span>
+              </a>
+              , Vienna, Austria
               <ul className="cv-work">
-                <li>Full-Stack Web and Software Development</li>
-                <li>Data Management</li>
-                <li>Networking, Infrastructure & Linux</li>
-                <li>Agile Development & Software Lifecycle Management</li>
-                <li>Software Architecture and Design</li>
-                <li>Agile Software Testing</li>
+                <li>
+                  Focus: full-stack web development, Java, databases,
+                  Linux/infrastructure, software architecture, Agile
+                  development, and software testing
+                </li>
               </ul>
             </section>
           </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2018 – 2022
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">BSc Psychology</span> (not completed){" "}
-              <br />{" "}
+            <section className={sectionLeftClass}>2017 – 2023</section>
+            <section className={sectionRightClass}>
+              <span className="cv-accent">Psychology Studies</span> coursework
+              completed, no degree
+              <br />
               <a
                 style={{ textDecoration: "underline" }}
                 href="https://www.univie.ac.at/en/"
                 target="_blank"
+                rel="noreferrer"
               >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  University of Vienna,
-                </span>
-              </a>{" "}
-              Vienna, Austria
+                <span style={linkColor}>University of Vienna</span>
+              </a>
+              , Vienna, Austria
             </section>
           </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2008 – 2012
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
+            <section className={sectionLeftClass}>2008 – 2012</section>
+            <section className={sectionRightClass}>
               <span className="cv-accent">
                 Yalova Termal High School for Natural Sciences
-              </span>{" "}
+              </span>
             </section>
           </section>
         </div>
 
         <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Language</h3>
+          <section className={sectionTopClass}>
+            <h3>Technical Skills</h3>
           </section>
+
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              GERMAN
+            <section className={sectionLeftClass}></section>
+            <section className={sectionRightClass}>
+              <ul className="cv-work">
+                <li>Backend & Core: Java, Spring Boot, Maven, C#, Python</li>
+                <li>
+                  Frontend & UI: Angular, React, TypeScript, npm, SASS,
+                  Bootstrap
+                </li>
+                <li>
+                  Data & Testing: SQL, Liquibase, NoSQL, JUnit, Mockito,
+                  Jasmine, Hibernate/JPA
+                </li>
+                <li>
+                  DevOps & Workflow: GitLab CI/CD, Bash/Batch Scripting, Linux,
+                  Docker (Basics), AWS (Basics), Jira, Slack
+                </li>
+              </ul>
             </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">C1</span> - Advanced proficiency,
+          </section>
+        </div>
+
+        <div className="cv__chapter__div">
+          <section className={sectionTopClass}>
+            <h3>Languages</h3>
+          </section>
+
+          <section className="cv__sub__bottom">
+            <section className={sectionLeftClass}>German</section>
+            <section className={sectionRightClass}>
+              <span className="cv-accent">C1</span> – Advanced proficiency,
               comfortable in business settings
             </section>
           </section>
+
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ENGLISH
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">C2</span> - Fluent in all professional
+            <section className={sectionLeftClass}>English</section>
+            <section className={sectionRightClass}>
+              <span className="cv-accent">C2</span> – Fluent in all professional
               and technical contexts
             </section>
           </section>
+
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              TURKISH
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Native Language</span>{" "}
+            <section className={sectionLeftClass}>Turkish</section>
+            <section className={sectionRightClass}>
+              <span className="cv-accent">Native</span>
             </section>
           </section>
         </div>
+
         <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Technical Skills</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            ></section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <ul className="cv-work">
-                <li>Java, Spring Boot, Hibernate</li>
-                <li>JS/TS, Angular, React, npm</li>
-                <li>HTML, CSS, SASS, Bootstrap</li>
-                <li>PostgreSQL, MySQL, MongoDB, Liquibase</li>
-                <li>JUnit, Jasmine, Vitest</li>
-                <li>Python</li>
-                <li>Git, GitLab, CI/CD Pipelines</li>
-                <li>Bash/Batch Scripting</li>
-                <li>Maven, Docker, AWS</li>
-                <li>Linux, Windows, macOS</li>
-                <li>Agile/Scrum, Code Review</li>
-              </ul>
-            </section>
-          </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
+          <section className={sectionTopClass}>
             <h3>Personal</h3>
           </section>
-          <section className="cv__sub__bottom"></section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            ></section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              I&apos;m a dedicated piano player and passionate about music and
-              visual arts. I occasionally play in a hobby jazz band. I also like
-              visual arts and paint traditionally and digitally.
-              <br />
-              Creativity fuels both my technical work and personal pursuits.{" "}
-              <br />
-              As a hobby project, I am working on an artists&apos; platform to
-              share artwork and connect with fellow art enthusiasts.
-            </section>
-          </section>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div id="resume_start" className="cv__div">
-        <h1 id="cv_start">lebenslauf</h1>
-
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Berufserfahrung</h3>
-          </section>
 
           <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              06/2025 – 02/2026
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Software Developer – Praktikant</span>{" "}
-              <br />
-              <a
-                style={{ textDecoration: "underline" }}
-                href="https://www.docolution.com"
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Docolution GmbH
-                </span>
-              </a>{" "}
-              Wien, Österreich
-              <ul className="cv-work">
-                <li>
-                  Entwicklung von Business-Management-Anwendungen mit Java,
-                  Spring Boot, TypeScript, Angular, SQL und Liquibase
-                </li>
-                <li>
-                  Wartung der Dokumenten-Analyse-Software (Aly):
-                  Fehlerbehebungen, Feature-Erweiterungen und Unterstützung bei
-                  Produktiv-Releases
-                </li>
-                <li>
-                  Implementierung von CI/CD-Pipelines, automatisierten Tests
-                  sowie Bash-/Batch-Skripten zur Deployment-Automatisierung und
-                  Aufgabenoptimierung
-                </li>
-                <li>
-                  Erstellung technischer Dokumentation und Mitwirkung bei
-                  Code-Reviews in einem agilen Teamumfeld
-                </li>
-                <li>
-                  Eigenverantwortliche Umsetzung von Full-Stack-Lösungen von der
-                  Datenbankgestaltung bis zur UI-Implementierung mit messbarem
-                  geschäftlichem Mehrwert
-                </li>
-              </ul>
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2021 – 2024
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Servicepersonal</span>
-              <br />
-              <a
-                style={{ textDecoration: "underline" }}
-                href="https://www.kolar-beisl.at/"
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Kolar Beisl
-                </span>
-              </a>{" "}
-              Wien, Österreich
-              <ul className="cv-work">
-                <li>
-                  Aufmerksame Gästebetreuung und Menüberatung in einem
-                  schnelllebigen, internationalen Restaurantbetrieb
-                </li>
-                <li>
-                  Enge Zusammenarbeit im Team zur Sicherstellung effizienter
-                  Abläufe und eines professionellen Auftretens
-                </li>
-              </ul>
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2023
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Kinderbetreuer</span>
-              <br />
-              <a
-                href="https://divinaart.at/"
-                style={{ textDecoration: "underline" }}
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Divina Art
-                </span>
-              </a>{" "}
-              Wien, Österreich
-              <ul className="cv-work">
-                <li>
-                  Betreuung von Kindern in einem sicheren und anregenden Umfeld
-                </li>
-                <li>Durchführung altersgerechter pädagogischer Aktivitäten</li>
-                <li>
-                  Förderung der sozialen, emotionalen und kognitiven Entwicklung
-                </li>
-              </ul>
-            </section>
-          </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Ausbildung</h3>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              03/2025 – 03/2026
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Junior Softwareentwickler</span>
-              <br />
-              <a
-                style={{ textDecoration: "underline" }}
-                href="https://www.technikum-wien.at/"
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  FH Technikum,
-                </span>
-              </a>{" "}
-              Wien, Österreich
-              <ul className="cv-work">
-                <li>Full-Stack Web- und Softwareentwicklung</li>
-                <li>Datenmanagement</li>
-                <li>Netzwerke, Infrastruktur und Linux</li>
-                <li>Agile Entwicklung & Software-Lifecycle-Management</li>
-                <li>Softwarearchitektur und -design</li>
-                <li>Agiles Software-Testing</li>
-              </ul>
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2018 – 2022
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Bachelorstudium Psychologie</span>{" "}
-              (nicht abgeschlossen) <br />{" "}
-              <a
-                style={{ textDecoration: "underline" }}
-                href="https://www.univie.ac.at/en/"
-                target="_blank"
-              >
-                <span
-                  style={
-                    theme.type === "light"
-                      ? { color: LightTheme.secondary }
-                      : { color: LightTheme.secondary }
-                  }
-                >
-                  {" "}
-                  Universität Wien,
-                </span>
-              </a>{" "}
-              Wien, Österreich
-            </section>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              2008 – 2012
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">
-                Yalova Termal Gymnasium für Naturwissenschaften
-              </span>{" "}
-            </section>
-          </section>
-        </div>
-
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Sprachkenntnisse</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              DEUTSCH
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">C1</span> – Fortgeschrittene
-              Sprachkenntnisse, sicher im beruflichen und geschäftlichen Umfeld
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              ENGLISCH
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">C2</span> – Verhandlungssicher in
-              allen beruflichen und technischen Kontexten
-            </section>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            >
-              TÜRKISCH
-            </section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <span className="cv-accent">Muttersprache</span>{" "}
-            </section>
-          </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Technische Kenntnisse</h3>
-          </section>
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            ></section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              <ul className="cv-work">
-                <li>Java, Spring Boot, Hibernate</li>
-                <li>JS/TS, Angular, React, npm</li>
-                <li>HTML, CSS, SASS, Bootstrap</li>
-                <li>PostgreSQL, MySQL, MongoDB, Liquibase</li>
-                <li>JUnit, Jasmine, Vitest</li>
-                <li>Python</li>
-                <li>Git, GitLab, CI/CD-Pipelines</li>
-                <li>Bash/Batch-Skripting</li>
-                <li>Maven, Docker, AWS</li>
-                <li>Linux, Windows, macOS</li>
-                <li>Agile/Scrum, Code Review</li>
-              </ul>
-            </section>
-          </section>
-        </div>
-        <div className="cv__chapter__div">
-          <section
-            className={`cv__sub__top ${
-              theme.type === "light" ? "cv__sub__top--light" : ""
-            }`}
-          >
-            <h3>Persönliches</h3>
-          </section>
-
-          <section className="cv__sub__bottom">
-            <section
-              className={`cv__sub__bottom__left ${
-                theme.type === "light" ? "cv__sub__bottom__left--light" : ""
-              }`}
-            ></section>
-            <section
-              className={`cv__sub__bottom__right ${
-                theme.type === "light" ? "cv__sub__bottom__right--light" : ""
-              }`}
-            >
-              Ich bin ein engagierter Pianist und leidenschaftlich an Musik und
-              visueller Kunst interessiert. Gelegentlich spiele ich in einer
-              Hobby-Jazzband. Außerdem beschäftige ich mich mit bildender Kunst
-              und male sowohl traditionell als auch digital.
-              <br />
-              Kreativität prägt sowohl meine technische Arbeit als auch meine
-              persönlichen Interessen.
-              <br />
-              Als Hobbyprojekt arbeite ich an einer Künstler*innen-Plattform, um
-              Kunstwerke zu teilen und mich mit anderen Kunstinteressierten zu
-              vernetzen.
+            <section className={sectionLeftClass}></section>
+            <section className={sectionRightClass}>
+              I am interested in software development, creative problem-solving,
+              music, visual arts, and languages. I play piano, occasionally play
+              in a hobby jazz band, and work on personal software projects in my
+              free time.
             </section>
           </section>
         </div>
       </div>
     );
   }
+
+  return (
+    <div id="resume_start" className="cv__div">
+      <h1 id="cv_start">lebenslauf</h1>
+
+      <div className="cv__chapter__div">
+        <section className={sectionTopClass}>
+          <h3>Berufserfahrung</h3>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>06/2025 – 02/2026</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">Software Developer – Praktikant</span>
+            <br />
+            <a
+              style={{ textDecoration: "underline" }}
+              href="https://www.docolution.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span style={linkColor}>Docolution GmbH</span>
+            </a>{" "}
+            Wien, Österreich
+            <span style={{ display: "block", height: "10px" }}></span>
+            <ul className="cv-work">
+              <li>
+                Entwicklung von Full-Stack-Features mit Java (Spring Boot) und
+                Angular für die interne Business-Anwendung People
+              </li>
+              <li>
+                Wartung und Erweiterung der Dokumentenanalyse-Software Aly,
+                einschließlich Fehlerbehebung und Feature-Erweiterungen
+              </li>
+              <li>
+                Entwicklung und Integration von REST APIs sowie Unterstützung
+                der Frontend-Backend-Kommunikation
+              </li>
+              <li>
+                Arbeit mit SQL und Liquibase für Datenbankdesign und
+                Schema-Management
+              </li>
+              <li>
+                Mitwirkung an CI/CD-Pipelines, automatisierten Tests und
+                Deployment-Prozessen mit Bash-/Batch-Skripting
+              </li>
+              <li>
+                Teilnahme an Debugging, Code Reviews und Production Release
+                Support in einem agilen Team
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>2015 – 2025</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">Weitere Berufserfahrung</span>
+            <br />
+            Wien, Österreich
+            <span style={{ display: "block", height: "10px" }}></span>
+            <ul className="cv-work">
+              <li>
+                Kundennahe operative Tätigkeiten in Gastronomie und Handel in
+                Wien
+              </li>
+              <li>
+                Entwicklung von Kommunikationsfähigkeit, Teamarbeit und
+                Problemlösungskompetenz unter hohem Arbeitsdruck
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+
+      <div className="cv__chapter__div">
+        <section className={sectionTopClass}>
+          <h3>Ausbildung</h3>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>03/2025 – 03/2026</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">Junior Software Developer</span>
+            <br />
+            <a
+              style={{ textDecoration: "underline" }}
+              href="https://www.technikum-wien.at/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span style={linkColor}>FH Technikum Wien</span>
+            </a>
+            , Wien, Österreich
+            <ul className="cv-work">
+              <li>
+                Schwerpunkt: Full-Stack-Webentwicklung, Java, Datenbanken,
+                Linux/Infrastruktur, Softwarearchitektur, agile Entwicklung und
+                Software-Testing
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>2017 – 2023</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">Psychologiestudium</span>{" "}
+            Lehrveranstaltungen abgeschlossen, kein Abschluss
+            <br />
+            <a
+              style={{ textDecoration: "underline" }}
+              href="https://www.univie.ac.at/en/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span style={linkColor}>Universität Wien</span>
+            </a>
+            , Wien, Österreich
+          </section>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>2008 – 2012</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">
+              Yalova Termal Gymnasium für Naturwissenschaften
+            </span>
+          </section>
+        </section>
+      </div>
+
+      <div className="cv__chapter__div">
+        <section className={sectionTopClass}>
+          <h3>Technische Kenntnisse</h3>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}></section>
+          <section className={sectionRightClass}>
+            <ul className="cv-work">
+              <li>Backend & Core: Java, Spring Boot, Maven, C#, Python</li>
+              <li>
+                Frontend & UI: Angular, React, TypeScript, npm, SASS, Bootstrap
+              </li>
+              <li>
+                Data & Testing: SQL, Liquibase, NoSQL, JUnit, Mockito, Jasmine,
+                Hibernate/JPA
+              </li>
+              <li>
+                DevOps & Workflow: GitLab CI/CD, Bash/Batch Scripting, Linux,
+                Docker (Basics), AWS (Basics), Jira, Slack
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+
+      <div className="cv__chapter__div">
+        <section className={sectionTopClass}>
+          <h3>Sprachkenntnisse</h3>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>Deutsch</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">C1</span> – Fortgeschrittene
+            Sprachkenntnisse, sicher im beruflichen und geschäftlichen Umfeld
+          </section>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>Englisch</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">C2</span> – Fließend in allen
+            beruflichen und technischen Kontexten
+          </section>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}>Türkisch</section>
+          <section className={sectionRightClass}>
+            <span className="cv-accent">Muttersprache</span>
+          </section>
+        </section>
+      </div>
+
+      <div className="cv__chapter__div">
+        <section className={sectionTopClass}>
+          <h3>Persönliches</h3>
+        </section>
+
+        <section className="cv__sub__bottom">
+          <section className={sectionLeftClass}></section>
+          <section className={sectionRightClass}>
+            Ich interessiere mich für Softwareentwicklung, kreatives
+            Problemlösen, Musik, bildende Kunst und Sprachen. Ich spiele
+            Klavier, gelegentlich in einer Hobby-Jazzband, und arbeite in meiner
+            Freizeit an eigenen Softwareprojekten.
+          </section>
+        </section>
+      </div>
+    </div>
+  );
 }

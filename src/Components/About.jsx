@@ -7,22 +7,30 @@ export default function About() {
     return (
       <p className="about__text">
         <span className="about-hello">Hello</span>
-        <br />
-        I am a driven and curious web and software developer with a passion for
-        creating software that works flawlessly from the database to the user
-        interface. I dig deep into how systems work behind the scenes and
-        constantly push myself to learn, improve, and deliver real value.
+        <br />I am a Vienna-based full-stack software developer with a strong
+        focus on <strong>Java</strong>, <strong>Spring Boot</strong>,{" "}
+        <strong>REST APIs</strong>, <strong>SQL databases</strong>, and modern
+        frontend technologies such as <strong>Angular</strong>,{" "}
+        <strong>React</strong>, and <strong>TypeScript</strong>. I enjoy
+        building reliable software across the full stack, from backend logic and
+        database integration to clean, usable interfaces.
         <br /> <br />
-        Beginning my developer journey independently, I&apos;ve created
-        web-based games, landing pages and e-commerce sites, refining my skills
-        in full-stack technologies. Currently gaining hands-on experience at a
-        tech company as part of my software development apprenticeship: I work
-        with modern full-stack technologies and scripting tools in a strong
-        engineering culture. I adapt fast, embrace challenges and enjoy turning
-        ideas into working solutions. <br /> <br /> Beyond technology, I am a
-        dedicated piano player and an art enthusiast, with a love for
-        philosophy, politics, and languages. My creativity, discipline, and
-        determination drive me to push boundaries and keep growing.
+        Through my software development apprenticeship and internship at
+        Docolution GmbH, I gained hands-on experience working on enterprise
+        business applications, <strong>CI/CD</strong> pipelines, automated
+        testing, debugging, code reviews, and production release support in an
+        agile team environment. I am especially interested in backend-oriented
+        full-stack roles where I can continue developing my skills in{" "}
+        <strong>Java/Spring</strong>, databases, cloud technologies, and
+        scalable application architecture.
+        <br /> <br />
+        I am based in Vienna, Austria, with full unrestricted access to the
+        Austrian labour market and EU long-term residence status. I am open to
+        full-stack and backend-focused software developer positions in Austria,
+        as well as hybrid or EU-remote opportunities.
+        <br /> <br />
+        Beyond technology, I play piano, enjoy visual arts and languages, and
+        often bring the same curiosity and discipline into my technical work.
       </p>
     );
   } else {
@@ -30,25 +38,33 @@ export default function About() {
       <p className="about__text">
         <span className="about-hello">Hallo</span>
         <br />
-        Ich bin ein motivierter und neugieriger Full-Stack-Entwickler mit einer
-        Leidenschaft dafür, Software zu entwickeln, die von der Datenbank bis
-        zur Benutzeroberfläche einwandfrei funktioniert. Ich gehe den Systemen
-        hinter den Kulissen auf den Grund und bemühe mich ständig, zu lernen,
-        mich zu verbessern und echten Mehrwert zu liefern.
+        Ich bin ein in Wien ansässiger Full-Stack Software Developer mit starkem
+        Fokus auf <strong>Java</strong>, <strong>Spring Boot</strong>,{" "}
+        <strong>REST APIs</strong>, <strong>SQL-Datenbanken</strong> und moderne
+        Frontend-Technologien wie <strong>Angular</strong>,{" "}
+        <strong>React</strong> und <strong>TypeScript</strong>. Mich
+        interessiert die Entwicklung zuverlässiger Software über den gesamten
+        Stack hinweg – von Backend-Logik und Datenbankintegration bis hin zu
+        sauberen, benutzerfreundlichen Oberflächen.
         <br /> <br />
-        Meine Entwicklerreise begann ich eigenständig und habe dabei webbasierte
-        Spiele, Landingpages und E-Commerce-Websites erstellt und meine
-        Fähigkeiten in Full-Stack-Technologien verfeinert. Derzeit sammle ich
-        praktische Erfahrung in einem Technologieunternehmen im Rahmen meiner
-        Ausbildung zum Softwareentwickler: Ich arbeite mit modernen
-        Full-Stack-Technologien und Skript-Tools in einer starken
-        Engineering-Kultur. Ich passe mich schnell an, gehe Herausforderungen
-        offen an und setze Ideen gern in funktionierende Lösungen um.
+        Im Rahmen meiner Ausbildung zum Software Developer und meines Praktikums
+        bei der Docolution GmbH konnte ich praktische Erfahrung mit
+        Enterprise-Business-Anwendungen, <strong>CI/CD</strong>-Pipelines,
+        automatisierten Tests, Debugging, Code Reviews und Production Release
+        Support in einem agilen Team sammeln. Besonders interessieren mich
+        backend-orientierte Full-Stack-Rollen, in denen ich meine Kenntnisse in{" "}
+        <strong>Java/Spring</strong>, Datenbanken, Cloud-Technologien und
+        skalierbarer Anwendungsarchitektur weiterentwickeln kann.
         <br /> <br />
-        Über die Technologie hinaus bin ich ein engagierter Klavierspieler und
-        Kunstliebhaber und interessiere mich für Philosophie, Politik und
-        Sprachen. Meine Kreativität, Disziplin und Entschlossenheit treiben mich
-        an, Grenzen zu überschreiten und kontinuierlich zu wachsen.
+        Ich bin in Wien, Österreich, ansässig und verfüge über uneingeschränkten
+        Zugang zum österreichischen Arbeitsmarkt sowie den Status
+        Daueraufenthalt-EU. Ich bin offen für Full-Stack- und
+        backend-fokussierte Softwareentwickler-Positionen in Österreich sowie
+        für hybride oder EU-remote Möglichkeiten.
+        <br /> <br />
+        Über die Technologie hinaus spiele ich Klavier, interessiere mich für
+        bildende Kunst und Sprachen und bringe dieselbe Neugier und Disziplin
+        auch in meine technische Arbeit ein.
       </p>
     );
   }

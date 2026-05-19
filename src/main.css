@@ -94,8 +94,6 @@
 }
 .home__left {
   max-width: 500px;
-  display: flex;
-  flex-direction: column;
 }
 .home__left h1 {
   font-size: 3rem;
@@ -116,6 +114,10 @@
     font-size: 1.2rem;
     text-align: center;
   }
+}
+.home__left {
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1070px) {
   .home__left {
@@ -153,12 +155,14 @@
   padding-top: 5vh;
   position: relative;
   overflow: hidden;
-  transition: 0.3s;
 }
 @media (max-width: 1070px) {
   .home__right {
     overflow: visible;
   }
+}
+.home__right {
+  transition: 0.3s;
 }
 .home__right::before, .home__right::after {
   opacity: 0;
@@ -182,11 +186,6 @@
 
 .home__right__scrollable {
   padding-top: 5vh;
-  overflow-y: auto;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10vh;
 }
 .home__right__scrollable::-webkit-scrollbar {
   background-color: var(--background);
@@ -203,6 +202,13 @@
   .home__right__scrollable::-webkit-scrollbar {
     display: none;
   }
+}
+.home__right__scrollable {
+  overflow-y: auto;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10vh;
 }
 
 .about__text {
@@ -381,11 +387,13 @@
   .single__project__main__bottom {
     flex-direction: column;
     overflow: scroll;
-    height: 100%;
-    align-items: center;
   }
   .single__project__main__bottom::-webkit-scrollbar {
     display: none;
+  }
+  .single__project__main__bottom {
+    height: 100%;
+    align-items: center;
   }
 }
 
@@ -1164,7 +1172,7 @@
 
 .cv__sub__bottom {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 3fr;
   column-gap: 20px;
 }
 .cv__sub__bottom__right {
