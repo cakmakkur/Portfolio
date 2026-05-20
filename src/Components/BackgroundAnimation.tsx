@@ -40,7 +40,7 @@ export default function HomepageOther() {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
 
     // IMPORTANT: camera must be outside rotating system
@@ -70,7 +70,7 @@ export default function HomepageOther() {
       star.position.set(
         THREE.MathUtils.randFloat(-150, 150),
         THREE.MathUtils.randFloat(-80, 80),
-        THREE.MathUtils.randFloat(-200, 200)
+        THREE.MathUtils.randFloat(-200, 200),
       );
 
       stars.current.push(star);
@@ -135,7 +135,7 @@ export default function HomepageOther() {
         top: 0,
         left: 0,
         pointerEvents: "none",
-        zIndex: 500,
+        zIndex: 0,
       }}
     />
   );

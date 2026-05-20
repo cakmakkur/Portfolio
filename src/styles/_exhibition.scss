@@ -37,7 +37,10 @@
   font-style: normal;
   color: var(--text);
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.2s;
   // &:hover {
   //   background-color: var(--text);
   //   color: var(--background);
@@ -64,31 +67,99 @@
 
 .paintings-main-div {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
   background: none;
-}
-
-.painting-container {
+  perspective: 100rem;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 500;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  & img {
-    max-width: 80vw;
-    max-height: 90vh;
+}
 
-    object-fit: contain;
-  }
+.paintings-carousel {
+  position: relative;
+  width: 80vw;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.painting-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.7s ease,
+    opacity 0.7s ease,
+    width 0.7s ease,
+    height 0.7s ease;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+.painting-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.painting-card--hidden-left,
+.painting-card--hidden-right {
+  width: 35vw;
+  height: 55vh;
+}
+
+.painting-card--left,
+.painting-card--right {
+  width: 42vw;
+  height: 62vh;
+}
+
+.painting-card--middle {
+  width: 52vw;
+  height: 72vh;
+}
+
+.painting-card--hidden-left {
+  transform: translate(calc(-50% - 70vw), -50%) rotateY(70deg) scale(0.8);
+  opacity: 0;
+  z-index: 150;
+}
+
+.painting-card--left {
+  transform: translate(calc(-50% - 34vw), -50%) rotateY(60deg) scale(0.9);
+  opacity: 0.9;
+  z-index: 200;
+}
+
+.painting-card--middle {
+  transform: translate(-50%, -50%) rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 300;
+}
+
+.painting-card--right {
+  transform: translate(calc(-50% + 34vw), -50%) rotateY(-60deg) scale(0.9);
+  opacity: 0.9;
+  z-index: 200;
+}
+
+.painting-card--hidden-right {
+  transform: translate(calc(-50% + 70vw), -50%) rotateY(-70deg) scale(0.8);
+  opacity: 0;
+  z-index: 150;
 }
 
 .button-overlay {
@@ -98,13 +169,37 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0;
   display: flex;
-  & button {
+}
+
+.button-overlay button {
+  width: 50vw;
+  height: 100vh;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .paintings-carousel {
+    width: 100vw;
+    height: 65vh;
+  }
+
+  .painting-card--middle {
+    width: 70vw;
+    height: 55vh;
+  }
+
+  .painting-card--left,
+  .painting-card--right {
     width: 50vw;
-    height: 100vh;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+    height: 48vh;
+  }
+
+  .painting-card--hidden-left,
+  .painting-card--hidden-right {
+    width: 40vw;
+    height: 42vh;
   }
 }
