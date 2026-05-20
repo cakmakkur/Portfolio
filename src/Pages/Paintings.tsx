@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import BackgroundAnimation from "../Components/BackgroundAnimation";
-import LoadingHexagonal from "../utils/LoadingHexagonal";
 import { paintings } from "../data/paintings";
 
 function getPosition(index: number, currentIndex: number, count: number) {
@@ -53,11 +52,22 @@ export default function Paintings() {
   }, []);
 
   const essentialReady = priorityLoadedCount >= 4;
+  const loadingPercentage = Math.min(100, Math.round((priorityLoadedCount / 4) * 100));
 
   if (!essentialReady) {
     return (
       <div className="painting-loading-overlay">
-        <LoadingHexagonal />
+        <div className="painting-loading-content">
+          <div className="painting-loading-progress">
+            <div
+              className="painting-loading-progress__fill"
+              style={{ width: `${loadingPercentage}%` }}
+            />
+          </div>
+          <div className="painting-loading-progress__label">
+            Loading...
+          </div>
+        </div>
       </div>
     );
   }
