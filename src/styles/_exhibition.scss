@@ -53,18 +53,6 @@
   }
 }
 
-.go-to-music-btn--light {
-}
-
-.go-to-music-btn--dark {
-}
-
-.go-to-paintings-btn--light {
-}
-
-.go-to-paintings-btn--dark {
-}
-
 .paintings-main-div {
   width: 100vw;
   height: 100vh;
@@ -102,7 +90,7 @@
     height 0.7s ease;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  // box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   opacity: 0;
   pointer-events: none;
   backface-visibility: hidden;
@@ -111,7 +99,7 @@
 .painting-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -129,7 +117,7 @@
 
 .painting-card--middle {
   width: 52vw;
-  height: 72vh;
+  height: 75vh;
 }
 
 .painting-card--hidden-left {
@@ -140,7 +128,7 @@
 
 .painting-card--left {
   transform: translate(calc(-50% - 34vw), -50%) rotateY(60deg) scale(0.9);
-  opacity: 0.9;
+  opacity: 0.5;
   z-index: 200;
 }
 
@@ -152,7 +140,7 @@
 
 .painting-card--right {
   transform: translate(calc(-50% + 34vw), -50%) rotateY(-60deg) scale(0.9);
-  opacity: 0.9;
+  opacity: 0.5;
   z-index: 200;
 }
 

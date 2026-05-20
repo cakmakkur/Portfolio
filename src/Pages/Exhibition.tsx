@@ -6,7 +6,6 @@ export default function Exhibition() {
 
   return (
     <div className="exhibition-main-div">
-      This page is currently being built. Come back again soon!
       <div className="exhibition-initial-buttons">
         <FxButton
           width="35vw"
