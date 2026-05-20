@@ -1999,6 +1999,16 @@
   }
 }
 
+.exhibition-loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+}
+
 .exhibition-init-btn {
   width: 35vw;
   height: 35vw;
@@ -2128,6 +2138,16 @@
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.painting-loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
 }
 
 @media (max-width: 900px) {

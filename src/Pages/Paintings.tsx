@@ -1,37 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BackgroundAnimation from "../Components/BackgroundAnimation";
-
-const paintings = [
-  "painting-25.jpeg",
-  "painting-36.png",
-  "painting-2.jpeg",
-  "painting-24.png",
-  "painting-19.png",
-  "painting-26.png",
-  "painting-15.png",
-  "painting-8.png",
-  "painting-1.jpeg",
-  "painting-23.jpeg",
-  "painting-9.png",
-  "painting-10.png",
-  "painting-20.png",
-  "painting-12.png",
-  "painting-22.jpg",
-  "painting-31.png",
-  "painting-6.png",
-  "painting-11.png",
-  "painting-17.png",
-  "painting-28.png",
-  "painting-37.jpeg",
-  "painting-13.png",
-  "painting-18.png",
-  "painting-38.png",
-  "painting-7.png",
-  "painting-4.png",
-  "painting-3.jpeg",
-  "painting-21.png",
-  "painting-5.png",
-];
+import LoadingHexagonal from "../utils/LoadingHexagonal";
+import { paintings } from "../data/paintings";
 
 function getPosition(index: number, currentIndex: number, count: number) {
   const offset = (index - currentIndex + count) % count;
@@ -45,6 +15,52 @@ function getPosition(index: number, currentIndex: number, count: number) {
 
 export default function Paintings() {
   const [currentPaintingIndex, setCurrentPaintingIndex] = useState(0);
+  const [priorityLoadedCount, setPriorityLoadedCount] = useState(0);
+
+  useEffect(() => {
+    let mounted = true;
+    const prioritized = [
+      paintings[0],
+      paintings[1],
+      paintings[paintings.length - 2],
+      paintings[paintings.length - 1],
+    ].filter(Boolean);
+
+    const preloadPriority = prioritized.map((src) => {
+      const img = new Image();
+      img.src = `/paintings/${src}`;
+      img.onload = () => {
+        if (mounted) setPriorityLoadedCount((prev) => prev + 1);
+      };
+      img.onerror = () => {
+        if (mounted) setPriorityLoadedCount((prev) => prev + 1);
+      };
+      return img;
+    });
+
+    const remaining = paintings.slice(2, -2).map((src) => {
+      const img = new Image();
+      img.src = `/paintings/${src}`;
+      return img;
+    });
+
+    return () => {
+      mounted = false;
+      [...preloadPriority, ...remaining].forEach((img) => {
+        img.src = "";
+      });
+    };
+  }, []);
+
+  const essentialReady = priorityLoadedCount >= 4;
+
+  if (!essentialReady) {
+    return (
+      <div className="painting-loading-overlay">
+        <LoadingHexagonal />
+      </div>
+    );
+  }
 
   const prevPainting = () => {
     setCurrentPaintingIndex(
