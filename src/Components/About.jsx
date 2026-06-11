@@ -21,8 +21,8 @@ export default function About() {
         testing, debugging, code reviews, and production release support in an
         agile team environment. I am especially interested in backend-oriented
         full-stack roles where I can continue developing my skills in{" "}
-        <strong>Java/Spring</strong>, databases, cloud technologies, and
-        scalable application architecture.
+        <strong>Java/Spring</strong>, databases, cloud and container
+        technologies, and scalable application architecture.
         <br /> <br />
         I am based in Vienna, Austria, with full unrestricted access to the
         Austrian labour market and EU long-term residence status. I am open to
@@ -53,8 +53,9 @@ export default function About() {
         automatisierten Tests, Debugging, Code Reviews und Production Release
         Support in einem agilen Team sammeln. Besonders interessieren mich
         backend-orientierte Full-Stack-Rollen, in denen ich meine Kenntnisse in{" "}
-        <strong>Java/Spring</strong>, Datenbanken, Cloud-Technologien und
-        skalierbarer Anwendungsarchitektur weiterentwickeln kann.
+        <strong>Java/Spring</strong>, Datenbanken, Cloud- und
+        Containertechnologien und skalierbarer Anwendungsarchitektur
+        weiterentwickeln kann.
         <br /> <br />
         Ich bin in Wien, Österreich, ansässig und verfüge über uneingeschränkten
         Zugang zum österreichischen Arbeitsmarkt sowie den Status

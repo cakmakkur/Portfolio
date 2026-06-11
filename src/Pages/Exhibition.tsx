@@ -7,12 +7,7 @@ export default function Exhibition() {
   return (
     <div className="exhibition-main-div">
       <div className="exhibition-initial-buttons">
-        <FxButton
-          width="35vw"
-          height="35vw"
-          href=""
-          onClick={() => alert("Coming up soon!")}
-        >
+        <FxButton width="35vw" height="35vw" to="/music">
           <div
             className={`exhibition-init-btn go-to-music-btn ${
               theme.type === "dark"
@@ -26,7 +21,7 @@ export default function Exhibition() {
               }
               alt=""
             />{" "}
-            <br /> MUSIC
+            MUSIC
           </div>
         </FxButton>
         <FxButton width="35vw" height="35vw" to="/paintings">
@@ -45,7 +40,7 @@ export default function Exhibition() {
               }
               alt=""
             />
-            <br /> PAINTINGS
+            PAINTINGS
           </div>
         </FxButton>
       </div>

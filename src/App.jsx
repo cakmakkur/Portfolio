@@ -7,6 +7,7 @@ import Loading from "./Components/Loading";
 import UICatalog from "./Pages/UICatalog";
 import Exhibition from "./Pages/Exhibition";
 import Paintings from "./Pages/Paintings";
+import Music from "./Pages/Music";
 
 const Schnapsen = lazy(() => import("./Projects/Schnapsen"));
 const Mondatelier = lazy(() => import("./Projects/Mondatelier"));
@@ -37,6 +38,7 @@ export default function App() {
 
           <Route path="/ui-catalog" element={<UICatalog />} />
           <Route path="/exhibition" element={<Exhibition />} />
+          <Route path="/music" element={<Music />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/paintings" element={<Paintings />} />
         </Routes>
